@@ -11,15 +11,11 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const port = process.env.PORT || 3000;
+const staticFiles = ["styles.css", "config.js", "scripts.js", "contact.js"];
 
 app.use(cors());
 app.use(express.json());
-
 app.use("/assets", express.static(path.join(__dirname, "assets")));
-app.use("/styles.css", express.static(path.join(__dirname, "styles.css")));
-app.use("/config.js", express.static(path.join(__dirname, "config.js")));
-app.use("/scripts.js", express.static(path.join(__dirname, "scripts.js")));
-app.use("/contact.js", express.static(path.join(__dirname, "contact.js")));
 
 app.get(["/", "/index.html"], (_req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
@@ -27,6 +23,12 @@ app.get(["/", "/index.html"], (_req, res) => {
 
 app.get("/contact.html", (_req, res) => {
   res.sendFile(path.join(__dirname, "contact.html"));
+});
+
+staticFiles.forEach((fileName) => {
+  app.get(`/${fileName}`, (_req, res) => {
+    res.sendFile(path.join(__dirname, fileName));
+  });
 });
 
 app.post("/send-email", async (req, res) => {
