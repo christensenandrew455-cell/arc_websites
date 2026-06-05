@@ -33,7 +33,7 @@ const config = {
     { name: "Mike", stars: 4, review: "Great experience!" },
   ],
 
-  googleReviewsLink: "",
+  googleReviewsLink: "hey man",
 };
 
 export default config;
