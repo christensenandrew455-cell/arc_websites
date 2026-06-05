@@ -1,16 +1,22 @@
 const siteConfig = {
-// Header
-showHeader: true,
-stickyHeader: true,
+  // HEADER
+  showHeader: true,
+  stickyHeader: true,
 
-// Footer
-showFooter: true,
-footerCentered: true,
+  // FOOTER
+  showFooter: true,
+  footerCentered: true,
 
-// Layout
-contentAlignment: "left", // left | center
-pagePadding: "p-6 md:p-12",
-maxWidth: "max-w-7xl",
+  // LAYOUT
+  contentAlignment: "left",
+  pagePadding: "p-6 md:p-12",
+  maxWidth: "max-w-7xl",
+
+  // CONTACT PAGE
+  contactPageRoute: "/contact",
+
+  // PRIVACY PAGE
+  privacyPageRoute: "/privacy",
 };
 
 export default siteConfig;
