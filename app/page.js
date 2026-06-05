@@ -1,3 +1,4 @@
+import Link from "next/link";
 import config from "./homeConfig";
 import siteConfig from "./siteConfig";
 
@@ -16,28 +17,52 @@ export default function Home() {
     >
       {siteConfig.showHeader && (
         <header
-          className={`flex justify-between items-center p-6 border-b ${
-            siteConfig.stickyHeader
-              ? "sticky top-0 bg-white z-50"
-              : ""
-          }`}
+          className={`
+            border-b
+            p-4
+            ${
+              siteConfig.stickyHeader
+                ? "sticky top-0 bg-white z-50"
+                : ""
+            }
+          `}
         >
-          <div className="flex items-center gap-3">
-            {config.logoUrl ? (
-              <img src={config.logoUrl} className="h-10" />
-            ) : (
-              <h1 className="text-xl font-bold">
+          <div className="max-w-7xl mx-auto grid grid-cols-3 items-center">
+            {/* LEFT */}
+            <div>
+              {config.logoUrl && (
+                <img
+                  src={config.logoUrl}
+                  alt={config.businessName}
+                  className="h-12 object-contain"
+                />
+              )}
+            </div>
+
+            {/* CENTER */}
+            <div className="text-center">
+              <h1 className="text-2xl font-bold">
                 {config.businessName}
               </h1>
-            )}
-          </div>
+            </div>
 
-          <a
-            href={`tel:${config.phone}`}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg"
-          >
-            {config.buttonName}
-          </a>
+            {/* RIGHT */}
+            <div className="flex justify-end gap-3">
+              <Link
+                href={siteConfig.contactPageRoute}
+                className="border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-100 transition"
+              >
+                {config.contactButtonText}
+              </Link>
+
+              <a
+                href={`tel:${config.phone}`}
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+              >
+                {config.callButtonText}
+              </a>
+            </div>
+          </div>
         </header>
       )}
 
@@ -45,17 +70,22 @@ export default function Home() {
         className={`mx-auto ${siteConfig.maxWidth} ${siteConfig.pagePadding}`}
       >
         <section className="space-y-4">
-          <h1 className="text-4xl font-bold">{config.slogan}</h1>
+          <h1 className="text-4xl font-bold">
+            {config.slogan}
+          </h1>
+
           <p>{config.companyStory}</p>
 
           <h2 className="text-2xl font-semibold mt-6">
             Mission
           </h2>
+
           <p>{config.mission}</p>
 
           <h2 className="text-2xl font-semibold mt-6">
             Why Choose Us
           </h2>
+
           <p>{config.whyChooseUs}</p>
         </section>
 
@@ -69,6 +99,7 @@ export default function Home() {
               <img
                 key={i}
                 src={img}
+                alt={`Work ${i + 1}`}
                 className="rounded-xl shadow"
               />
             ))}
@@ -94,8 +125,12 @@ export default function Home() {
                 key={i}
                 className="p-4 bg-white rounded-xl shadow"
               >
-                <p className="font-semibold">{t.name}</p>
+                <p className="font-semibold">
+                  {t.name}
+                </p>
+
                 <p>{"⭐".repeat(t.stars)}</p>
+
                 <p>{t.review}</p>
               </div>
             ))}
@@ -104,24 +139,47 @@ export default function Home() {
           {config.googleReviewsLink && (
             <a
               href={config.googleReviewsLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-600 underline mt-4 block"
             >
               View Google Reviews
             </a>
           )}
         </section>
+
+        {/* CONTACT CTA */}
+        <section className="mt-12 text-center">
+          <Link
+            href={siteConfig.contactPageRoute}
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition"
+          >
+            {config.contactButtonText}
+          </Link>
+        </section>
       </div>
 
       {siteConfig.showFooter && (
         <footer
-          className={`p-6 border-t ${
-            siteConfig.footerCentered
-              ? "text-center"
-              : "text-left"
-          }`}
+          className={`
+            p-6
+            border-t
+            ${
+              siteConfig.footerCentered
+                ? "text-center"
+                : "text-left"
+            }
+          `}
         >
           <p>{config.email}</p>
           <p>{config.phone}</p>
+
+          <Link
+            href={siteConfig.privacyPageRoute}
+            className="block mt-3 text-blue-600 underline"
+          >
+            Privacy Policy
+          </Link>
         </footer>
       )}
     </main>
