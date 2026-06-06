@@ -99,35 +99,45 @@ export default function Home() {
 
         {/* ABOUT */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-3xl font-bold mb-6">
             About Us
           </h2>
 
-          <div className="space-y-4">
-            <p>{config.companyStory}</p>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-semibold mb-3">
+                Company Story
+              </h3>
 
-            <p>{config.mission}</p>
+              <p>{config.companyStory}</p>
+
+              <p className="mt-3">{config.mission}</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold mb-3">
+                What We Do
+              </h3>
+
+              <p>{config.whatWeDo}</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold mb-3">
+                Areas We Serve
+              </h3>
+
+              <p>{config.serviceAreas.join(", ")}</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold mb-3">
+                Why Choose Us
+              </h3>
+
+              <p>{config.whyChooseUs}</p>
+            </div>
           </div>
-        </section>
-
-        {/* SERVICE AREA */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">
-            Areas We Service
-          </h2>
-
-          <p className="text-lg">
-            {config.serviceAreas.join(", ")}
-          </p>
-        </section>
-
-        {/* WHY CHOOSE US */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">
-            Why Choose Us
-          </h2>
-
-          <p>{config.whyChooseUs}</p>
         </section>
 
         {/* OUR WORK */}
