@@ -79,18 +79,18 @@ export default function Home() {
             </>
           )}
 
-          <div className="relative z-10 px-8 py-28 text-center text-white">
-            <h1 className="text-5xl font-bold">
+          <div className="relative z-10 px-8 py-32 text-center text-white">
+            <h1 className="text-5xl md:text-6xl font-bold">
               {config.heroTitle}
             </h1>
 
-            <p className="text-xl mt-4 max-w-3xl mx-auto">
+            <p className="text-xl mt-4 max-w-4xl mx-auto">
               {config.heroSubtitle}
             </p>
 
             <Link
               href={siteConfig.contactPageRoute}
-              className="inline-block mt-8 bg-white text-black px-8 py-4 rounded-xl font-semibold"
+              className="inline-block mt-8 bg-white text-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition"
             >
               {config.contactButtonText}
             </Link>
@@ -103,31 +103,22 @@ export default function Home() {
             About Us
           </h2>
 
-          <p>{config.companyStory}</p>
+          <div className="space-y-4">
+            <p>{config.companyStory}</p>
 
-          <h3 className="text-2xl font-semibold mt-6">
-            Our Mission
-          </h3>
-
-          <p>{config.mission}</p>
+            <p>{config.mission}</p>
+          </div>
         </section>
 
-        {/* SERVICE AREAS */}
+        {/* SERVICE AREA */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-4">
             Areas We Service
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {config.serviceAreas.map((area, i) => (
-              <div
-                key={i}
-                className="border rounded-xl p-4 text-center shadow-sm"
-              >
-                {area}
-              </div>
-            ))}
-          </div>
+          <p className="text-lg">
+            {config.serviceAreas.join(", ")}
+          </p>
         </section>
 
         {/* WHY CHOOSE US */}
@@ -140,7 +131,7 @@ export default function Home() {
         </section>
 
         {/* OUR WORK */}
-        <section className="mt-10">
+        <section className="mb-12">
           <h2 className="text-3xl font-bold mb-4">
             Our Work
           </h2>
@@ -166,7 +157,7 @@ export default function Home() {
         </section>
 
         {/* TESTIMONIALS */}
-        <section className="mt-10 bg-gray-50 p-6 rounded-xl">
+        <section className="bg-gray-50 p-6 rounded-xl">
           <h2 className="text-3xl font-bold mb-4">
             Testimonials
           </h2>
@@ -224,6 +215,7 @@ export default function Home() {
           `}
         >
           <p>{config.email}</p>
+
           <p>{config.phone}</p>
 
           <Link
