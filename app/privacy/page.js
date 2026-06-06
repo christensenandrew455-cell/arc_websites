@@ -72,7 +72,5 @@ Privacy Policy </h1>
     </div>
   </div>
 </main>
-```
-
 );
 }
