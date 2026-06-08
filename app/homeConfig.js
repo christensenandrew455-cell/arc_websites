@@ -1,34 +1,47 @@
 const config = {
   // BUSINESS INFO
-  businessName: "Bobs Landwork",
+  businessName: "Bob's Landwork",
   phone: "(999)-999-9999",
-  email: "[bob@email.com](mailto:bob@email.com)",
+  email: "bob@email.com",
 
   // BRANDING
-  logoUrl: "",
+  logoUrl: "", // Provide your logo URL here
+  showLogo: true,
 
   // BUTTONS
   contactButtonText: "Contact Us",
+
+  // HEADER CONFIGURATION
+  showNavLinks: true, // Toggle to show or hide the Home, Services, About Us, Contact buttons
+  headerLinks: [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "About Us", href: "/about" },
+    { name: "Contact Us", href: "/contact" },
+  ],
+  headerBackground: "bg-white",
+  headerBorder: "border-gray-200",
+  headerTextColor: "text-gray-800",
+
+  headerButtonBg: "bg-blue-600",
+  headerButtonHover: "hover:bg-blue-700",
+  headerButtonText: "text-white",
 
   // STYLE
   font: "font-sans",
   primaryColor: "blue-600",
   secondaryColor: "gray-200",
 
-  // HERO
+  // HERO SECTION
   heroTitle: "Bob's Landwork",
-
   heroSubtitle:
     "Reliable Land Clearing and Property Services Throughout Central Massachusetts",
-
   heroUseImage: true,
-
   heroImage:
     "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
-
   heroBackgroundColor: "bg-blue-600",
 
-  // ABOUT
+  // ABOUT SECTION
   companyStory:
     "Bob's Landwork provides professional land clearing, excavation, property cleanup, and site preparation services throughout Central Massachusetts. We take pride in delivering dependable work, honest communication, and quality results for every customer.",
 
@@ -44,9 +57,7 @@ const config = {
     "Experienced, dependable, fully committed to customer satisfaction, and focused on delivering quality results every time.",
 
   // SERVICE AREAS
-  serviceAreas: [
-    "Central Massachusetts",
-  ],
+  serviceAreas: ["Central Massachusetts"],
 
   // MEDIA
   images: [
