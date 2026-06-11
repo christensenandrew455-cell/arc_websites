@@ -18,7 +18,6 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
              />
 )}
 
-```
           <h1
             className={`text-2xl font-bold ${config.theme.accentText}`}
           >
