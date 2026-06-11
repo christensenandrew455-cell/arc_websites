@@ -206,7 +206,5 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
     </footer>
   )}
 </main>
-```
-
 );
 }
