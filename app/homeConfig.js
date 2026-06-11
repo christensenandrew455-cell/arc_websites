@@ -1,8 +1,8 @@
 const config = {
   // BUSINESS INFO
-  businessName: "Bob's Landwork",
-  phone: "(999)-999-9999",
-  email: "bob@email.com",
+  businessName: "Jtb painting",
+  phone: "",
+  email: "Taborpainting508@gmail.com",
 
   // BRANDING
   logoUrl: "", // Provide your logo URL here
@@ -33,31 +33,31 @@ const config = {
   secondaryColor: "gray-200",
 
   // HERO SECTION
-  heroTitle: "Bob's Landwork",
+  heroTitle: "JTB painting",
   heroSubtitle:
-    "Reliable Land Clearing and Property Services Throughout Central Massachusetts",
-  heroUseImage: true,
+    "Precision in Every Stroke. Excellence in Every Project.",
+  heroUseImage: false,
   heroImage:
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+    "",
   heroBackgroundColor: "bg-blue-600",
 
   // ABOUT SECTION
   companyStory:
-    "Bob's Landwork provides professional land clearing, excavation, property cleanup, and site preparation services throughout Central Massachusetts. We take pride in delivering dependable work, honest communication, and quality results for every customer.",
+    "Founded by Jason Beirne after working with Student Painters, our company was built on hard work, quality craftsmanship, and a commitment to delivering outstanding results",
 
   mission:
-    "Our goal is to help property owners improve and maintain their land with safe, efficient, and affordable services.",
+    "To provide professional, high-quality painting services with excellent workmanship, reliable communication, and customer satisfaction on every project.",
 
   // WHAT WE DO
   whatWeDo:
-    "Bob's Landwork specializes in land clearing, excavation, grading, property cleanup, brush removal, site preparation, and related land management services. Whether you're preparing for construction, improving your property, or cleaning up overgrown areas, we provide reliable solutions tailored to your needs.",
+    "JTB Painting specializes in delivering high-quality painting services with precision strokes, attention to detail, and lasting results that enhance the beauty of every property",
 
   // WHY CHOOSE US
   whyChooseUs:
-    "Experienced, dependable, fully committed to customer satisfaction, and focused on delivering quality results every time.",
+    "We deliver exceptional painting results, complete projects on time, and treat every property with the care and attention it deserves.",
 
   // SERVICE AREAS
-  serviceAreas: ["Central Massachusetts"],
+  serviceAreas: ["all over Massachusetts"],
 
   // MEDIA
   images: [
@@ -71,19 +71,19 @@ const config = {
   // TESTIMONIALS
   testimonials: [
     {
-      name: "John",
+      name: "Chris",
       stars: 5,
-      review: "Amazing service!",
-    },
-    {
-      name: "Sarah",
-      stars: 5,
-      review: "Highly recommend!",
+      review: "The room looks brand new!",
     },
     {
       name: "Mike",
+      stars: 5,
+      review: "these guys know what they are doing!",
+    },
+    {
+      name: "Sarah",
       stars: 4,
-      review: "Great experience!",
+      review: "Jason and his team were so resepctful and im gonna refer you guys for sure!",
     },
   ],
 
