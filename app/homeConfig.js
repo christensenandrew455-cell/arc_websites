@@ -1,6 +1,6 @@
 const config = {
 // BUSINESS INFO
-businessName: "JTB Painting",
+businessName: "Tabor Painting",
 phone: "",
 email: "Taborpainting508@gmail.com",
 
@@ -9,7 +9,7 @@ logoUrl: "",
 showLogo: true,
 
 // BUTTONS
-contactButtonText: "Get A Free Estimate",
+contactButtonText: "contact us",
 
 // THEME
 theme: {
@@ -51,7 +51,7 @@ headerLinks: [
 font: "font-sans",
 
 // HERO
-heroTitle: "JTB Painting",
+heroTitle: "Tabor Painting",
 heroSubtitle:
 "Precision in Every Stroke. Excellence in Every Project.",
 heroUseImage: false,
@@ -59,7 +59,7 @@ heroImage: "",
 
 // ABOUT
 companyStory:
-"Founded by Jason Beirne after working with Student Painters, JTB Painting was built on hard work, quality craftsmanship, and a commitment to delivering outstanding results.",
+"Founded by Jason Beirne after working with Student Painters, Tabor Painting was built on hard work, quality craftsmanship, and a commitment to delivering outstanding results.",
 
 mission:
 "To provide professional, high-quality painting services with excellent workmanship, reliable communication, and customer satisfaction on every project.",
