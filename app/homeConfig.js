@@ -2,7 +2,7 @@ const config = {
 // BUSINESS INFO
 businessName: "JTB Painting",
 phone: "",
-email: "[Taborpainting508@gmail.com](mailto:Taborpainting508@gmail.com)",
+email: "Taborpainting508@gmail.com",
 
 // LOGO
 logoUrl: "",
