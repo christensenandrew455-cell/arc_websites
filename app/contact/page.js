@@ -121,7 +121,7 @@ export default function ContactPage() {
           {config.showSizeField && (
             <input
               name="size"
-              placeholder="Size"
+              placeholder="Size of job"
               value={form.size}
               onChange={handleChange}
               className="border p-3 rounded-lg"
@@ -131,7 +131,7 @@ export default function ContactPage() {
           {config.showDateField && (
             <input
               name="date"
-              placeholder="Date"
+              placeholder="Date when available"
               value={form.date}
               onChange={handleChange}
               className="border p-3 rounded-lg"
