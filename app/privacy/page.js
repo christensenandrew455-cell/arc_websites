@@ -58,8 +58,7 @@ Privacy Policy </h1>
 
     <p>
       If you have questions regarding this Privacy
-      Policy, please contact us through our contact
-      page.
+      Policy, please contact Christensenandrew455@gmail.com.
     </p>
 
     <div className="mt-10 text-center">
