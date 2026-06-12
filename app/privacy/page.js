@@ -4,7 +4,6 @@ export default function PrivacyPolicy() {
 return ( <main className="bg-gray-100 min-h-screen py-10 px-4"> <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8 md:p-12"> <h1 className="text-4xl font-bold mb-6">
 Privacy Policy </h1>
 
-```
     <p className="mb-4">
       This Privacy Policy explains how we handle
       information submitted through our website.
@@ -17,7 +16,7 @@ Privacy Policy </h1>
     <p className="mb-4">
       When you use our contact form, we may collect
       basic information such as your name, email
-      address, phone number, and any message you
+      address, phone number, address, and any message you
       choose to send.
     </p>
 
