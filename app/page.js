@@ -174,7 +174,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
       </h2>
 
       <p className="text-gray-400 mb-8 text-lg">
-        Contact JTB Painting today for a free estimate.
+        Contact Tabor Painting today for a free estimate.
       </p>
 
       <Link
