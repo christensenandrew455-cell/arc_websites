@@ -3,16 +3,16 @@ const config = {
   subtitle:
     "Send us a message and we'll get back to you as soon as possible.",
 
-  phone: "(774)-245-3383",
-  email: "Taborpainting508@gmail.com",
+  phone: "(978)-660-3255",
+  email: "Christensenandrew455@gmail.com",
 
   primaryColor: "blue-600",
   font: "font-sans",
 
   // Optional Fields
   showAddressField: false,
-  showSizeField: true,
-  showDateField: true,
+  showSizeField: false,
+  showDateField: false,
   showMessageField: true,
     
   successMessage: "Message sent successfully!",
