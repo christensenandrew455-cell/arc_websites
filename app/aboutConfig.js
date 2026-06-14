@@ -10,19 +10,19 @@ const aboutConfig = {
     {
       title: "Our Story",
       content:
-        "Bob's Landwork was built on a simple idea: provide dependable land services with honest communication and quality workmanship. We understand that every property is different, which is why we take the time to understand each customer's goals before starting a project. Whether it's clearing land for new construction, cleaning up an overgrown property, or preparing a site for development, we approach every job with professionalism and attention to detail.",
+        "ARC Websites was founded with a belief that every small business should have access to a professional online presence. We saw talented business owners relying only on word of mouth while competitors with better websites were winning customers. We started ARC Websites to close that gap and give local businesses the tools they need to succeed online.",
     },
 
     {
       title: "Our Mission",
       content:
-        "Our mission is to help property owners improve, maintain, and prepare their land through safe, efficient, and affordable services. We believe in doing the job right the first time while treating every customer's property with the same care and respect we would expect for our own.",
+        "At ARC Websites, our mission is simple: help small businesses get the online presence they deserve. Many hardworking business owners provide incredible services but lose opportunities because they don't have a professional website. We build affordable, modern websites that help businesses earn trust, attract customers, and grow with confidence.",
     },
 
     {
       title: "What We Do",
       content:
-        "We specialize in land clearing, excavation, grading, brush removal, property cleanup, and site preparation services throughout Central Massachusetts. From small residential projects to larger property improvement jobs, we provide practical solutions that help our customers move forward with confidence.",
+        "We create professional websites for small businesses that want to attract more customers and build trust online. Every website we build is designed to showcase your services, highlight your work, and make it easy for potential customers to contact you. We handle everything from design and hosting to updates and maintenance, so you can focus on running your business while we take care of your online presence.",
     },
 
     {
@@ -34,8 +34,7 @@ const aboutConfig = {
     {
       title: "Areas We Serve",
       content:
-        "Bob's Landwork proudly serves Central Massachusetts and surrounding communities. We work with homeowners, property owners, contractors, and businesses looking for professional land management and excavation services.",
-    },
+        "We focus on simplicity, reliability, and results. We don't believe in complicated packages or confusing technical jargon. We work directly with business owners to create websites that look professional, load quickly, and help generate new leads. When you work with us, you're not just getting a website you're gaining a partner invested in your success.",
   ],
 };
 
