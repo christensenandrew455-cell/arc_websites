@@ -71,7 +71,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
           ["Our Story", config.companyStory],
           ["Our Mission", config.mission],
           ["What We Do", config.whatWeDo],
-          ["Areas We Serve", config.serviceAreas.join(", ")],
+          ["Areas We Serve", config.serviceAreas],
         ].map(([title, content]) => (
           <div
             key={title}
