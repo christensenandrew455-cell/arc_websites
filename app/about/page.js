@@ -29,39 +29,28 @@ export default function AboutPage() {
               </h1>
             </div>
 
-<div className="flex items-center gap-6">
-  {config.showNavLinks && (
-    <nav className="hidden md:flex items-center gap-6">
-      {config.headerLinks.map((link) => (
-        <Link
-          key={link.name}
-          href={link.href}
-          className="font-medium hover:opacity-80 transition"
-        >
-          {link.name}
-        </Link>
-      ))}
-    </nav>
-  )}
+            <div className="flex items-center gap-6">
+              {config.showNavLinks && (
+                <nav className="hidden md:flex items-center gap-6">
+                  {config.headerLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="font-medium hover:opacity-80 transition"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </nav>
+              )}
 
-  <Link
-    href={siteConfig.contactPageRoute}
-    className={config.theme.button}
-  >
-    Contact Us
-  </Link>
-</div>
-                {config.headerLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="font-medium hover:opacity-80 transition"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </nav>
-            )}
+              <Link
+                href={siteConfig.contactPageRoute}
+                className={config.theme.button}
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </header>
       )}
@@ -73,7 +62,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Learn more about our company, our mission, and our commitment to delivering quality land services throughout Central Massachusetts.
+            Learn more about ARC Websites, our mission, and our commitment to helping small businesses build a stronger online presence.
           </p>
         </div>
 
@@ -125,6 +114,7 @@ export default function AboutPage() {
           `}
         >
           <p>{config.email}</p>
+
           <p>{config.phone}</p>
 
           <Link
