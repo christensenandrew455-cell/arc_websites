@@ -14,11 +14,11 @@ contactButtonText: "Get Started",
 // THEME
 theme: {
 pageBg: "bg-white",
-pageText: "text-gray-700",
+pageText: "text-black",
 
 headerBg: "bg-white/95",
 headerBorder: "border-blue-200",
-headerText: "text-gray-700",
+headerText: "text-black",
 
 heroBg:
   "bg-gradient-to-br from-blue-50 via-white to-orange-50",
