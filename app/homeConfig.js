@@ -14,11 +14,11 @@ contactButtonText: "Get Started",
 // THEME
 theme: {
 pageBg: "bg-white",
-pageText: "text-gray-900",
+pageText: "text-gray-700",
 
 headerBg: "bg-white/95",
 headerBorder: "border-blue-200",
-headerText: "text-gray-900",
+headerText: "text-gray-700",
 
 heroBg:
   "bg-gradient-to-br from-blue-50 via-white to-orange-50",
@@ -51,7 +51,7 @@ headerLinks: [
 font: "font-sans",
 
 // HERO
-heroTitle: "Professional Websites For Small Businesses",
+heroTitle: "ARC Websites",
 
 heroSubtitle:
 "Modern websites that help local businesses build trust, attract customers, and grow online.",
