@@ -2,49 +2,57 @@ const servicesConfig = {
   pageTitle: "Our Services",
 
   pageSubtitle:
-    "Professional land clearing, excavation, and property improvement services throughout Central Massachusetts.",
+    "Professional Website Management Top-Performing Layouts, Ongoing Maintenance, and Dedicated Upkeep",
 
-  contactButtonText: "Get a Free Estimate",
+  contactButtonText: "Contact us",
 
   services: [
     {
-      title: "Land Clearing",
+      title: "Maintenance and Upkeep",
       image:
         "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
       description:
-        "We clear trees, brush, overgrowth, and unwanted vegetation to prepare your property for construction, development, or general improvement.",
+        "We ensure your website remains fluid and up-to-date, performing regular updates to keep your content fresh, secure, and aligned with industry standards.",
     },
 
     {
-      title: "Excavation",
+      title: "Custom Design and Premium Layout",
       image:
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
       description:
-        "Professional excavation services for foundations, drainage projects, site preparation, and general earthmoving needs.",
+        "I craft tailored, professional website layouts, aligning every detail with your brand’s essence so your online presence is both polished and purposeful.",
     },
 
     {
-      title: "Brush Removal",
+      title: "Performance Testing",
       image:
         "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
       description:
-        "Remove overgrown brush and vegetation to improve appearance, accessibility, and property value.",
+        "Through meticulous biweekly or monthly testing cycles, I rigorously check each page, ensuring fast load times, seamless navigation, and full functionality across devices.",
     },
 
     {
-      title: "Property Cleanup",
+      title: "Content Updates",
       image:
         "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
       description:
-        "Complete property cleanup services including debris removal, lot cleanup, storm cleanup, and site restoration.",
+        "I provide seamless content refreshes, ensuring your messaging stays relevant, engaging, and aligned with your evolving business goals.",
     },
 
     {
-      title: "Site Preparation",
+      title: "SEO Optimization",
       image:
         "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
       description:
-        "Prepare your property for construction with grading, clearing, excavation, and groundwork services.",
+        "I integrate advanced SEO strategies, ensuring your site ranks higher in search results, driving more organic traffic to your business.",
+    },
+    
+    {
+      title: "Security Monitoring",
+      image:
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+      description:
+        "I implement robust security protocols, safeguarding your site from threats, vulnerabilities, and ensuring user trust.",
     },
   ],
 };
