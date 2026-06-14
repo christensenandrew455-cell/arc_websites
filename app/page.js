@@ -81,7 +81,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
               {title}
             </h3>
 
-            <p className="text-gray-300">
+            <p className="text-black">
               {content}
             </p>
           </div>
@@ -94,7 +94,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
             Why Choose Us
           </h3>
 
-          <p className="text-gray-300">
+          <p className="text-black">
             {config.whyChooseUs}
           </p>
         </div>
@@ -149,7 +149,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
               {"★".repeat(t.stars)}
             </p>
 
-            <p className="text-gray-300">
+            <p className="text-black">
               {t.review}
             </p>
           </div>
@@ -173,7 +173,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
         Ready To upgrade your business?
       </h2>
 
-      <p className="text-gray-400 mb-8 text-lg">
+      <p className="text-black mb-8 text-lg">
         Contact ARC websites to get started.
       </p>
 
