@@ -43,7 +43,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
         {config.heroTitle}
       </h1>
 
-      <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300">
+      <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-700">
         {config.heroSubtitle}
       </p>
 
@@ -81,7 +81,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
               {title}
             </h3>
 
-            <p className="text-black">
+            <p className="text-gray-700">
               {content}
             </p>
           </div>
@@ -94,7 +94,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
             Why Choose Us
           </h3>
 
-          <p className="text-black">
+          <p className="text-grey-700">
             {config.whyChooseUs}
           </p>
         </div>
@@ -149,7 +149,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
               {"★".repeat(t.stars)}
             </p>
 
-            <p className="text-black">
+            <p className="text-grey-700">
               {t.review}
             </p>
           </div>
