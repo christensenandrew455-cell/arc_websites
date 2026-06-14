@@ -29,8 +29,28 @@ export default function ServicesPage() {
               </h1>
             </div>
 
-            {config.showNavLinks && (
-              <nav className="hidden md:flex items-center gap-6">
+<div className="flex items-center gap-6">
+  {config.showNavLinks && (
+    <nav className="hidden md:flex items-center gap-6">
+      {config.headerLinks.map((link) => (
+        <Link
+          key={link.name}
+          href={link.href}
+          className="font-medium hover:opacity-80 transition"
+        >
+          {link.name}
+        </Link>
+      ))}
+    </nav>
+  )}
+
+  <Link
+    href={siteConfig.contactPageRoute}
+    className={config.theme.button}
+  >
+    Contact Us
+  </Link>
+</div>
                 {config.headerLinks.map((link) => (
                   <Link
                     key={link.name}
