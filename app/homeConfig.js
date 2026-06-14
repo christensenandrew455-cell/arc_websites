@@ -54,7 +54,7 @@ font: "font-sans",
 heroTitle: "ARC Websites",
 
 heroSubtitle:
-"we manage your website so you can focus on your business.”,
+"we manage your website so you can focus on your business.",
 
 heroUseImage: false,
 heroImage: "",
