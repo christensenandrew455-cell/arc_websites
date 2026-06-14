@@ -5,22 +5,14 @@ import aboutConfig from "../aboutConfig";
 
 export default function AboutPage() {
   return (
-    <main className={`${config.font} text-gray-900 bg-gray-100`}>
+    <main
+      className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
+    >
       {siteConfig.showHeader && (
         <header
-          className={`
-            border-b
-            ${config.headerBorder}
-            ${config.headerBackground}
-            p-4
-            ${
-              siteConfig.stickyHeader
-                ? "sticky top-0 bg-white z-50"
-                : ""
-            }
-          `}
+          className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.headerBorder} backdrop-blur`}
         >
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               {config.showLogo && config.logoUrl && (
                 <img
@@ -31,26 +23,19 @@ export default function AboutPage() {
               )}
 
               <h1
-                className={`font-bold text-xl ${config.headerTextColor}`}
+                className={`text-2xl font-bold ${config.theme.accentText}`}
               >
                 {config.businessName}
               </h1>
             </div>
 
             {config.showNavLinks && (
-              <nav className="hidden md:flex items-center gap-6 ml-auto">
+              <nav className="hidden md:flex items-center gap-6">
                 {config.headerLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`
-                      px-4
-                      py-2
-                      rounded-lg
-                      transition
-                      hover:bg-gray-100
-                      ${config.headerTextColor}
-                    `}
+                    className="font-medium hover:opacity-80 transition"
                   >
                     {link.name}
                   </Link>
@@ -62,7 +47,6 @@ export default function AboutPage() {
       )}
 
       <div className="max-w-6xl mx-auto p-6 md:p-12">
-        {/* PAGE HEADER */}
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             {aboutConfig.pageTitle}
@@ -73,7 +57,6 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* HERO IMAGE */}
         <div className="mb-16">
           <img
             src={aboutConfig.heroImage}
@@ -82,12 +65,11 @@ export default function AboutPage() {
           />
         </div>
 
-        {/* CONTENT CARDS */}
         <div className="space-y-8">
           {aboutConfig.sections.map((section) => (
             <section
               key={section.title}
-              className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border"
+              className={`${config.theme.sectionBg} p-8 md:p-10`}
             >
               <h2 className="text-3xl font-bold mb-4">
                 {section.title}
@@ -100,11 +82,10 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {/* CTA */}
         <section className="text-center mt-16">
           <Link
             href={siteConfig.contactPageRoute}
-            className="inline-block bg-blue-600 text-white px-10 py-5 rounded-xl text-lg font-semibold hover:bg-blue-700 transition"
+            className={config.theme.button}
           >
             {aboutConfig.contactButtonText}
           </Link>
@@ -137,4 +118,3 @@ export default function AboutPage() {
     </main>
   );
 }
-
