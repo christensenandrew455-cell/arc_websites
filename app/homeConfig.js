@@ -54,7 +54,7 @@ font: "font-sans",
 heroTitle: "ARC Websites",
 
 heroSubtitle:
-"Modern websites that help local businesses build trust, attract customers, and grow online.",
+"we manage your website so you can focus on your business.”,
 
 heroUseImage: false,
 heroImage: "",
