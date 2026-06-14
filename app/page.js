@@ -170,11 +170,11 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
 
     <section className="text-center py-20">
       <h2 className="text-5xl font-bold mb-4">
-        Ready To Transform Your Property?
+        Ready To upgrade your business?
       </h2>
 
       <p className="text-gray-400 mb-8 text-lg">
-        Contact Tabor Painting today for a free estimate.
+        Contact ARC websites to get started.
       </p>
 
       <Link
