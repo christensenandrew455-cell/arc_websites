@@ -2,40 +2,42 @@ const config = {
 // BUSINESS INFO
 businessName: "ARC Websites",
 phone: "(978)-660-3255",
-email: "christensenandrew455@gmail.com",
+email: "[christensenandrew455@gmail.com](mailto:christensenandrew455@gmail.com)",
 
 // LOGO
 logoUrl: "",
 showLogo: true,
 
 // BUTTONS
-contactButtonText: "contact us",
+contactButtonText: "Get Started",
 
 // THEME
 theme: {
-pageBg: "bg-black",
-pageText: "text-white",
+pageBg: "bg-white",
+pageText: "text-gray-900",
 
-headerBg: "bg-black",
-headerBorder: "border-blue-500/20",
-headerText: "text-white",
+```
+headerBg: "bg-white/95",
+headerBorder: "border-blue-200",
+headerText: "text-gray-900",
 
 heroBg:
-  "bg-gradient-to-br from-black via-gray-950 to-blue-950",
+  "bg-gradient-to-br from-blue-50 via-white to-orange-50",
 
 sectionBg:
-  "bg-gray-900 border border-blue-500/20 rounded-3xl shadow-2xl",
+  "bg-white border border-blue-100 rounded-3xl shadow-xl",
 
 cardBg:
-  "bg-black border border-blue-500/20 rounded-2xl shadow-lg hover:border-blue-500 transition-all",
+  "bg-white border border-blue-100 rounded-2xl shadow-lg hover:border-orange-400 transition-all",
 
 testimonialBg:
-  "bg-black border border-blue-500/20 rounded-2xl",
+  "bg-white border border-blue-100 rounded-2xl",
 
 button:
-  "bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition",
+  "bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition",
 
-accentText: "text-blue-400",
+accentText: "text-blue-600",
+```
 
 },
 
@@ -51,9 +53,11 @@ headerLinks: [
 font: "font-sans",
 
 // HERO
-heroTitle: "ARC Websites",
+heroTitle: "Professional Websites For Small Businesses",
+
 heroSubtitle:
-"We manage your website, so you can focus on your business.",
+"Modern websites that help local businesses build trust, attract customers, and grow online.",
+
 heroUseImage: false,
 heroImage: "",
 
@@ -70,12 +74,12 @@ whatWeDo:
 whyChooseUs:
 "We provide modern websites, reliable support, and a simple process that lets business owners focus on their work while we handle their online presence.",
 
-serviceAreas: ["the whole east coast"],
+serviceAreas: "Massachusetts",
 
 images: [
-"https://via.placeholder.com/600x400",
-"https://via.placeholder.com/600x400",
-"https://via.placeholder.com/600x400",
+"https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+"https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+"https://images.unsplash.com/photo-1559028012-481c04fa702d",
 ],
 
 video: "",
@@ -84,18 +88,17 @@ testimonials: [
 {
 name: "Chris",
 stars: 5,
-review: "The room looks brand new!",
+review: "Excellent service and a professional website.",
 },
 {
 name: "Mike",
 stars: 5,
-review: "These guys know what they are doing!",
+review: "Easy process and great communication.",
 },
 {
 name: "Sarah",
 stars: 5,
-review:
-"Jason and his team were respectful, professional, and did amazing work.",
+review: "The website looks amazing and works perfectly.",
 },
 ],
 
