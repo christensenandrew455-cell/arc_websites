@@ -2,7 +2,7 @@ const config = {
 // BUSINESS INFO
 businessName: "ARC Websites",
 phone: "(978)-660-3255",
-email: "[christensenandrew455@gmail.com](mailto:christensenandrew455@gmail.com)",
+email: "christensenandrew455@gmail.com",
 
 // LOGO
 logoUrl: "",
