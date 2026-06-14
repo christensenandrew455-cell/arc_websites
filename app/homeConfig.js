@@ -1,8 +1,8 @@
 const config = {
 // BUSINESS INFO
-businessName: "Tabor Painting",
-phone: "(774)-245-3383",
-email: "Taborpainting508@gmail.com",
+businessName: "ARC Websites",
+phone: "(978)-660-3255",
+email: "christensenandrew455@gmail.com",
 
 // LOGO
 logoUrl: "",
@@ -40,7 +40,7 @@ accentText: "text-blue-400",
 },
 
 // HEADER
-showNavLinks: false,
+showNavLinks: true,
 headerLinks: [
 { name: "Home", href: "/" },
 { name: "Services", href: "/services" },
@@ -51,26 +51,26 @@ headerLinks: [
 font: "font-sans",
 
 // HERO
-heroTitle: "Tabor Painting",
+heroTitle: "ARC Websites",
 heroSubtitle:
-"Precision in Every Stroke. Excellence in Every Project.",
+"we manage your website so you can focus on your business",
 heroUseImage: false,
 heroImage: "",
 
 // ABOUT
 companyStory:
-"Founded by Jason Beirne after working with Student Painters, Tabor Painting was built on hard work, quality craftsmanship, and a commitment to delivering outstanding results.",
+"ARC Websites was founded to help small businesses compete online and reach more customers with a professional web presence.",
 
 mission:
-"To provide professional, high-quality painting services with excellent workmanship, reliable communication, and customer satisfaction on every project.",
+"Our mission is to give hardworking business owners the tools they need to succeed online through affordable, high-quality websites.",
 
 whatWeDo:
-"JTB Painting specializes in delivering high-quality painting services with precision strokes, attention to detail, and lasting results that enhance the beauty of every property.",
+"We build professional websites for small businesses that help attract customers, build trust, and grow their online presence.",
 
 whyChooseUs:
-"We deliver exceptional painting results, complete projects on time, and treat every property with the care and attention it deserves.",
+"We provide modern websites, reliable support, and a simple process that lets business owners focus on their work while we handle their online presence.",
 
-serviceAreas: ["All of Massachusetts"],
+serviceAreas: ["the whole east coast"],
 
 images: [
 "https://via.placeholder.com/600x400",
