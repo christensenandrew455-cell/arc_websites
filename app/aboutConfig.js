@@ -1,10 +1,10 @@
 const aboutConfig = {
-  pageTitle: "About Bob's Landwork",
+  pageTitle: "About ARC Websites",
 
   heroImage:
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+    "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
 
-  contactButtonText: "Get a Free Estimate",
+  contactButtonText: "contact us",
 
   sections: [
     {
