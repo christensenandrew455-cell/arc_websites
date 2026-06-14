@@ -35,7 +35,8 @@ const aboutConfig = {
       title: "Areas We Serve",
       content:
         "We focus on simplicity, reliability, and results. We don't believe in complicated packages or confusing technical jargon. We work directly with business owners to create websites that look professional, load quickly, and help generate new leads. When you work with us, you're not just getting a website you're gaining a partner invested in your success.",
-  ],
-};
+      },
+      ],
+      };
 
 export default aboutConfig;
