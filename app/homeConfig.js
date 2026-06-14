@@ -16,7 +16,6 @@ theme: {
 pageBg: "bg-white",
 pageText: "text-gray-900",
 
-```
 headerBg: "bg-white/95",
 headerBorder: "border-blue-200",
 headerText: "text-gray-900",
@@ -37,7 +36,6 @@ button:
   "bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition",
 
 accentText: "text-blue-600",
-```
 
 },
 
