@@ -10,7 +10,7 @@ const servicesConfig = {
     {
       title: "Maintenance and Upkeep",
       image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
       description:
         "We ensure your website remains fluid and up-to-date, performing regular updates to keep your content fresh, secure, and aligned with industry standards.",
     },
@@ -18,7 +18,7 @@ const servicesConfig = {
     {
       title: "Custom Design and Premium Layout",
       image:
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
       description:
         "I craft tailored, professional website layouts, aligning every detail with your brand’s essence so your online presence is both polished and purposeful.",
     },
@@ -26,7 +26,7 @@ const servicesConfig = {
     {
       title: "Performance Testing",
       image:
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+        "https://images.unsplash.com/photo-1559028012-481c04fa702d",
       description:
         "Through meticulous biweekly or monthly testing cycles, I rigorously check each page, ensuring fast load times, seamless navigation, and full functionality across devices.",
     },
@@ -34,7 +34,7 @@ const servicesConfig = {
     {
       title: "Content Updates",
       image:
-        "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
       description:
         "I provide seamless content refreshes, ensuring your messaging stays relevant, engaging, and aligned with your evolving business goals.",
     },
@@ -42,7 +42,7 @@ const servicesConfig = {
     {
       title: "SEO Optimization",
       image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978",
       description:
         "I integrate advanced SEO strategies, ensuring your site ranks higher in search results, driving more organic traffic to your business.",
     },
@@ -50,7 +50,7 @@ const servicesConfig = {
     {
       title: "Security Monitoring",
       image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+        "https://images.unsplash.com/photo-1563986768609-322da13575f3",
       description:
         "I implement robust security protocols, safeguarding your site from threats, vulnerabilities, and ensuring user trust.",
     },
