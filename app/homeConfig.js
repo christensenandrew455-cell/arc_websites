@@ -79,7 +79,7 @@ const config = {
     {
       name: "Tabor Painting",
       url: "https://jtb-painting.vercel.app",
-      image: "/Screenshot 2026-06-15 134753.png",
+      image: "/tabor-painting.png",
       description:
         "A business on the starter plan that does painting.",
     },
@@ -87,7 +87,7 @@ const config = {
     {
       name: "ARC Websites",
       url: "https://arc-websites.vercel.app",
-      image: "/Screenshot 2026-06-15 134723.png",
+      image: "/arc-websites.png",
       description:
         "The website you're on right now.",
     },
