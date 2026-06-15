@@ -79,7 +79,7 @@ serviceAreas: "Massachusetts",
 portfolioSites: [
 {
 name: "Tabor Painting",
-url: "jtb-painting.vercel.app",
+url: "https://jtb-painting.vercel.app",
 image:
 "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
 description:
@@ -88,7 +88,7 @@ description:
 
 {
   name: "ARC websites",
-  url: "arc-websites.vercel.app",
+  url: "https://arc-websites.vercel.app",
   image:
     "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
   description:
