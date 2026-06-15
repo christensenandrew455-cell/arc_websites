@@ -92,7 +92,7 @@ description:
   image:
     "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
   description:
-    The website your on right now.",
+    "The website your on right now.",
 },
 
 {
