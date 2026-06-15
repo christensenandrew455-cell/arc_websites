@@ -2,7 +2,7 @@ const config = {
 // BUSINESS INFO
 businessName: "ARC Websites",
 phone: "(978)-660-3255",
-email: "christensenandrew455@gmail.com",
+email: "[christensenandrew455@gmail.com](mailto:christensenandrew455@gmail.com)",
 
 // LOGO
 logoUrl: "",
@@ -41,6 +41,7 @@ accentText: "text-blue-600",
 
 // HEADER
 showNavLinks: true,
+
 headerLinks: [
 { name: "Home", href: "/" },
 { name: "Services", href: "/services" },
@@ -54,7 +55,7 @@ font: "font-sans",
 heroTitle: "ARC Websites",
 
 heroSubtitle:
-"we manage your website so you can focus on your business.",
+"We manage your website so you can focus on your business.",
 
 heroUseImage: false,
 heroImage: "",
@@ -74,10 +75,35 @@ whyChooseUs:
 
 serviceAreas: "Massachusetts",
 
-images: [
-"https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+// PORTFOLIO
+portfolioSites: [
+{
+name: "Tabor Painting",
+url: "jtb-painting.vercel.app",
+image:
 "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-"https://images.unsplash.com/photo-1559028012-481c04fa702d",
+description:
+"A buiness on the starter plan that dose painting",
+},
+
+{
+  name: "ARC websites",
+  url: "arc-websites.vercel.app",
+  image:
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+  description:
+    The website your on right now.",
+},
+
+{
+  name: "Auto Detailing Website",
+  url: "https://example.com",
+  image:
+    "https://images.unsplash.com/photo-1559028012-481c04fa702d",
+  description:
+    "Clean, mobile-friendly business website focused on bookings and customer conversions.",
+},
+
 ],
 
 video: "",
@@ -88,16 +114,20 @@ name: "Chris",
 stars: 5,
 review: "Excellent service and a professional website.",
 },
+
 {
-name: "Mike",
-stars: 5,
-review: "Easy process and great communication.",
+  name: "Mike",
+  stars: 5,
+  review: "Easy process and great communication.",
 },
+
 {
-name: "Sarah",
-stars: 5,
-review: "The website looks amazing and works perfectly.",
+  name: "Sarah",
+  stars: 5,
+  review: "The website looks amazing and works perfectly.",
 },
+```
+
 ],
 
 googleReviewsLink: "",
