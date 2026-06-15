@@ -126,7 +126,6 @@ review: "Excellent service and a professional website.",
   stars: 5,
   review: "The website looks amazing and works perfectly.",
 },
-```
 
 ],
 
