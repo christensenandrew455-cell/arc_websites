@@ -77,6 +77,10 @@ export default function ServicesPage() {
           >
             {servicesConfig.contactButtonText}
           </Link>
+
+          <p className="mt-6 text-sm font-semibold text-gray-500">
+            Managed by ARK Websites
+          </p>
         </section>
       </div>
 
@@ -95,6 +99,10 @@ export default function ServicesPage() {
           <p>{config.email}</p>
 
           <p>{config.phone}</p>
+
+          <p className="mt-4 text-sm font-semibold text-gray-500">
+            Managed by ARK Websites
+          </p>
 
           <Link
             href={siteConfig.privacyPageRoute}
