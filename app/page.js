@@ -1,71 +1,30 @@
 import Link from "next/link";
 import config from "./homeConfig";
 import siteConfig from "./siteConfig";
+import SiteHeader from "./components/SiteHeader";
 
 export default function Home() {
 return (
 <main
 className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
 >
-{siteConfig.showHeader && (
-<header
-className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.headerBorder} backdrop-blur`}
-> <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"> <div className="flex items-center gap-3">
-{config.showLogo && config.logoUrl && ( <img
-               src={config.logoUrl}
-               alt={config.businessName}
-               className="h-12 w-auto object-contain"
-             />
-)}
-
-          <h1
-            className={`text-2xl font-bold ${config.theme.accentText}`}
-          >
-            {config.businessName}
-          </h1>
-        </div>
-
-        <div className="flex items-center gap-8">
-          {config.showNavLinks && (
-            <nav className="hidden md:flex items-center gap-6">
-              {config.headerLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="font-medium hover:opacity-80 transition"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-          )}
-
-          <Link
-            href={siteConfig.contactPageRoute}
-            className={config.theme.button}
-          >
-            {config.headerButtonText || "Contact Us"}
-          </Link>
-        </div>
-      </div>
-    </header>
-  )}
+{siteConfig.showHeader && <SiteHeader />}
 
   <section
-    className={`min-h-screen flex items-center justify-center text-center px-6 ${config.theme.heroBg}`}
+    className={`min-h-[78vh] md:min-h-screen flex items-center justify-center text-center px-4 md:px-6 py-16 md:py-0 ${config.theme.heroBg}`}
   >
-    <div>
-      <h1 className="text-6xl md:text-8xl font-extrabold mb-6">
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-4xl sm:text-5xl md:text-8xl font-extrabold mb-5 md:mb-6 leading-tight">
         {config.heroTitle}
       </h1>
 
-      <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-700">
+      <p className="text-lg md:text-2xl max-w-3xl mx-auto text-gray-700 leading-relaxed">
         {config.heroSubtitle}
       </p>
 
       <Link
         href={siteConfig.contactPageRoute}
-        className={`inline-block mt-10 ${config.theme.button}`}
+        className={`inline-block mt-8 md:mt-10 ${config.theme.button}`}
       >
         {config.contactButtonText}
       </Link>
@@ -73,16 +32,16 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
   </section>
 
   <div
-    className={`mx-auto ${siteConfig.maxWidth} ${siteConfig.pagePadding}`}
+    className={`mx-auto ${siteConfig.maxWidth} p-4 md:p-12`}
   >
-    <section className={`${config.theme.sectionBg} p-8 mb-12`}>
+    <section className={`${config.theme.sectionBg} p-5 md:p-8 mb-8 md:mb-12`}>
       <h2
-        className={`text-4xl font-bold mb-8 ${config.theme.accentText}`}
+        className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 ${config.theme.accentText}`}
       >
         About Us
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-5 md:gap-6">
         {[
           ["Our Story", config.companyStory],
           ["Our Mission", config.mission],
@@ -91,40 +50,40 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
         ].map(([title, content]) => (
           <div
             key={title}
-            className={`${config.theme.cardBg} p-6`}
+            className={`${config.theme.cardBg} p-5 md:p-6`}
           >
-            <h3 className="text-2xl font-semibold mb-3">
+            <h3 className="text-xl md:text-2xl font-semibold mb-3">
               {title}
             </h3>
 
-            <p className="text-gray-700">
+            <p className="text-gray-700 leading-relaxed">
               {content}
             </p>
           </div>
         ))}
 
         <div
-          className={`${config.theme.cardBg} p-6 md:col-span-2`}
+          className={`${config.theme.cardBg} p-5 md:p-6 md:col-span-2`}
         >
-          <h3 className="text-2xl font-semibold mb-3">
+          <h3 className="text-xl md:text-2xl font-semibold mb-3">
             Why Choose Us
           </h3>
 
-          <p className="text-gray-700">
+          <p className="text-gray-700 leading-relaxed">
             {config.whyChooseUs}
           </p>
         </div>
       </div>
     </section>
 
-    <section className={`${config.theme.sectionBg} p-8 mb-12`}>
+    <section className={`${config.theme.sectionBg} p-5 md:p-8 mb-8 md:mb-12`}>
       <h2
-        className={`text-4xl font-bold mb-8 ${config.theme.accentText}`}
+        className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 ${config.theme.accentText}`}
       >
         Our Work
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         {config.portfolioSites.map((site, i) => (
           <a
             key={i}
@@ -136,15 +95,15 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
             <img
               src={site.image}
               alt={site.name}
-              className="w-full h-56 object-cover"
+              className="w-full h-48 md:h-56 object-cover"
             />
 
-            <div className="p-6">
-              <h3 className="text-2xl font-bold mb-3">
+            <div className="p-5 md:p-6">
+              <h3 className="text-xl md:text-2xl font-bold mb-3">
                 {site.name}
               </h3>
 
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4 leading-relaxed">
                 {site.description}
               </p>
 
@@ -157,18 +116,18 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
       </div>
     </section>
 
-    <section className={`${config.theme.sectionBg} p-8`}>
+    <section className={`${config.theme.sectionBg} p-5 md:p-8`}>
       <h2
-        className={`text-4xl font-bold mb-8 ${config.theme.accentText}`}
+        className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 ${config.theme.accentText}`}
       >
         Testimonials
       </h2>
 
-      <div className="space-y-6">
+      <div className="space-y-5 md:space-y-6">
         {config.testimonials.map((t, i) => (
           <div
             key={i}
-            className={`${config.theme.testimonialBg} p-6`}
+            className={`${config.theme.testimonialBg} p-5 md:p-6`}
           >
             <p className="font-semibold text-lg">
               {t.name}
@@ -178,7 +137,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
               {"★".repeat(t.stars)}
             </p>
 
-            <p className="text-gray-700">
+            <p className="text-gray-700 leading-relaxed">
               {t.review}
             </p>
           </div>
@@ -197,12 +156,12 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
       )}
     </section>
 
-    <section className="text-center py-20">
-      <h2 className="text-5xl font-bold mb-4">
+    <section className="text-center py-14 md:py-20">
+      <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
         Ready To upgrade your business?
       </h2>
 
-      <p className="text-gray-700 mb-8 text-lg">
+      <p className="text-gray-700 mb-8 text-base md:text-lg">
         Contact ARK Websites to get started.
       </p>
 
@@ -216,7 +175,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
   </div>
 
   {siteConfig.showFooter && (
-    <footer className="border-t border-blue-500/20 py-8 text-center">
+    <footer className="border-t border-blue-500/20 py-8 text-center px-4">
       <p>{config.email}</p>
 
       {config.phone && (
