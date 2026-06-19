@@ -45,6 +45,16 @@ export default function AboutPage() {
               </p>
             </section>
           ))}
+
+          <section className={`${config.theme.sectionBg} p-5 md:p-10`}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Socials
+            </h2>
+
+            <p className="text-base md:text-lg leading-relaxed text-gray-700">
+              We are not available on any socials right now. For now, the best way to reach ARK Websites is through the contact page, email, or phone number listed on the site.
+            </p>
+          </section>
         </div>
 
         <section className="text-center mt-10 md:mt-16">
@@ -54,6 +64,10 @@ export default function AboutPage() {
           >
             {aboutConfig.contactButtonText}
           </Link>
+
+          <p className="mt-6 text-sm font-semibold text-gray-500">
+            Managed by ARK Websites
+          </p>
         </section>
       </div>
 
@@ -72,6 +86,10 @@ export default function AboutPage() {
           <p>{config.email}</p>
 
           <p>{config.phone}</p>
+
+          <p className="mt-4 text-sm font-semibold text-gray-500">
+            Managed by ARK Websites
+          </p>
 
           <Link
             href={siteConfig.privacyPageRoute}
