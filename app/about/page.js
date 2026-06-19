@@ -66,7 +66,10 @@ export default function AboutPage() {
           </Link>
 
           <p className="mt-6 text-sm font-semibold text-gray-500">
-            Managed by ARK Websites
+            Made and managed by{" "}
+            <a href="https://arc-websites.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
+              ARK Websites
+            </a>
           </p>
         </section>
       </div>
@@ -88,7 +91,10 @@ export default function AboutPage() {
           <p>{config.phone}</p>
 
           <p className="mt-4 text-sm font-semibold text-gray-500">
-            Managed by ARK Websites
+            Made and managed by{" "}
+            <a href="https://arc-websites.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
+              ARK Websites
+            </a>
           </p>
 
           <Link
