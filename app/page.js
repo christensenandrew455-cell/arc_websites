@@ -203,7 +203,7 @@ className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.h
       </h2>
 
       <p className="text-gray-700 mb-8 text-lg">
-        Contact ARC Websites to get started.
+        Contact ARK Websites to get started.
       </p>
 
       <Link
