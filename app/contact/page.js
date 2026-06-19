@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import config from "./contactConfig";
+import SiteHeader from "../components/SiteHeader";
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -57,13 +58,16 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-gray-100 min-h-screen py-10 px-4">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8 md:p-12">
-        <h1 className="text-4xl font-bold mb-3">
+    <main className="bg-gray-100 min-h-screen">
+      <SiteHeader />
+
+      <div className="max-w-4xl mx-auto py-6 md:py-10 px-4">
+        <div className="bg-white shadow-lg rounded-lg p-5 md:p-12">
+        <h1 className="text-3xl md:text-4xl font-bold mb-3">
           {config.pageTitle}
         </h1>
 
-        <p className="text-gray-600 mb-8">
+        <p className="text-gray-600 mb-8 leading-relaxed">
           {config.subtitle}
         </p>
 
@@ -166,6 +170,7 @@ export default function ContactPage() {
           >
             Return Home
           </Link>
+        </div>
         </div>
       </div>
     </main>
