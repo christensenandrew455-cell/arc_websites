@@ -1,7 +1,8 @@
 import Link from "next/link";
+import SiteHeader from "../components/SiteHeader";
 
 export default function PrivacyPolicy() {
-return ( <main className="bg-gray-100 min-h-screen py-10 px-4"> <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8 md:p-12"> <h1 className="text-4xl font-bold mb-6">
+return ( <main className="bg-gray-100 min-h-screen"> <SiteHeader /> <div className="max-w-4xl mx-auto py-6 md:py-10 px-4"> <div className="bg-white shadow-lg rounded-lg p-5 md:p-12"> <h1 className="text-3xl md:text-4xl font-bold mb-6">
 Privacy Policy </h1>
 
     <p className="mb-4">
@@ -68,7 +69,7 @@ Privacy Policy </h1>
         Return Home
       </Link>
     </div>
-  </div>
+  </div> </div>
 </main>
 );
 }
