@@ -155,7 +155,7 @@ export default function ContactPage() {
           </button>
 
           <p className="text-sm text-gray-500 text-center mt-2">
-            By submitting this form, you agree to be contacted by ARC websites regarding your request for services.
+            By submitting this form, you agree to be contacted by ARK Websites regarding your request for services.
           </p>
         </form>
 
