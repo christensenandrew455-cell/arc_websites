@@ -170,6 +170,10 @@ export default function ContactPage() {
           >
             Return Home
           </Link>
+
+          <p className="mt-6 text-sm font-semibold text-gray-500">
+            Managed by ARK Websites
+          </p>
         </div>
         </div>
       </div>
