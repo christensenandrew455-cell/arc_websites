@@ -54,7 +54,7 @@ const config = {
   heroTitle: "ARK Websites",
 
   heroSubtitle:
-    "We manage your website so you can focus on your business.",
+    "We make and manage your website so you can focus on your business.",
 
   heroUseImage: false,
   heroImage: "",
