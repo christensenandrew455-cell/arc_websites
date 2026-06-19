@@ -1,6 +1,6 @@
 const config = {
   // BUSINESS INFO
-  businessName: "ARC Websites",
+  businessName: "ARK Websites",
   phone: "(978)-660-3255",
   email: "christensenandrew455@gmail.com",
 
@@ -51,7 +51,7 @@ const config = {
   font: "font-sans",
 
   // HERO
-  heroTitle: "ARC Websites",
+  heroTitle: "ARK Websites",
 
   heroSubtitle:
     "We manage your website so you can focus on your business.",
@@ -61,7 +61,7 @@ const config = {
 
   // ABOUT
   companyStory:
-    "ARC Websites was founded to help small businesses compete online and reach more customers with a professional web presence.",
+    "ARK Websites was founded to help small businesses compete online and reach more customers with a professional web presence.",
 
   mission:
     "Our mission is to give hardworking business owners the tools they need to succeed online through affordable, high-quality websites.",
@@ -85,7 +85,7 @@ const config = {
     },
 
     {
-      name: "ARC Websites",
+      name: "ARK Websites",
       url: "https://arc-websites.vercel.app",
       image: "/arc-websites.png",
       description:
