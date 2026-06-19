@@ -1,0 +1,34 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ARK Websites Logo</title>
+  <desc id="desc">A clean front-facing laptop with ARK on the screen.</desc>
+
+  <defs>
+    <linearGradient id="screenGradient" x1="150" y1="145" x2="362" y2="295" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="bodyGradient" x1="103" y1="333" x2="409" y2="409" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CBD5E1"/>
+      <stop offset="1" stop-color="#64748B"/>
+    </linearGradient>
+    <filter id="shadow" x="60" y="80" width="392" height="370" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="#F8FAFC"/>
+  <circle cx="256" cy="256" r="206" fill="#EFF6FF"/>
+
+  <g filter="url(#shadow)">
+    <rect x="130" y="125" width="252" height="198" rx="20" fill="#111827"/>
+    <rect x="150" y="145" width="212" height="150" rx="12" fill="url(#screenGradient)"/>
+
+    <text x="256" y="238" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="900" letter-spacing="4" fill="#FFFFFF">ARK</text>
+    <path d="M194 258H318" stroke="#22C55E" stroke-width="7" stroke-linecap="round"/>
+
+    <path d="M103 333H409L441 391C445 399 439 409 430 409H82C73 409 67 399 71 391L103 333Z" fill="url(#bodyGradient)"/>
+    <path d="M103 333H409L423 359H89L103 333Z" fill="#94A3B8"/>
+    <path d="M206 373H306L317 392H195L206 373Z" fill="#475569" opacity="0.8"/>
+    <rect x="126" y="315" width="260" height="18" fill="#0F172A" opacity="0.18"/>
+  </g>
+</svg>
