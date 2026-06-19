@@ -2,80 +2,36 @@ import Link from "next/link";
 import config from "../homeConfig";
 import siteConfig from "../siteConfig";
 import servicesConfig from "../servicesConfig";
+import SiteHeader from "../components/SiteHeader";
 
 export default function ServicesPage() {
   return (
     <main
       className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
     >
-      {siteConfig.showHeader && (
-        <header
-          className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.headerBorder} backdrop-blur`}
-        >
-          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              {config.showLogo && config.logoUrl && (
-                <img
-                  src={config.logoUrl}
-                  alt={config.businessName}
-                  className="h-12 w-auto object-contain"
-                />
-              )}
+      {siteConfig.showHeader && <SiteHeader />}
 
-              <h1
-                className={`text-2xl font-bold ${config.theme.accentText}`}
-              >
-                {config.businessName}
-              </h1>
-            </div>
-
-            <div className="flex items-center gap-6">
-              {config.showNavLinks && (
-                <nav className="hidden md:flex items-center gap-6">
-                  {config.headerLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className="font-medium hover:opacity-80 transition"
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
-                </nav>
-              )}
-
-              <Link
-                href={siteConfig.contactPageRoute}
-                className={config.theme.button}
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </header>
-      )}
-
-      <div className="max-w-7xl mx-auto p-6 md:p-12">
-        <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <div className="max-w-7xl mx-auto p-4 md:p-12">
+        <div className="text-center mb-10 md:mb-20">
+          <h1 className="text-4xl md:text-6xl font-bold mb-5 md:mb-6 leading-tight">
             {servicesConfig.pageTitle}
           </h1>
 
-          <p className="text-xl max-w-4xl mx-auto text-gray-700">
+          <p className="text-lg md:text-xl max-w-4xl mx-auto text-gray-700 leading-relaxed">
             {servicesConfig.pageSubtitle}
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-8 md:space-y-12">
           {servicesConfig.services.map((service, index) => (
             <section
               key={service.title}
               className={`
                 grid md:grid-cols-2
-                gap-10
+                gap-6 md:gap-10
                 items-center
                 ${config.theme.sectionBg}
-                p-8
+                p-5
                 md:p-12
               `}
             >
@@ -87,12 +43,12 @@ export default function ServicesPage() {
                 }
               >
                 <div
-                  className={`inline-block ${config.theme.button} mb-6`}
+                  className={`inline-block ${config.theme.button} mb-5 md:mb-6`}
                 >
                   {service.title}
                 </div>
 
-                <p className="text-lg leading-relaxed text-gray-700">
+                <p className="text-base md:text-lg leading-relaxed text-gray-700">
                   {service.description}
                 </p>
               </div>
@@ -114,7 +70,7 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        <section className="text-center mt-20">
+        <section className="text-center mt-12 md:mt-20">
           <Link
             href={siteConfig.contactPageRoute}
             className={config.theme.button}
