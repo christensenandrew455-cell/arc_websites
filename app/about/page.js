@@ -62,7 +62,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Learn more about ARC Websites, our mission, and our commitment to helping small businesses build a stronger online presence.
+            Learn more about ARK Websites, our mission, and our commitment to helping small businesses build a stronger online presence.
           </p>
         </div>
 
