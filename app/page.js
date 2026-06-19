@@ -4,6 +4,27 @@ import siteConfig from "./siteConfig";
 import SiteHeader from "./components/SiteHeader";
 
 export default function Home() {
+const faqItems = [
+  {
+    question: "Do I need to already have a website?",
+    answer: "No. We can help small businesses get started with a clean, professional website even if they have no current online presence.",
+  },
+  {
+    question: "Can I request updates after the website is built?",
+    answer: "Yes. ARK Websites focuses on website management, updates, and upkeep so your site can stay current as your business changes.",
+  },
+  {
+    question: "Is the website mobile-friendly?",
+    answer: "Yes. The layouts are built to work on phones, tablets, and desktop screens so customers can reach you from any device.",
+  },
+  {
+    question: "Do you help with basic SEO?",
+    answer: "Yes. We build with clean structure, readable content, and basic SEO-friendly setup to help your business look more professional online.",
+  },
+];
+
+const socials = ["Twitter / X", "TikTok", "Instagram", "YouTube", "Snapchat", "Facebook"];
+
 return (
 <main
 className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
@@ -73,6 +94,29 @@ className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
             {config.whyChooseUs}
           </p>
         </div>
+
+        <div
+          className={`${config.theme.cardBg} p-5 md:p-6 md:col-span-2`}
+        >
+          <h3 className="text-xl md:text-2xl font-semibold mb-3">
+            Socials
+          </h3>
+
+          <p className="text-gray-700 leading-relaxed mb-4">
+            We are available on these platforms once our social pages are launched.
+          </p>
+
+          <div className="flex flex-wrap gap-3">
+            {socials.map((social) => (
+              <span
+                key={social}
+                className="rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700"
+              >
+                {social}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
 
@@ -116,7 +160,7 @@ className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
       </div>
     </section>
 
-    <section className={`${config.theme.sectionBg} p-5 md:p-8`}>
+    <section className={`${config.theme.sectionBg} p-5 md:p-8 mb-8 md:mb-12`}>
       <h2
         className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 ${config.theme.accentText}`}
       >
@@ -156,6 +200,27 @@ className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
       )}
     </section>
 
+    <section className={`${config.theme.sectionBg} p-5 md:p-8 mb-8 md:mb-12`}>
+      <h2
+        className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 ${config.theme.accentText}`}
+      >
+        FAQ
+      </h2>
+
+      <div className="space-y-4">
+        {faqItems.map((item) => (
+          <div key={item.question} className={`${config.theme.cardBg} p-5 md:p-6`}>
+            <h3 className="text-lg md:text-xl font-semibold mb-2">
+              {item.question}
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              {item.answer}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+
     <section className="text-center py-14 md:py-20">
       <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
         Ready To upgrade your business?
@@ -171,6 +236,10 @@ className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
       >
         {config.contactButtonText}
       </Link>
+
+      <p className="mt-6 text-sm font-semibold text-gray-500">
+        Managed by ARK Websites
+      </p>
     </section>
   </div>
 
@@ -183,6 +252,10 @@ className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
           {config.phone}
         </p>
       )}
+
+      <p className="mt-4 text-sm font-semibold text-gray-500">
+        Managed by ARK Websites
+      </p>
 
       <Link
         href={siteConfig.privacyPageRoute}
