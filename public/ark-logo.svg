@@ -1,13 +1,17 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">ARK Websites Logo</title>
-  <desc id="desc">A laptop angled slightly away from the camera with ARK on the screen and green falling code behind it.</desc>
+  <desc id="desc">A laptop turned in Y-axis perspective with ARK on the screen and green falling code behind it.</desc>
 
   <defs>
-    <linearGradient id="screenGradient" x1="139" y1="151" x2="383" y2="325" gradientUnits="userSpaceOnUse">
+    <linearGradient id="screenGradient" x1="150" y1="145" x2="380" y2="315" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0F172A"/>
       <stop offset="1" stop-color="#1E3A8A"/>
     </linearGradient>
-    <linearGradient id="bodyGradient" x1="122" y1="326" x2="415" y2="409" gradientUnits="userSpaceOnUse">
+    <linearGradient id="sideGradient" x1="363" y1="137" x2="414" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="bodyGradient" x1="101" y1="335" x2="414" y2="401" gradientUnits="userSpaceOnUse">
       <stop stop-color="#CBD5E1"/>
       <stop offset="1" stop-color="#64748B"/>
     </linearGradient>
@@ -32,13 +36,21 @@
     <text x="363" y="392">10</text>
   </g>
 
-  <g filter="url(#shadow)" transform="rotate(-22.5 256 280)">
-    <path d="M146 145C146 134.507 154.507 126 165 126H347C357.493 126 366 134.507 366 145V318H146V145Z" fill="#111827"/>
-    <path d="M163 151C163 145.477 167.477 141 173 141H339C344.523 141 349 145.477 349 151V299H163V151Z" fill="url(#screenGradient)"/>
-    <path d="M116 329H396L431 390C435.589 397.997 429.812 408 420.593 408H91.407C82.188 408 76.411 397.997 81 390L116 329Z" fill="url(#bodyGradient)"/>
-    <path d="M116 329H396L411 356H101L116 329Z" fill="#94A3B8"/>
-    <path d="M213 371H299L310 390H202L213 371Z" fill="#475569" opacity="0.8"/>
-    <text x="256" y="238" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="900" letter-spacing="4" fill="#FFFFFF">ARK</text>
-    <path d="M191 258H321" stroke="#22C55E" stroke-width="7" stroke-linecap="round"/>
+  <g filter="url(#shadow)">
+    <!-- screen drawn as a trapezoid to fake a Y-axis turn, with the right edge farther away -->
+    <path d="M126 145C126 134 135 126 146 127L361 139C371 140 379 149 379 159V321L126 309V145Z" fill="#111827"/>
+    <path d="M145 153C145 148 149 144 154 144L348 155C353 155 357 160 357 165V299L145 289V153Z" fill="url(#screenGradient)"/>
+    <path d="M379 159L407 179C412 183 415 188 415 194V330L379 321V159Z" fill="url(#sideGradient)"/>
+    <path d="M357 165L394 189V304L357 299V165Z" fill="#0B1120" opacity="0.9"/>
+
+    <!-- laptop base also uses perspective, wider near side and narrower far side -->
+    <path d="M96 328L389 342L436 390C443 397 438 409 428 409H86C76 409 71 397 78 389L96 328Z" fill="url(#bodyGradient)"/>
+    <path d="M96 328L389 342L410 363L88 350L96 328Z" fill="#94A3B8"/>
+    <path d="M206 371L302 376L316 393H193L206 371Z" fill="#475569" opacity="0.8"/>
+
+    <g transform="matrix(0.94 0.045 0 1 13 -4)">
+      <text x="256" y="235" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="900" letter-spacing="4" fill="#FFFFFF">ARK</text>
+      <path d="M194 255H318" stroke="#22C55E" stroke-width="7" stroke-linecap="round"/>
+    </g>
   </g>
 </svg>
