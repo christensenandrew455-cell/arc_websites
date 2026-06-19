@@ -5,7 +5,7 @@ const config = {
   email: "christensenandrew455@gmail.com",
 
   // LOGO
-  logoUrl: "",
+  logoUrl: "/ark-logo.svg",
   showLogo: true,
 
   // BUTTONS
