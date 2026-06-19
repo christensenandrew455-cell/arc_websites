@@ -1,0 +1,44 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ARK Websites Logo</title>
+  <desc id="desc">A laptop angled slightly away from the camera with ARK on the screen and green falling code behind it.</desc>
+
+  <defs>
+    <linearGradient id="screenGradient" x1="139" y1="151" x2="383" y2="325" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="bodyGradient" x1="122" y1="326" x2="415" y2="409" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CBD5E1"/>
+      <stop offset="1" stop-color="#64748B"/>
+    </linearGradient>
+    <filter id="shadow" x="58" y="78" width="406" height="380" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="#F8FAFC"/>
+  <circle cx="256" cy="256" r="206" fill="#EFF6FF"/>
+
+  <g opacity="0.75" font-family="monospace" font-size="22" font-weight="700" fill="#22C55E">
+    <text x="102" y="104">01</text>
+    <text x="376" y="103">10</text>
+    <text x="82" y="156">&lt;/&gt;</text>
+    <text x="398" y="166">01</text>
+    <text x="105" y="220">10</text>
+    <text x="405" y="235">{ }</text>
+    <text x="77" y="292">01</text>
+    <text x="386" y="314">&lt;/&gt;</text>
+    <text x="112" y="365">{ }</text>
+    <text x="363" y="392">10</text>
+  </g>
+
+  <g filter="url(#shadow)" transform="rotate(-22.5 256 280)">
+    <path d="M146 145C146 134.507 154.507 126 165 126H347C357.493 126 366 134.507 366 145V318H146V145Z" fill="#111827"/>
+    <path d="M163 151C163 145.477 167.477 141 173 141H339C344.523 141 349 145.477 349 151V299H163V151Z" fill="url(#screenGradient)"/>
+    <path d="M116 329H396L431 390C435.589 397.997 429.812 408 420.593 408H91.407C82.188 408 76.411 397.997 81 390L116 329Z" fill="url(#bodyGradient)"/>
+    <path d="M116 329H396L411 356H101L116 329Z" fill="#94A3B8"/>
+    <path d="M213 371H299L310 390H202L213 371Z" fill="#475569" opacity="0.8"/>
+    <text x="256" y="238" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="900" letter-spacing="4" fill="#FFFFFF">ARK</text>
+    <path d="M191 258H321" stroke="#22C55E" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>
