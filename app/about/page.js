@@ -2,96 +2,52 @@ import Link from "next/link";
 import config from "../homeConfig";
 import siteConfig from "../siteConfig";
 import aboutConfig from "../aboutConfig";
+import SiteHeader from "../components/SiteHeader";
 
 export default function AboutPage() {
   return (
     <main
       className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
     >
-      {siteConfig.showHeader && (
-        <header
-          className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.headerBorder} backdrop-blur`}
-        >
-          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              {config.showLogo && config.logoUrl && (
-                <img
-                  src={config.logoUrl}
-                  alt={config.businessName}
-                  className="h-12 w-auto object-contain"
-                />
-              )}
+      {siteConfig.showHeader && <SiteHeader />}
 
-              <h1
-                className={`text-2xl font-bold ${config.theme.accentText}`}
-              >
-                {config.businessName}
-              </h1>
-            </div>
-
-            <div className="flex items-center gap-6">
-              {config.showNavLinks && (
-                <nav className="hidden md:flex items-center gap-6">
-                  {config.headerLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className="font-medium hover:opacity-80 transition"
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
-                </nav>
-              )}
-
-              <Link
-                href={siteConfig.contactPageRoute}
-                className={config.theme.button}
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </header>
-      )}
-
-      <div className="max-w-6xl mx-auto p-6 md:p-12">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <div className="max-w-6xl mx-auto p-4 md:p-12">
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="text-4xl md:text-6xl font-bold mb-5 md:mb-6 leading-tight">
             {aboutConfig.pageTitle}
           </h1>
 
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Learn more about ARK Websites, our mission, and our commitment to helping small businesses build a stronger online presence.
           </p>
         </div>
 
-        <div className="mb-16">
+        <div className="mb-10 md:mb-16">
           <img
             src={aboutConfig.heroImage}
             alt={aboutConfig.pageTitle}
-            className="w-full h-[500px] object-cover rounded-3xl shadow-xl"
+            className="w-full h-64 md:h-[500px] object-cover rounded-3xl shadow-xl"
           />
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {aboutConfig.sections.map((section) => (
             <section
               key={section.title}
-              className={`${config.theme.sectionBg} p-8 md:p-10`}
+              className={`${config.theme.sectionBg} p-5 md:p-10`}
             >
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 {section.title}
               </h2>
 
-              <p className="text-lg leading-relaxed text-gray-700">
+              <p className="text-base md:text-lg leading-relaxed text-gray-700">
                 {section.content}
               </p>
             </section>
           ))}
         </div>
 
-        <section className="text-center mt-16">
+        <section className="text-center mt-10 md:mt-16">
           <Link
             href={siteConfig.contactPageRoute}
             className={config.theme.button}
