@@ -1,5 +1,5 @@
 const aboutConfig = {
-  pageTitle: "About ARC Websites",
+  pageTitle: "About ARK Websites",
 
   heroImage:
     "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
@@ -10,13 +10,13 @@ const aboutConfig = {
     {
       title: "Our Story",
       content:
-        "ARC Websites was founded with a belief that every small business should have access to a professional online presence. We saw talented business owners relying only on word of mouth while competitors with better websites were winning customers. We started ARC Websites to close that gap and give local businesses the tools they need to succeed online.",
+        "ARK Websites was founded with a belief that every small business should have access to a professional online presence. We saw talented business owners relying only on word of mouth while competitors with better websites were winning customers. We started ARK Websites to close that gap and give local businesses the tools they need to succeed online.",
     },
 
     {
       title: "Our Mission",
       content:
-        "At ARC Websites, our mission is simple: help small businesses get the online presence they deserve. Many hardworking business owners provide incredible services but lose opportunities because they don't have a professional website. We build affordable, modern websites that help businesses earn trust, attract customers, and grow with confidence.",
+        "At ARK Websites, our mission is simple: help small businesses get the online presence they deserve. Many hardworking business owners provide incredible services but lose opportunities because they don't have a professional website. We build affordable, modern websites that help businesses earn trust, attract customers, and grow with confidence.",
     },
 
     {
