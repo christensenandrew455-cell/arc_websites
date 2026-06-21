@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import config from "./contactConfig";
+import siteConfig from "../siteConfig";
 import SiteHeader from "../components/SiteHeader";
 
 export default function ContactPage() {
@@ -162,24 +163,34 @@ export default function ContactPage() {
             By submitting this form, you agree to be contacted by ARK Websites regarding your request for services.
           </p>
         </form>
+        </div>
+      </div>
 
-        <div className="mt-10 text-center">
-          <Link
-            href="/"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition"
-          >
-            Return Home
-          </Link>
+      {siteConfig.showFooter && (
+        <footer className="border-t border-blue-500/20 py-8 text-center px-4">
+          <p>{config.email}</p>
 
-          <p className="mt-6 text-sm font-semibold text-gray-500">
+          {config.phone && (
+            <p className="mt-1">
+              {config.phone}
+            </p>
+          )}
+
+          <p className="mt-4 text-sm font-semibold text-gray-500">
             Made and managed by{" "}
             <a href="https://arc-websites.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
               ARK Websites
             </a>
           </p>
-        </div>
-        </div>
-      </div>
+
+          <Link
+            href={siteConfig.privacyPageRoute}
+            className="inline-block mt-4 text-blue-400 hover:text-blue-300"
+          >
+            Privacy Policy
+          </Link>
+        </footer>
+      )}
     </main>
   );
 }
