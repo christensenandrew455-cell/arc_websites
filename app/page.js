@@ -118,6 +118,13 @@ className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
           </div>
         </div>
       </div>
+
+      <p className="mt-6 text-center text-gray-700">
+        Want to learn more about ARK Websites?{" "}
+        <Link href="/about" className="font-semibold text-blue-600 underline hover:text-blue-700">
+          Click here to visit our About Us page.
+        </Link>
+      </p>
     </section>
 
     <section className={`${config.theme.sectionBg} p-5 md:p-8 mb-8 md:mb-12`}>
@@ -158,6 +165,13 @@ className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
           </a>
         ))}
       </div>
+
+      <p className="mt-6 text-center text-gray-700">
+        Want to see what kind of website we can build for your business?{" "}
+        <Link href="/services" className="font-semibold text-blue-600 underline hover:text-blue-700">
+          Click here to view our Services page.
+        </Link>
+      </p>
     </section>
 
     <section className={`${config.theme.sectionBg} p-5 md:p-8 mb-8 md:mb-12`}>
@@ -219,6 +233,13 @@ className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
           </div>
         ))}
       </div>
+
+      <p className="mt-6 text-center text-gray-700">
+        Still have questions or want to get started?{" "}
+        <Link href={siteConfig.contactPageRoute} className="font-semibold text-blue-600 underline hover:text-blue-700">
+          Click here to contact us.
+        </Link>
+      </p>
     </section>
 
     <section className="text-center py-14 md:py-20">
