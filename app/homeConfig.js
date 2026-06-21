@@ -86,7 +86,7 @@ const config = {
 
     {
       name: "ARK Websites",
-      url: "https://arc-websites.vercel.app",
+      url: "https://arkwebsites.com",
       image: "/arc-websites.png",
       description:
         "The website you're on right now.",
@@ -127,7 +127,7 @@ const config = {
     },
   ],
 
-  googleReviewsLink: "",
+  googleReviewsLink: "heyman",
 };
 
 export default config;
