@@ -236,13 +236,6 @@ className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
       >
         {config.contactButtonText}
       </Link>
-
-      <p className="mt-6 text-sm font-semibold text-gray-500">
-        Made and managed by{" "}
-        <a href="https://arc-websites.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
-          ARK Websites
-        </a>
-      </p>
     </section>
   </div>
 
