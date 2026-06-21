@@ -203,14 +203,17 @@ className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
       </div>
 
       {config.googleReviewsLink && (
-        <a
-          href={config.googleReviewsLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-6 text-blue-400 hover:text-blue-300"
-        >
-          View Google Reviews →
-        </a>
+        <p className="mt-6 text-center text-gray-700">
+          Want to read more reviews?{" "}
+          <a
+            href={config.googleReviewsLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-blue-600 underline hover:text-blue-700"
+          >
+            Click here to view our Google reviews.
+          </a>
+        </p>
       )}
     </section>
 
