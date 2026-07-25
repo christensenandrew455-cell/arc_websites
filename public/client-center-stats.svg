@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="709" height="1536" viewBox="0 0 709 1536">
+  <rect width="709" height="1536" fill="#f8fafc"/>
+  <rect width="709" height="64" fill="#303030"/>
+  <text x="38" y="43" font-family="Arial" font-size="25" font-weight="700" fill="#fff">10:42</text>
+  <text x="570" y="43" font-family="Arial" font-size="20" font-weight="700" fill="#fff">5G  82%</text>
+  <rect y="64" width="709" height="122" fill="#fff"/>
+  <text x="22" y="122" font-family="Arial" font-size="31" font-weight="800" fill="#020617">ARK Client Center</text>
+  <text x="22" y="160" font-family="Arial" font-size="18" font-weight="700" letter-spacing="3" fill="#64748b">SUMMIT HOME SERVICES</text>
+  <rect x="412" y="93" width="132" height="61" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="444" y="131" font-family="Arial" font-size="20" font-weight="700" fill="#334155">Settings</text>
+  <rect x="559" y="93" width="126" height="61" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="584" y="131" font-family="Arial" font-size="20" font-weight="700" fill="#334155">Sign out</text>
+  <line x1="0" y1="186" x2="709" y2="186" stroke="#e2e8f0"/>
+  <text x="22" y="245" font-family="Arial" font-size="18" font-weight="700" letter-spacing="4" fill="#64748b">SUMMIT HOME SERVICES</text>
+  <text x="22" y="313" font-family="Arial" font-size="54" font-weight="900" fill="#020617">Your Stats</text>
+  <rect x="22" y="357" width="665" height="83" rx="20" fill="#fff" stroke="#dbe2ea" stroke-width="2"/>
+  <text x="110" y="408" font-family="Arial" font-size="20" font-weight="700" fill="#64748b">Today</text>
+  <text x="297" y="408" font-family="Arial" font-size="20" font-weight="700" fill="#64748b">This Month</text>
+  <rect x="462" y="364" width="217" height="69" rx="17" fill="#020617"/>
+  <text x="530" y="407" font-family="Arial" font-size="20" font-weight="800" fill="#fff">All Time</text>
+  <rect x="22" y="478" width="665" height="326" rx="30" fill="#020617"/>
+  <text x="60" y="630" font-family="Arial" font-size="24" font-weight="800" letter-spacing="4" fill="#fff">LEADS</text>
+  <text x="60" y="679" font-family="Arial" font-size="20" font-weight="700" fill="#94a3b8">Open new leads and accepted clients</text>
+  <text x="584" y="680" font-family="Arial" font-size="88" font-weight="900" fill="#fff">28</text>
+  <rect x="22" y="829" width="320" height="265" rx="30" fill="#fff" stroke="#dbe2ea" stroke-width="2"/>
+  <text x="60" y="997" font-family="Arial" font-size="23" font-weight="800" letter-spacing="4" fill="#334155">MESSAGES</text>
+  <text x="60" y="1044" font-family="Arial" font-size="18" font-weight="700" fill="#94a3b8">Open current chats</text>
+  <text x="270" y="1037" font-family="Arial" font-size="64" font-weight="900" fill="#020617">14</text>
+  <rect x="367" y="829" width="320" height="265" rx="30" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+  <text x="404" y="997" font-family="Arial" font-size="23" font-weight="800" letter-spacing="4" fill="#9a3412">EMPLOYEES</text>
+  <text x="404" y="1044" font-family="Arial" font-size="18" font-weight="700" fill="#c2410c">Approved accounts</text>
+  <text x="617" y="1037" font-family="Arial" font-size="64" font-weight="900" fill="#020617">4</text>
+  <rect x="22" y="1131" width="665" height="166" rx="28" fill="#fff" stroke="#fed7aa" stroke-width="2"/>
+  <text x="52" y="1182" font-family="Arial" font-size="18" font-weight="800" letter-spacing="3" fill="#ea580c">TODAY'S ACTIVITY</text>
+  <text x="52" y="1230" font-family="Arial" font-size="21" font-weight="700" fill="#0f172a">6 new leads · 9 messages · 2 appointments confirmed</text>
+  <text x="52" y="1270" font-family="Arial" font-size="18" fill="#64748b">Your team has responded to every unread conversation.</text>
+  <rect y="1449" width="709" height="87" fill="#101010"/>
+  <circle cx="354" cy="1492" r="17" fill="none" stroke="#fff" stroke-width="3"/>
+</svg>
