@@ -4,7 +4,6 @@ import emailConfig from "../../contact/emailConfig";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const MAX_SCREENSHOT_BYTES = 5 * 1024 * 1024;
 const ALLOWED_SCREENSHOT_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
 
@@ -29,9 +28,11 @@ function validPhone(value) {
 
 export async function POST(request) {
   try {
-    if (!process.env.RESEND_API_KEY) {
+    const apiKey = text(process.env.RESEND_API_KEY, 300);
+    if (!apiKey) {
       return Response.json({ success: false, error: "Support delivery is not configured." }, { status: 503 });
     }
+    const resend = new Resend(apiKey);
 
     const formData = await request.formData();
     const name = text(formData.get("name"), 120);
