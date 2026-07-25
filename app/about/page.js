@@ -43,10 +43,10 @@ export default function AboutPage() {
         ))}
 
         <section className="rounded-3xl border border-orange-300 bg-orange-50 p-7 text-center shadow-lg sm:p-10">
-          <h2 className="text-3xl font-black">See how the client center works.</h2>
-          <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-700">Open the full process or view the download options.</p>
+          <h2 className="text-3xl font-black">Ready to see the client center?</h2>
+          <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-700">Return to the quick homepage overview or open the download options.</p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
-            <Link href="/how-it-works" className={config.theme.secondaryButton}>How It Works</Link>
+            <Link href="/" className={config.theme.secondaryButton}>Back to Home</Link>
             <Link href="/download" className={config.theme.button}>Download Options</Link>
           </div>
         </section>
