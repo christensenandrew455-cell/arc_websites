@@ -19,17 +19,17 @@
   <rect x="462" y="364" width="217" height="69" rx="17" fill="#020617"/>
   <text x="530" y="407" font-family="Arial" font-size="20" font-weight="800" fill="#fff">All Time</text>
   <rect x="22" y="478" width="665" height="326" rx="30" fill="#020617"/>
-  <text x="60" y="630" font-family="Arial" font-size="24" font-weight="800" letter-spacing="4" fill="#fff">LEADS</text>
-  <text x="60" y="679" font-family="Arial" font-size="20" font-weight="700" fill="#94a3b8">Open new leads and accepted clients</text>
-  <text x="584" y="680" font-family="Arial" font-size="88" font-weight="900" fill="#fff">28</text>
+  <text x="60" y="610" font-family="Arial" font-size="88" font-weight="900" fill="#fff">28</text>
+  <text x="60" y="670" font-family="Arial" font-size="24" font-weight="800" letter-spacing="4" fill="#fff">LEADS</text>
+  <text x="60" y="715" font-family="Arial" font-size="20" font-weight="700" fill="#94a3b8">Open new leads and accepted clients</text>
   <rect x="22" y="829" width="320" height="265" rx="30" fill="#fff" stroke="#dbe2ea" stroke-width="2"/>
+  <text x="60" y="930" font-family="Arial" font-size="64" font-weight="900" fill="#020617">14</text>
   <text x="60" y="997" font-family="Arial" font-size="23" font-weight="800" letter-spacing="4" fill="#334155">MESSAGES</text>
   <text x="60" y="1044" font-family="Arial" font-size="18" font-weight="700" fill="#94a3b8">Open current chats</text>
-  <text x="270" y="1037" font-family="Arial" font-size="64" font-weight="900" fill="#020617">14</text>
   <rect x="367" y="829" width="320" height="265" rx="30" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+  <text x="404" y="930" font-family="Arial" font-size="64" font-weight="900" fill="#020617">4</text>
   <text x="404" y="997" font-family="Arial" font-size="23" font-weight="800" letter-spacing="4" fill="#9a3412">EMPLOYEES</text>
   <text x="404" y="1044" font-family="Arial" font-size="18" font-weight="700" fill="#c2410c">Approved accounts</text>
-  <text x="617" y="1037" font-family="Arial" font-size="64" font-weight="900" fill="#020617">4</text>
   <rect x="22" y="1131" width="665" height="166" rx="28" fill="#fff" stroke="#fed7aa" stroke-width="2"/>
   <text x="52" y="1182" font-family="Arial" font-size="18" font-weight="800" letter-spacing="3" fill="#ea580c">TODAY'S ACTIVITY</text>
   <text x="52" y="1230" font-family="Arial" font-size="21" font-weight="700" fill="#0f172a">6 new leads · 9 messages · 2 appointments confirmed</text>
