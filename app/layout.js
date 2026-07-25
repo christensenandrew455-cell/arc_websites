@@ -1,8 +1,13 @@
-import "/globals.css";
+import "../globals.css";
 
 export const metadata = {
-  title: "Business Site",
-  description: "Built with Next.js",
+  title: {
+    default: "ARK Client Center",
+    template: "%s | ARK Client Center",
+  },
+  description: "Secure lead, client, receptionist, and business messaging management for service businesses.",
+  applicationName: "ARK Client Center",
+  metadataBase: new URL("https://arkwebsites.com"),
 };
 
 export default function RootLayout({ children }) {
