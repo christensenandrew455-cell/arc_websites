@@ -3,8 +3,6 @@ import Link from "next/link";
 export default function SiteFooter() {
   const links = [
     ["About", "/about"],
-    ["How It Works", "/how-it-works"],
-    ["FAQ", "/faq"],
     ["Download", "/download"],
     ["Support", "/support"],
     ["Privacy Policy", "/privacy"],
@@ -15,7 +13,7 @@ export default function SiteFooter() {
     <footer className="border-t border-orange-200 bg-white px-4 py-10 text-slate-600">
       <div className="mx-auto max-w-7xl text-center">
         <p className="text-xl font-black text-slate-950">ARK Client Center</p>
-        <p className="mx-auto mt-2 max-w-2xl text-sm leading-6">Leads, client conversations, appointments, and employees in one simple business workspace.</p>
+        <p className="mx-auto mt-2 max-w-2xl text-sm leading-6">Leads, conversations, appointments, and employees in one simple business workspace.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-3 text-sm font-bold">
           {links.map(([name, href]) => (
             <Link key={href} href={href} className="hover:text-orange-600">{name}</Link>
