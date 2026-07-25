@@ -1,103 +1,55 @@
 import Link from "next/link";
-import config from "../homeConfig";
-import siteConfig from "../siteConfig";
-import aboutConfig from "../aboutConfig";
 import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "../components/SiteFooter";
+
+const sections = [
+  {
+    title: "Why ARK Client Center exists",
+    body: "Small service businesses lose opportunities when calls go unanswered, notes are scattered, or follow-up happens from a personal phone. ARK Client Center gives the business one organized place to review leads and continue customer relationships.",
+  },
+  {
+    title: "How the receptionist connects",
+    body: "When a customer calls a business's dedicated ARK number, the receptionist can collect the information needed for an estimate request. After the caller confirms the details and agrees to be contacted, the lead is sent into that business's client center.",
+  },
+  {
+    title: "How messaging works",
+    body: "Approved owners and employees can continue a one-to-one conversation using the business's dedicated number. Customers can reply directly, text STOP to opt out, or use HELP to receive the ARK support and reporting path.",
+  },
+  {
+    title: "Who controls the account",
+    body: "Each business is responsible for its employees, messages, customer relationships, and compliance. ARK operates the platform, reviews credible abuse reports, and may restrict or terminate accounts that misuse the service.",
+  },
+];
 
 export default function AboutPage() {
   return (
-    <main
-      className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
-    >
-      {siteConfig.showHeader && <SiteHeader />}
+    <main className="min-h-screen bg-slate-950 text-white">
+      <SiteHeader />
+      <section className="px-4 py-20 sm:px-6 sm:py-28">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-300">About the platform</p>
+          <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-[-0.04em] sm:text-6xl">A private, organized bridge between the first phone call and the next customer.</h1>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">ARK Client Center combines lead intake, client organization, and business messaging without requiring owners to publish their personal phone numbers.</p>
 
-      <div className="max-w-6xl mx-auto p-4 md:p-12">
-        <div className="text-center mb-8 md:mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold mb-5 md:mb-6 leading-tight">
-            {aboutConfig.pageTitle}
-          </h1>
+          <div className="mt-14 grid gap-5 md:grid-cols-2">
+            {sections.map((section) => (
+              <article key={section.title} className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
+                <h2 className="text-2xl font-black">{section.title}</h2>
+                <p className="mt-4 leading-7 text-slate-300">{section.body}</p>
+              </article>
+            ))}
+          </div>
 
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Learn more about ARK Websites, our mission, and our commitment to helping small businesses build a stronger online presence.
-          </p>
+          <div className="mt-14 rounded-3xl border border-cyan-300/20 bg-cyan-300/10 p-8">
+            <h2 className="text-2xl font-black">Need the app or need to report a concern?</h2>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <Link href="/download" className="rounded-2xl bg-cyan-400 px-6 py-3 text-center text-sm font-black text-slate-950">Download Options</Link>
+              <Link href="/support" className="rounded-2xl border border-white/15 px-6 py-3 text-center text-sm font-black text-white">Support & Reports</Link>
+            </div>
+          </div>
         </div>
-
-        <div className="mb-10 md:mb-16">
-          <img
-            src={aboutConfig.heroImage}
-            alt={aboutConfig.pageTitle}
-            className="w-full h-64 md:h-[500px] object-cover rounded-3xl shadow-xl"
-          />
-        </div>
-
-        <div className="space-y-6 md:space-y-8">
-          {aboutConfig.sections.map((section) => (
-            <section
-              key={section.title}
-              className={`${config.theme.sectionBg} p-5 md:p-10`}
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                {section.title}
-              </h2>
-
-              <p className="text-base md:text-lg leading-relaxed text-gray-700">
-                {section.content}
-              </p>
-            </section>
-          ))}
-
-          <section className={`${config.theme.sectionBg} p-5 md:p-10`}>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Socials
-            </h2>
-
-            <p className="text-base md:text-lg leading-relaxed text-gray-700">
-              We are not available on any socials right now. For now, the best way to reach ARK Websites is through the contact page, email, or phone number listed on the site.
-            </p>
-          </section>
-        </div>
-
-        <section className="text-center mt-10 md:mt-16">
-          <Link
-            href={siteConfig.contactPageRoute}
-            className={config.theme.button}
-          >
-            {aboutConfig.contactButtonText}
-          </Link>
-        </section>
-      </div>
-
-      {siteConfig.showFooter && (
-        <footer
-          className={`
-            p-6
-            border-t
-            ${
-              siteConfig.footerCentered
-                ? "text-center"
-                : "text-left"
-            }
-          `}
-        >
-          <p>{config.email}</p>
-
-          <p>{config.phone}</p>
-
-          <p className="mt-4 text-sm font-semibold text-gray-500">
-            Made and managed by{" "}
-            <a href="https://arc-websites.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
-              ARK Websites
-            </a>
-          </p>
-
-          <Link
-            href={siteConfig.privacyPageRoute}
-            className="block mt-3 text-blue-600 underline"
-          >
-            Privacy Policy
-          </Link>
-        </footer>
-      )}
+      </section>
+      <SiteFooter />
     </main>
   );
 }
