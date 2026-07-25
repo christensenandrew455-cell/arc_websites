@@ -1,20 +1,18 @@
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
+import config from "../homeConfig";
 
-function StoreCard({ title, description, href, label }) {
-  const available = Boolean(href);
+function DownloadOption({ title, description, href, label, featured = false }) {
   return (
-    <article className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
+    <article className={`rounded-3xl border p-6 sm:p-8 ${featured ? "border-orange-300 bg-orange-50" : "border-orange-200 bg-white shadow-sm"}`}>
       <h2 className="text-2xl font-black">{title}</h2>
-      <p className="mt-3 leading-7 text-slate-300">{description}</p>
-      {available ? (
-        <a href={href} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex rounded-2xl bg-cyan-400 px-5 py-3 text-sm font-black text-slate-950 hover:bg-cyan-300">
+      <p className="mt-3 leading-7 text-slate-600">{description}</p>
+      {href ? (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={`mt-6 ${featured ? config.theme.button : config.theme.secondaryButton}`}>
           {label}
         </a>
       ) : (
-        <span className="mt-6 inline-flex rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-black text-slate-400">
-          Store listing coming soon
-        </span>
+        <span className="mt-6 inline-flex rounded-xl border border-slate-300 bg-slate-50 px-5 py-3 text-sm font-black text-slate-500">Store listing coming soon</span>
       )}
     </article>
   );
@@ -26,32 +24,27 @@ export default function DownloadPage() {
   const webUrl = process.env.NEXT_PUBLIC_CLIENT_CENTER_URL || "https://ark-websites-ocm-xi.vercel.app";
 
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-white text-slate-950">
       <SiteHeader />
-      <section className="px-4 py-20 sm:px-6 sm:py-28">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-300">Get the client center</p>
-          <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-[-0.04em] sm:text-6xl">Choose the version that works for your device.</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">The secure web version is available now. App-store buttons will activate when the official Android and iPhone listings are published.</p>
-
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            <StoreCard title="Android" description="Install ARK Client Center from the Google Play listing when it becomes available." href={androidUrl} label="Open Google Play" />
-            <StoreCard title="iPhone & iPad" description="Install ARK Client Center from the Apple App Store when the iOS listing becomes available." href={iosUrl} label="Open App Store" />
-            <article className="rounded-3xl border border-cyan-300/20 bg-cyan-300/10 p-7">
-              <h2 className="text-2xl font-black">Secure Web App</h2>
-              <p className="mt-3 leading-7 text-slate-200">Open the hosted client center in a modern browser without installing anything.</p>
-              <a href={webUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex rounded-2xl bg-cyan-400 px-5 py-3 text-sm font-black text-slate-950 hover:bg-cyan-300">
-                Open Client Center
-              </a>
-            </article>
-          </div>
-
-          <div className="mt-10 rounded-3xl border border-white/10 bg-white/[0.04] p-7">
-            <h2 className="text-2xl font-black">Before installing</h2>
-            <p className="mt-3 leading-7 text-slate-300">Use only an official ARK Client Center download or store listing. Do not install copies sent by unknown accounts or hosted on unrelated websites.</p>
-          </div>
+      <section className="border-b border-orange-200 bg-gradient-to-b from-orange-50 to-white px-4 py-14 text-center sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-4xl">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Download</p>
+          <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Open ARK Client Center on your device.</h1>
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">Use the secure web version now. The store buttons will become available when the official Android and iPhone listings are published.</p>
         </div>
       </section>
+
+      <div className="mx-auto max-w-5xl space-y-5 px-4 py-10 sm:px-6 sm:py-14">
+        <DownloadOption title="Secure Web App" description="Open the client center in a modern browser without installing anything." href={webUrl} label="Open Client Center" featured />
+        <DownloadOption title="Android" description="Install ARK Client Center from the official Google Play listing when it becomes available." href={androidUrl} label="Open Google Play" />
+        <DownloadOption title="iPhone and iPad" description="Install ARK Client Center from the official Apple App Store listing when it becomes available." href={iosUrl} label="Open App Store" />
+
+        <section className="rounded-3xl border border-orange-200 bg-white p-6 shadow-sm sm:p-8">
+          <h2 className="text-2xl font-black">Use official downloads only</h2>
+          <p className="mt-3 leading-7 text-slate-600">Do not install copies sent by unknown accounts or hosted on unrelated websites. Official download options will always be listed on this page.</p>
+        </section>
+      </div>
+
       <SiteFooter />
     </main>
   );
