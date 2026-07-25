@@ -6,19 +6,19 @@ import config from "./homeConfig";
 const aboutHighlights = [
   {
     title: "Why ARK started",
-    body: "Small-business owners miss real opportunities while they are working, driving, or helping another customer.",
+    body: "Andrew Christensen started ARK after running a landscaping business and constantly switching between the work itself, new leads, handwritten notes, and text threads. He wanted one place that clearly showed who called, what they needed, and when the next job was.",
   },
   {
-    title: "Useful caller information",
-    body: "The receptionist collects the job details, address, timing, and notes your business actually needs.",
+    title: "AI caller intake",
+    body: "The responsive AI receptionist accurately collects job details, contact information, timing, and estimate requests. It guides callers toward the next step so more inquiries can become real estimate opportunities instead of missed voicemails.",
   },
   {
     title: "More than voicemail",
-    body: "Calls become organized leads instead of vague messages that still require another round of questions.",
+    body: "The receptionist carries the conversation forward, asks the questions your business needs, and organizes the answers before the call ends.",
   },
   {
     title: "One clear workspace",
-    body: "See who called, what they need, and what should happen next without searching through notes and apps.",
+    body: "See who called, what they need, and what should happen next without searching through notes, missed calls, and old conversations.",
   },
   {
     title: "Private business messaging",
@@ -26,7 +26,7 @@ const aboutHighlights = [
   },
   {
     title: "Employees stay connected",
-    body: "Approve employee accounts, control access, and keep assigned work inside the business workspace.",
+    body: "Approve employee accounts, control access, assign work, and review activity inside the same business workspace.",
   },
 ];
 
@@ -75,15 +75,23 @@ const previews = [
 const faqItems = [
   {
     question: "Is ARK Client Center only a voicemail service?",
-    answer: "No. The receptionist asks the caller the questions your business needs and sends an organized lead into the client center.",
+    answer: "No. The receptionist is responsive and trained to guide the caller toward an estimate while collecting the client information your business requires.",
+  },
+  {
+    question: "Can I use my personal phone number as the receptionist number?",
+    answer: "No. ARK uses a separate business number for the receptionist and customer messaging. That keeps your personal number private and gives customers one consistent number for calls and conversations.",
   },
   {
     question: "Do I have to give customers my private phone number?",
-    answer: "No. Calls and customer conversations can use the business's dedicated ARK number.",
+    answer: "No. Calls and customer conversations use the business's dedicated ARK number, so your personal phone number stays private.",
   },
   {
-    question: "Can employees use the app?",
-    answer: "Yes. Owners can approve employee accounts, control access, and assign work inside the business workspace.",
+    question: "Can my employees have accounts inside my business workspace?",
+    answer: "Yes. Owners can approve employee accounts inside the business account, control what each person can access, assign work, and review what employees are doing inside the shared workspace.",
+  },
+  {
+    question: "How does payment work?",
+    answer: "ARK Client Center charges a flat $50 platform fee, plus usage: $1 per customer conversation, $2 per completed lead, and $5 per approved employee account.",
   },
   {
     question: "Can customers opt out or report a concern?",
@@ -98,9 +106,9 @@ export default function Home() {
 
       <section className={`border-b border-orange-200 px-4 py-12 text-center sm:px-6 sm:py-16 ${config.theme.heroBg}`}>
         <div className="mx-auto max-w-4xl">
-          <p className="text-xs font-black uppercase tracking-[0.22em] text-orange-600">ARK Client Center</p>
-          <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-6xl">Manage leads and client conversations with ease.</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-700">Turn calls into organized leads and follow up through a dedicated business number—all from one simple app.</p>
+          <h1 className="text-5xl font-black tracking-tight text-slate-950 sm:text-7xl">ARK Client Center</h1>
+          <h2 className="mx-auto mt-4 max-w-3xl text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">An AI receptionist that collects every lead while you keep working.</h2>
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-slate-700 sm:text-lg">Job details, contact information, estimate requests, and next steps arrive in one organized place—so you never have to dig through notes, missed calls, or old conversations to remember what comes next.</p>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <Link href="/download" className={config.theme.button}>Download the App</Link>
             <Link href="/about" className={config.theme.secondaryButton}>Learn More</Link>
