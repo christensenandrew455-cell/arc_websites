@@ -47,25 +47,25 @@ const steps = [
 
 const previews = [
   {
-    eyebrow: "A clear workspace",
+    phrase: "A clear workspace",
     title: "Business stats",
     image: "/client-center-stats.svg",
     alt: "ARK Client Center statistics dashboard showing leads, messages, employees, and recent activity",
   },
   {
-    eyebrow: "Every lead organized",
+    phrase: "Every lead organized",
     title: "Leads and clients",
     image: "/client-center-leads.svg",
     alt: "ARK Client Center leads page showing contacted leads and accepted clients",
   },
   {
-    eyebrow: "Keep conversations together",
+    phrase: "Keep conversations together",
     title: "Client conversations",
     image: "/client-center-messages.svg",
     alt: "ARK Client Center messages page showing several customer conversations",
   },
   {
-    eyebrow: "Your team connected",
+    phrase: "Your team connected",
     title: "Employee management",
     image: "/client-center-employees.svg",
     alt: "ARK Client Center employee management page showing pending and active employees",
@@ -146,9 +146,9 @@ export default function Home() {
           <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">What it looks like</p>
           <div className="mt-8 space-y-12">
             {previews.map((preview, index) => (
-              <article key={preview.title} className={index ? "border-t border-orange-200 pt-10" : ""}>
-                <p className="text-xs font-black uppercase tracking-[0.18em] text-orange-600">{preview.eyebrow}</p>
-                <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">{preview.title}</h2>
+              <article key={preview.title} className={`text-center ${index ? "border-t border-orange-200 pt-10" : ""}`}>
+                <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">{preview.phrase}</h2>
+                <h3 className="mt-2 text-xl font-black text-slate-950 sm:text-2xl">{preview.title}</h3>
                 <img src={preview.image} alt={preview.alt} className="mx-auto mt-5 w-full max-w-[430px] rounded-[2rem] border border-slate-300 bg-slate-100 shadow-xl" />
               </article>
             ))}
