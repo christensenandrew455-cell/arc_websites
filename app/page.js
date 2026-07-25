@@ -1,294 +1,144 @@
 import Link from "next/link";
-import config from "./homeConfig";
-import siteConfig from "./siteConfig";
 import SiteHeader from "./components/SiteHeader";
+import SiteFooter from "./components/SiteFooter";
 
-export default function Home() {
-const faqItems = [
+const features = [
   {
-    question: "Do I need to already have a website?",
-    answer: "No. We can help small businesses get started with a clean, professional website even if they have no current online presence.",
+    title: "Never lose a lead",
+    body: "Calls handled by the ARK receptionist can become organized leads with contact details, service needs, notes, and requested estimate times.",
   },
   {
-    question: "Can I request updates after the website is built?",
-    answer: "Yes. ARK Websites focuses on website management, updates, and upkeep so your site can stay current as your business changes.",
+    title: "Keep your personal number private",
+    body: "Use a dedicated business number for customer conversations instead of sharing an owner or employee's personal cell number.",
   },
   {
-    question: "Is the website mobile-friendly?",
-    answer: "Yes. The layouts are built to work on phones, tablets, and desktop screens so customers can reach you from any device.",
+    title: "Manage the whole conversation",
+    body: "Review leads, accept clients, follow up, track conversations, and keep important client information in one focused workspace.",
   },
   {
-    question: "Do you help with basic SEO?",
-    answer: "Yes. We build with clean structure, readable content, and basic SEO-friendly setup to help your business look more professional online.",
+    title: "Built for real service businesses",
+    body: "ARK Client Center is designed around the daily work of contractors and small teams—not generic enterprise software.",
   },
 ];
 
-const socials = ["Twitter / X", "TikTok", "Instagram", "YouTube", "Snapchat", "Facebook"];
+const steps = [
+  ["1", "A customer calls", "The customer reaches the business through its dedicated ARK phone number."],
+  ["2", "The receptionist gathers details", "The caller's inquiry, contact information, service request, and preferred timing are organized."],
+  ["3", "The business follows up", "The owner or approved employee can review the lead and continue the customer conversation."],
+];
 
-return (
-<main
-className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}
->
-{siteConfig.showHeader && <SiteHeader />}
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-slate-950 text-white">
+      <SiteHeader />
 
-  <section
-    className={`min-h-[78vh] md:min-h-screen flex items-center justify-center text-center px-4 md:px-6 py-16 md:py-0 ${config.theme.heroBg}`}
-  >
-    <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl sm:text-5xl md:text-8xl font-extrabold mb-5 md:mb-6 leading-tight">
-        {config.heroTitle}
-      </h1>
-
-      <p className="text-lg md:text-2xl max-w-3xl mx-auto text-gray-700 leading-relaxed">
-        {config.heroSubtitle}
-      </p>
-
-      <Link
-        href={siteConfig.contactPageRoute}
-        className={`inline-block mt-8 md:mt-10 ${config.theme.button}`}
-      >
-        {config.contactButtonText}
-      </Link>
-    </div>
-  </section>
-
-  <div
-    className={`mx-auto ${siteConfig.maxWidth} p-4 md:p-12`}
-  >
-    <section className={`${config.theme.sectionBg} p-5 md:p-8 mb-8 md:mb-12`}>
-      <h2
-        className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 ${config.theme.accentText}`}
-      >
-        About Us
-      </h2>
-
-      <div className="grid md:grid-cols-2 gap-5 md:gap-6">
-        {[
-          ["Our Story", config.companyStory],
-          ["Our Mission", config.mission],
-          ["What We Do", config.whatWeDo],
-          ["Areas We Serve", config.serviceAreas],
-        ].map(([title, content]) => (
-          <div
-            key={title}
-            className={`${config.theme.cardBg} p-5 md:p-6`}
-          >
-            <h3 className="text-xl md:text-2xl font-semibold mb-3">
-              {title}
-            </h3>
-
-            <p className="text-gray-700 leading-relaxed">
-              {content}
-            </p>
-          </div>
-        ))}
-
-        <div
-          className={`${config.theme.cardBg} p-5 md:p-6 md:col-span-2`}
-        >
-          <h3 className="text-xl md:text-2xl font-semibold mb-3">
-            Why Choose Us
-          </h3>
-
-          <p className="text-gray-700 leading-relaxed">
-            {config.whyChooseUs}
-          </p>
+      <section className="relative overflow-hidden px-4 pb-24 pt-20 sm:px-6 sm:pt-28">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute left-1/2 top-0 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-cyan-400/15 blur-3xl" />
+          <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-blue-600/15 blur-3xl" />
         </div>
 
-        <div
-          className={`${config.theme.cardBg} p-5 md:p-6 md:col-span-2`}
-        >
-          <h3 className="text-xl md:text-2xl font-semibold mb-3">
-            Socials
-          </h3>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.08fr_.92fr]">
+          <div>
+            <p className="inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-cyan-200">
+              Leads. Clients. Conversations.
+            </p>
+            <h1 className="mt-6 max-w-4xl text-5xl font-black tracking-[-0.05em] sm:text-6xl lg:text-7xl">
+              Keep every customer opportunity in one secure client center.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+              ARK Client Center helps service businesses capture leads from their receptionist, protect personal phone numbers, and manage customer follow-up from one app.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link href="/download" className="inline-flex justify-center rounded-2xl bg-cyan-400 px-6 py-4 text-sm font-black text-slate-950 transition hover:bg-cyan-300">
+                Download the App
+              </Link>
+              <Link href="/about" className="inline-flex justify-center rounded-2xl border border-white/15 bg-white/5 px-6 py-4 text-sm font-black text-white transition hover:bg-white/10">
+                See How It Works
+              </Link>
+            </div>
+          </div>
 
-          <p className="text-gray-700 leading-relaxed mb-4">
-            We are available on these platforms once our social pages are launched.
-          </p>
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-4 shadow-2xl shadow-cyan-950/40 backdrop-blur">
+            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900 p-5">
+              <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.18em] text-cyan-300">Today</p>
+                  <h2 className="mt-1 text-2xl font-black">Business Overview</h2>
+                </div>
+                <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-black text-emerald-300">Connected</span>
+              </div>
+              <div className="mt-4 grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                {[["Leads", "12"], ["Messages", "8"], ["Employees", "3"]].map(([label, value]) => (
+                  <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                    <p className="text-xs font-bold text-slate-400">{label}</p>
+                    <p className="mt-2 text-3xl font-black">{value}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 space-y-3">
+                {["New estimate request", "Customer replied to your message", "Estimate time awaiting confirmation"].map((item, index) => (
+                  <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-cyan-400 text-xs font-black text-slate-950">{index + 1}</span>
+                    <p className="text-sm font-bold text-slate-200">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div className="flex flex-wrap gap-3">
-            {socials.map((social) => (
-              <span
-                key={social}
-                className="rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700"
-              >
-                {social}
-              </span>
+      <section className="border-y border-white/10 bg-white/[0.025] px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-300">What it does</p>
+          <h2 className="mt-3 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">More than a missed-call notification.</h2>
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {features.map((feature) => (
+              <article key={feature.title} className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:p-8">
+                <h3 className="text-xl font-black">{feature.title}</h3>
+                <p className="mt-3 leading-7 text-slate-300">{feature.body}</p>
+              </article>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      <p className="mt-6 text-center text-gray-700">
-        Want to learn more about ARK Websites?{" "}
-        <Link href="/about" className="font-semibold text-blue-600 underline hover:text-blue-700">
-          Click here to visit our About Us page.
-        </Link>
-      </p>
-    </section>
-
-    <section className={`${config.theme.sectionBg} p-5 md:p-8 mb-8 md:mb-12`}>
-      <h2
-        className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 ${config.theme.accentText}`}
-      >
-        Our Work
-      </h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-        {config.portfolioSites.map((site, i) => (
-          <a
-            key={i}
-            href={site.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${config.theme.cardBg} overflow-hidden block hover:scale-105 transition duration-300`}
-          >
-            <img
-              src={site.image}
-              alt={site.name}
-              className="w-full h-48 md:h-56 object-cover"
-            />
-
-            <div className="p-5 md:p-6">
-              <h3 className="text-xl md:text-2xl font-bold mb-3">
-                {site.name}
-              </h3>
-
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                {site.description}
-              </p>
-
-              <span className="text-blue-600 font-semibold">
-                View Website →
-              </span>
+      <section className="px-4 py-24 sm:px-6">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-300">How it works</p>
+              <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">A simple path from phone call to customer follow-up.</h2>
+              <p className="mt-5 leading-7 text-slate-300">The receptionist and client center work together so the business can respond without exposing personal contact information.</p>
             </div>
-          </a>
-        ))}
-      </div>
-
-      <p className="mt-6 text-center text-gray-700">
-        Want to see what kind of website we can build for your business?{" "}
-        <Link href="/services" className="font-semibold text-blue-600 underline hover:text-blue-700">
-          Click here to view our Services page.
-        </Link>
-      </p>
-    </section>
-
-    <section className={`${config.theme.sectionBg} p-5 md:p-8 mb-8 md:mb-12`}>
-      <h2
-        className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 ${config.theme.accentText}`}
-      >
-        Testimonials
-      </h2>
-
-      <div className="space-y-5 md:space-y-6">
-        {config.testimonials.map((t, i) => (
-          <div
-            key={i}
-            className={`${config.theme.testimonialBg} p-5 md:p-6`}
-          >
-            <p className="font-semibold text-lg">
-              {t.name}
-            </p>
-
-            <p className="text-blue-400 mb-2">
-              {"★".repeat(t.stars)}
-            </p>
-
-            <p className="text-gray-700 leading-relaxed">
-              {t.review}
-            </p>
+            <div className="space-y-4">
+              {steps.map(([number, title, body]) => (
+                <article key={number} className="grid grid-cols-[auto_1fr] gap-4 rounded-3xl border border-white/10 bg-white/[0.04] p-6">
+                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-400 text-lg font-black text-slate-950">{number}</span>
+                  <div>
+                    <h3 className="text-xl font-black">{title}</h3>
+                    <p className="mt-2 leading-7 text-slate-300">{body}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
 
-      {config.googleReviewsLink && (
-        <p className="mt-6 text-center text-gray-700">
-          Want to read more reviews?{" "}
-          <a
-            href={config.googleReviewsLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-blue-600 underline hover:text-blue-700"
-          >
-            Click here to view our Google reviews.
-          </a>
-        </p>
-      )}
-    </section>
-
-    <section className={`${config.theme.sectionBg} p-5 md:p-8 mb-8 md:mb-12`}>
-      <h2
-        className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 ${config.theme.accentText}`}
-      >
-        FAQ
-      </h2>
-
-      <div className="space-y-4">
-        {faqItems.map((item) => (
-          <div key={item.question} className={`${config.theme.cardBg} p-5 md:p-6`}>
-            <h3 className="text-lg md:text-xl font-semibold mb-2">
-              {item.question}
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              {item.answer}
-            </p>
+      <section className="px-4 pb-24 sm:px-6">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-cyan-300/20 bg-gradient-to-br from-cyan-400/15 to-blue-600/10 p-8 text-center sm:p-14">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-200">Ready to open your client center?</p>
+          <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Download the app or open the secure web version.</h2>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link href="/download" className="rounded-2xl bg-cyan-400 px-6 py-4 text-sm font-black text-slate-950 hover:bg-cyan-300">View Download Options</Link>
+            <Link href="/support" className="rounded-2xl border border-white/15 bg-white/5 px-6 py-4 text-sm font-black text-white hover:bg-white/10">Report a Messaging Concern</Link>
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
 
-      <p className="mt-6 text-center text-gray-700">
-        Still have questions or want to get started?{" "}
-        <Link href={siteConfig.contactPageRoute} className="font-semibold text-blue-600 underline hover:text-blue-700">
-          Click here to contact us.
-        </Link>
-      </p>
-    </section>
-
-    <section className="text-center py-14 md:py-20">
-      <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-        Ready To upgrade your business?
-      </h2>
-
-      <p className="text-gray-700 mb-8 text-base md:text-lg">
-        Contact ARK Websites to get started.
-      </p>
-
-      <Link
-        href={siteConfig.contactPageRoute}
-        className={config.theme.button}
-      >
-        {config.contactButtonText}
-      </Link>
-    </section>
-  </div>
-
-  {siteConfig.showFooter && (
-    <footer className="border-t border-blue-500/20 py-8 text-center px-4">
-      <p>{config.email}</p>
-
-      {config.phone && (
-        <p className="mt-1">
-          {config.phone}
-        </p>
-      )}
-
-      <p className="mt-4 text-sm font-semibold text-gray-500">
-        Made and managed by{" "}
-        <a href="https://arc-websites.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
-          ARK Websites
-        </a>
-      </p>
-
-      <Link
-        href={siteConfig.privacyPageRoute}
-        className="inline-block mt-4 text-blue-400 hover:text-blue-300"
-      >
-        Privacy Policy
-      </Link>
-    </footer>
-  )}
-</main>
-
-);
+      <SiteFooter />
+    </main>
+  );
 }
