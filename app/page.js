@@ -9,8 +9,12 @@ const aboutHighlights = [
     body: "Small-business owners miss real opportunities while they are working, driving, or helping another customer.",
   },
   {
+    title: "Useful caller information",
+    body: "The receptionist collects the job details, address, timing, and notes your business actually needs.",
+  },
+  {
     title: "More than voicemail",
-    body: "The receptionist asks useful questions and turns the call into an organized lead instead of a vague message.",
+    body: "Calls become organized leads instead of vague messages that still require another round of questions.",
   },
   {
     title: "One clear workspace",
@@ -23,10 +27,6 @@ const aboutHighlights = [
   {
     title: "Employees stay connected",
     body: "Approve employee accounts, control access, and keep assigned work inside the business workspace.",
-  },
-  {
-    title: "Built to stay simple",
-    body: "ARK is made for real small businesses that need useful tools—not another complicated dashboard.",
   },
 ];
 
@@ -47,21 +47,25 @@ const steps = [
 
 const previews = [
   {
+    eyebrow: "A clear workspace",
     title: "Business stats",
     image: "/client-center-stats.svg",
     alt: "ARK Client Center statistics dashboard showing leads, messages, employees, and recent activity",
   },
   {
+    eyebrow: "Every lead organized",
     title: "Leads and clients",
     image: "/client-center-leads.svg",
     alt: "ARK Client Center leads page showing contacted leads and accepted clients",
   },
   {
+    eyebrow: "Keep conversations together",
     title: "Client conversations",
     image: "/client-center-messages.svg",
     alt: "ARK Client Center messages page showing several customer conversations",
   },
   {
+    eyebrow: "Your team connected",
     title: "Employee management",
     image: "/client-center-employees.svg",
     alt: "ARK Client Center employee management page showing pending and active employees",
@@ -106,27 +110,22 @@ export default function Home() {
 
       <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 sm:py-12">
         <section className={`${config.theme.sectionBg} p-6 sm:p-8`}>
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">More than voicemail</p>
-          <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">The receptionist collects the information your business actually needs.</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-slate-700">Customers explain the job, address, timing, and notes. You receive a complete lead that is ready for the next step.</p>
-        </section>
-
-        <section className={`${config.theme.sectionBg} p-6 sm:p-8`}>
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">About ARK Client Center</p>
-              <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">The story in six quick pieces.</h2>
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">ARK Client Center</p>
+              <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">About Us</h2>
             </div>
-            <Link href="/about" className="font-black text-orange-600 underline decoration-2 underline-offset-4 hover:text-orange-700">Read the full story</Link>
+            <Link href="/about" className="hidden font-black text-orange-600 underline decoration-2 underline-offset-4 hover:text-orange-700 sm:inline-flex">Read more</Link>
           </div>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-2 gap-3">
             {aboutHighlights.map((item) => (
-              <Link key={item.title} href="/about" className="rounded-2xl border border-orange-200 bg-orange-50/50 p-5 transition hover:-translate-y-0.5 hover:border-orange-400 hover:shadow-md">
-                <h3 className="text-lg font-black">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+              <Link key={item.title} href="/about" className="rounded-2xl border border-orange-200 bg-orange-50/50 p-4 transition hover:-translate-y-0.5 hover:border-orange-400 hover:shadow-md sm:p-5">
+                <h3 className="text-base font-black sm:text-lg">{item.title}</h3>
+                <p className="mt-2 text-xs leading-5 text-slate-700 sm:text-sm sm:leading-6">{item.body}</p>
               </Link>
             ))}
           </div>
+          <Link href="/about" className="mt-5 inline-flex font-black text-orange-600 underline decoration-2 underline-offset-4 hover:text-orange-700 sm:hidden">Read more</Link>
         </section>
 
         <section className={`${config.theme.sectionBg} p-6 sm:p-8`}>
@@ -145,11 +144,11 @@ export default function Home() {
 
         <section className={`${config.theme.sectionBg} p-6 sm:p-8`}>
           <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">What it looks like</p>
-          <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">A clear workspace.</h2>
           <div className="mt-8 space-y-12">
             {previews.map((preview, index) => (
               <article key={preview.title} className={index ? "border-t border-orange-200 pt-10" : ""}>
-                <h3 className="text-center text-xl font-black sm:text-2xl">{preview.title}</h3>
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-orange-600">{preview.eyebrow}</p>
+                <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">{preview.title}</h2>
                 <img src={preview.image} alt={preview.alt} className="mx-auto mt-5 w-full max-w-[430px] rounded-[2rem] border border-slate-300 bg-slate-100 shadow-xl" />
               </article>
             ))}
