@@ -7,9 +7,8 @@ const config = {
   headerLinks: [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "How It Works", href: "/how-it-works" },
-    { name: "FAQ", href: "/faq" },
     { name: "Support", href: "/support" },
+    { name: "Privacy", href: "/privacy" },
   ],
   font: "font-sans",
   theme: {
