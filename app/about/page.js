@@ -1,54 +1,57 @@
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
+import config from "../homeConfig";
 
 const sections = [
   {
-    title: "Why ARK Client Center exists",
-    body: "Small service businesses lose opportunities when calls go unanswered, notes are scattered, or follow-up happens from a personal phone. ARK Client Center gives the business one organized place to review leads and continue customer relationships.",
+    title: "Where the idea came from",
+    body: "ARK Client Center was started by Andrew Christensen after seeing how easily small businesses lose track of real opportunities. Owners are often working, driving, meeting customers, or handling the job itself when the next call comes in.",
   },
   {
-    title: "How the receptionist connects",
-    body: "When a customer calls a business's dedicated ARK number, the receptionist can collect the information needed for an estimate request. After the caller confirms the details and agrees to be contacted, the lead is sent into that business's client center.",
+    title: "What the goal is",
+    body: "The goal is to make the first customer interaction useful. Instead of leaving the owner with a vague voicemail, the receptionist talks the caller through the information the business needs and sends an organized lead into one simple workspace.",
   },
   {
-    title: "How messaging works",
-    body: "Approved owners and employees can continue a one-to-one conversation using the business's dedicated number. Customers can reply directly, text STOP to opt out, or use HELP to receive the ARK support and reporting path.",
+    title: "Why privacy matters",
+    body: "Owners and employees should not have to publish their personal phone numbers just to follow up with customers. ARK Client Center keeps business conversations connected to a dedicated business number.",
   },
   {
-    title: "Who controls the account",
-    body: "Each business is responsible for its employees, messages, customer relationships, and compliance. ARK operates the platform, reviews credible abuse reports, and may restrict or terminate accounts that misuse the service.",
+    title: "Why the app stays simple",
+    body: "The platform is being built for real small businesses, not giant companies with full-time office staff. Every screen should help the owner understand what needs attention and what to do next without making the work more complicated.",
   },
 ];
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-white text-slate-950">
       <SiteHeader />
-      <section className="px-4 py-20 sm:px-6 sm:py-28">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-300">About the platform</p>
-          <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-[-0.04em] sm:text-6xl">A private, organized bridge between the first phone call and the next customer.</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">ARK Client Center combines lead intake, client organization, and business messaging without requiring owners to publish their personal phone numbers.</p>
-
-          <div className="mt-14 grid gap-5 md:grid-cols-2">
-            {sections.map((section) => (
-              <article key={section.title} className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
-                <h2 className="text-2xl font-black">{section.title}</h2>
-                <p className="mt-4 leading-7 text-slate-300">{section.body}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-14 rounded-3xl border border-cyan-300/20 bg-cyan-300/10 p-8">
-            <h2 className="text-2xl font-black">Need the app or need to report a concern?</h2>
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-              <Link href="/download" className="rounded-2xl bg-cyan-400 px-6 py-3 text-center text-sm font-black text-slate-950">Download Options</Link>
-              <Link href="/support" className="rounded-2xl border border-white/15 px-6 py-3 text-center text-sm font-black text-white">Support & Reports</Link>
-            </div>
-          </div>
+      <section className="border-b border-orange-200 bg-gradient-to-b from-orange-50 to-white px-4 py-14 text-center sm:px-6 sm:py-18">
+        <div className="mx-auto max-w-4xl">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">About ARK Client Center</p>
+          <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">A simpler way to keep customer opportunities organized.</h1>
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">ARK Client Center connects receptionist intake, leads, conversations, and employees without forcing business owners to give out their private numbers.</p>
         </div>
       </section>
+
+      <div className="mx-auto max-w-5xl space-y-5 px-4 py-10 sm:px-6 sm:py-14">
+        {sections.map((section) => (
+          <section key={section.title} className={`${config.theme.sectionBg} p-6 sm:p-8`}>
+            <h2 className="text-2xl font-black">{section.title}</h2>
+            <p className="mt-3 leading-7 text-slate-600">{section.body}</p>
+          </section>
+        ))}
+
+        <section className="rounded-3xl border border-orange-200 bg-orange-50 p-7 text-center sm:p-10">
+          <h2 className="text-3xl font-black">See how the client center works.</h2>
+          <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">Return to the product walkthrough or open the download options.</p>
+          <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link href="/#how-it-works" className={config.theme.secondaryButton}>How It Works</Link>
+            <Link href="/download" className={config.theme.button}>Download Options</Link>
+          </div>
+        </section>
+      </div>
+
       <SiteFooter />
     </main>
   );
