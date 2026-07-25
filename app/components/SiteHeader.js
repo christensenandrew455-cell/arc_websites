@@ -1,90 +1,50 @@
 import Link from "next/link";
 import config from "../homeConfig";
-import siteConfig from "../siteConfig";
 
-function LogoMark() {
-  if (config.showLogo && config.logoUrl) {
-    return (
-      <img
-        src={config.logoUrl}
-        alt={config.businessName}
-        className="h-11 w-auto object-contain"
-      />
-    );
-  }
-
+function Brand() {
   return (
-    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-orange-500 text-sm font-extrabold tracking-tight text-white shadow-md">
-      ARK
-    </span>
+    <Link href="/" className="flex items-center gap-3" aria-label="ARK Client Center home">
+      <span className="grid h-11 w-11 place-items-center rounded-2xl bg-cyan-400 text-xs font-black tracking-[0.16em] text-slate-950 shadow-lg shadow-cyan-400/20">
+        ARK
+      </span>
+      <span>
+        <span className="block text-sm font-black uppercase tracking-[0.2em] text-cyan-300">ARK</span>
+        <span className="block text-sm font-bold text-white sm:text-base">Client Center</span>
+      </span>
+    </Link>
   );
 }
 
 export default function SiteHeader() {
-  const mobileLinks = [
-    ...config.headerLinks,
-    { name: "Contact", href: siteConfig.contactPageRoute },
-  ];
-
   return (
-    <header
-      className={`sticky top-0 z-50 border-b ${config.theme.headerBg} ${config.theme.headerBorder} backdrop-blur`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
-        <div className="hidden items-center gap-3 md:flex">
-          {config.showLogo && config.logoUrl && (
-            <img
-              src={config.logoUrl}
-              alt={config.businessName}
-              className="h-12 w-auto object-contain"
-            />
-          )}
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+        <Brand />
 
-          <h1 className={`text-2xl font-bold ${config.theme.accentText}`}>
-            {config.businessName}
-          </h1>
-        </div>
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
+          {config.headerLinks.map((link) => (
+            <Link key={link.name} href={link.href} className="text-sm font-bold text-slate-300 transition hover:text-white">
+              {link.name}
+            </Link>
+          ))}
+        </nav>
 
-        <div className="relative md:hidden">
-          <details className="group">
-            <summary className="flex cursor-pointer list-none items-center gap-2 rounded-2xl bg-white p-1 shadow-sm outline-none ring-1 ring-blue-100">
-              <LogoMark />
-              <span className="text-xs font-semibold text-gray-500">Menu</span>
-            </summary>
-
-            <div className="absolute left-0 mt-3 w-52 overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-xl">
-              {mobileLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="block px-5 py-4 text-base font-semibold text-gray-800 hover:bg-blue-50"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </details>
-        </div>
-
-        <div className="hidden items-center gap-8 md:flex">
-          {config.showNavLinks && (
-            <nav className="flex items-center gap-6">
-              {config.headerLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="font-medium transition hover:opacity-80"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-          )}
-
-          <Link href={siteConfig.contactPageRoute} className={config.theme.button}>
-            {config.headerButtonText || "Contact Us"}
+        <div className="hidden sm:block">
+          <Link href="/download" className="inline-flex rounded-xl bg-cyan-400 px-4 py-2.5 text-sm font-black text-slate-950 transition hover:bg-cyan-300">
+            Download App
           </Link>
         </div>
+
+        <details className="relative sm:hidden">
+          <summary className="cursor-pointer list-none rounded-xl border border-white/15 px-3 py-2 text-sm font-black text-white">Menu</summary>
+          <div className="absolute right-0 mt-3 w-56 overflow-hidden rounded-2xl border border-white/10 bg-slate-900 p-2 shadow-2xl">
+            {[...config.headerLinks, { name: "Download App", href: "/download" }].map((link) => (
+              <Link key={`${link.name}-${link.href}`} href={link.href} className="block rounded-xl px-4 py-3 text-sm font-bold text-slate-200 hover:bg-white/10">
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        </details>
       </div>
     </header>
   );
