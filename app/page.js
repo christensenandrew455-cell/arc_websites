@@ -143,14 +143,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${config.theme.sectionBg} overflow-hidden p-6 sm:p-8`}>
+        <section className={`${config.theme.sectionBg} p-6 sm:p-8`}>
           <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">What it looks like</p>
           <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">A clear workspace.</h2>
-          <div className="mt-6 grid auto-cols-[84%] grid-flow-col gap-4 overflow-x-auto pb-3 snap-x snap-mandatory sm:auto-cols-auto sm:grid-flow-row sm:grid-cols-2 sm:overflow-visible sm:pb-0">
-            {previews.map((preview) => (
-              <article key={preview.title} className="snap-center rounded-2xl border border-orange-200 bg-orange-50/40 p-4">
-                <h3 className="text-center text-lg font-black">{preview.title}</h3>
-                <img src={preview.image} alt={preview.alt} className="mx-auto mt-4 w-full max-w-[430px] rounded-[1.75rem] border border-slate-300 bg-slate-100 shadow-lg" />
+          <div className="mt-8 space-y-12">
+            {previews.map((preview, index) => (
+              <article key={preview.title} className={index ? "border-t border-orange-200 pt-10" : ""}>
+                <h3 className="text-center text-xl font-black sm:text-2xl">{preview.title}</h3>
+                <img src={preview.image} alt={preview.alt} className="mx-auto mt-5 w-full max-w-[430px] rounded-[2rem] border border-slate-300 bg-slate-100 shadow-xl" />
               </article>
             ))}
           </div>
