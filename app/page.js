@@ -104,7 +104,7 @@ export default function Home() {
     <main className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}>
       <SiteHeader />
 
-      <section className={`border-b border-orange-200 px-4 py-12 text-center sm:px-6 sm:py-16 ${config.theme.heroBg}`}>
+      <section className={`flex min-h-[calc(100svh-69px)] items-center border-b border-orange-200 px-4 py-12 text-center sm:px-6 sm:py-16 ${config.theme.heroBg}`}>
         <div className="mx-auto max-w-4xl">
           <h1 className="text-5xl font-black tracking-tight text-slate-950 sm:text-7xl">ARK Client Center</h1>
           <h2 className="mx-auto mt-4 max-w-3xl text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">An AI receptionist that collects every lead while you keep working.</h2>
