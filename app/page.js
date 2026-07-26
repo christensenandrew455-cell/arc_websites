@@ -108,7 +108,6 @@ export default function Home() {
         <div className="mx-auto max-w-4xl">
           <h1 className="text-5xl font-black tracking-tight text-slate-950 sm:text-7xl">ARK Client Center</h1>
           <h2 className="mx-auto mt-4 max-w-3xl text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">An AI receptionist that collects every lead while you keep working.</h2>
-          <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-slate-700 sm:text-lg">Job details, contact information, estimate requests, and next steps arrive in one organized place—so you never have to dig through notes, missed calls, or old conversations to remember what comes next.</p>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <Link href="/download" className={config.theme.button}>Download the App</Link>
             <Link href="/about" className={config.theme.secondaryButton}>Learn More</Link>
