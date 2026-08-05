@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function SiteFooter() {
   const links = [
     ["About", "/about"],
-    ["Download", "/download"],
+    ["Get Started", "/download"],
     ["Support", "/support"],
     ["Privacy Policy", "/privacy"],
     ["Terms & Conditions", "/terms"],

@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import config from "../homeConfig";
+import { signupUrl } from "../productLinks";
 
 function Brand() {
   return (
     <Link href="/" className="flex items-center gap-3" aria-label="ARK Client Center home">
-      <img src={config.logoUrl} alt="ARK Client Center" className="h-11 w-11 rounded-xl object-contain" />
+      <Image src={config.logoUrl} alt="ARK Client Center" width={44} height={44} priority className="h-11 w-11 rounded-xl object-contain" />
       <span className="text-lg font-black tracking-tight text-slate-950 sm:text-xl">ARK Client Center</span>
     </Link>
   );
@@ -24,14 +26,14 @@ export default function SiteHeader() {
           ))}
         </nav>
 
-        <Link href="/download" className="hidden rounded-xl bg-slate-950 px-5 py-3 text-sm font-black text-white transition hover:bg-orange-600 sm:inline-flex">
-          Download App
-        </Link>
+        <a href={signupUrl} className="hidden rounded-xl bg-slate-950 px-5 py-3 text-sm font-black text-white transition hover:bg-orange-600 sm:inline-flex">
+          Start Setup
+        </a>
 
         <details className="relative sm:hidden">
           <summary className="cursor-pointer list-none rounded-xl border border-orange-200 bg-white px-3 py-2 text-sm font-black text-slate-950">Menu</summary>
           <div className="absolute right-0 mt-3 w-60 overflow-hidden rounded-2xl border border-orange-200 bg-white p-2 shadow-xl">
-            {[...config.headerLinks, { name: "Download App", href: "/download" }].map((link) => (
+            {[...config.headerLinks, { name: "Get Started", href: "/download" }].map((link) => (
               <Link key={`${link.name}-${link.href}`} href={link.href} className="block rounded-xl px-4 py-3 text-sm font-bold text-slate-700 hover:bg-orange-50 hover:text-orange-700">
                 {link.name}
               </Link>

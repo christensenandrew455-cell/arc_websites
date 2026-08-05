@@ -3,7 +3,7 @@ const config = {
   logoUrl: "/ark-logo.svg",
   showLogo: true,
   showNavLinks: true,
-  headerButtonText: "Download App",
+  headerButtonText: "Start Setup",
   headerLinks: [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },

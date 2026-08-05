@@ -47,7 +47,7 @@ export default function AboutPage() {
           <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-700">Return to the quick homepage overview or open the download options.</p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
             <Link href="/" className={config.theme.secondaryButton}>Back to Home</Link>
-            <Link href="/download" className={config.theme.button}>Download Options</Link>
+            <Link href="/download" className={config.theme.button}>Get Started</Link>
           </div>
         </section>
       </div>
