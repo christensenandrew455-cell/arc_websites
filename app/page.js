@@ -1,16 +1,13 @@
-import Link from "next/link";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
 import OpportunityCalculator from "./components/OpportunityCalculator";
-import { GetAppLink } from "./components/AppStoreRouting";
 import config from "./homeConfig";
-import { demoPhone, demoPhoneHref } from "./productLinks";
 
 const featureCards = [
-  { title: "ARK answers first.", href: "#how-it-works" },
-  { title: "Get the details, not a mystery number.", href: "#how-it-works" },
-  { title: "Keep your personal number personal.", href: "#private-number" },
-  { title: "Send the lead to the right employee.", href: "#team" },
+  "Calls get answered while you keep working.",
+  "Real lead details show up in one place.",
+  "Spam and sales calls stop wasting your time.",
+  "Send the right lead to the right employee.",
 ];
 
 const conversation = [
@@ -36,13 +33,6 @@ const conversation = [
   ["business", "You are all set. The business will follow up through this number if anything changes."],
 ];
 
-function DemoButton({ className, children }) {
-  if (demoPhoneHref) {
-    return <a href={demoPhoneHref} className={className}>{children || `Call ${demoPhone}`}</a>;
-  }
-  return <a href="#live-demo" className={className}>{children || "Try the Live Demo"}</a>;
-}
-
 export default function Home() {
   return (
     <main className={`${config.font} min-h-screen ${config.theme.pageBg} ${config.theme.pageText}`}>
@@ -52,10 +42,6 @@ export default function Home() {
         <div className="mx-auto max-w-5xl text-center">
           <h1 className="text-5xl font-black leading-[0.95] tracking-[-0.05em] text-slate-950 sm:text-7xl lg:text-[5.25rem]">Keep working. ARK answers first.</h1>
           <p className="mx-auto mt-6 max-w-3xl text-xl font-black leading-8 text-slate-700 sm:text-2xl">Stop answering calls that waste your time. Get the real leads in your app.</p>
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <DemoButton className={config.theme.button}>{demoPhoneHref ? `Call the Demo: ${demoPhone}` : "Try the Live Demo"}</DemoButton>
-            <GetAppLink className={config.theme.secondaryButton}>Get the App</GetAppLink>
-          </div>
         </div>
       </section>
 
@@ -70,10 +56,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <h2 className="text-center text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">What you get</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {featureCards.map((feature) => (
-              <a key={feature.title} href={feature.href} className="grid min-h-52 place-items-center rounded-3xl border border-slate-200 bg-slate-50 p-7 text-center transition hover:-translate-y-1 hover:border-orange-300 hover:bg-orange-50 hover:shadow-lg">
-                <h3 className="text-3xl font-black leading-tight tracking-tight text-slate-950">{feature.title}</h3>
-              </a>
+            {featureCards.map((title) => (
+              <div key={title} className="grid min-h-52 place-items-center rounded-3xl border border-slate-200 bg-slate-50 p-7 text-center">
+                <h3 className="text-3xl font-black leading-tight tracking-tight text-slate-950">{title}</h3>
+              </div>
             ))}
           </div>
         </div>
@@ -85,25 +71,11 @@ export default function Home() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {["Customer calls.", "ARK gets the details.", "You choose what happens next."].map((title, index) => (
               <article key={title} className="rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm">
-                <span className="text-sm font-black text-orange-600">0{index + 1}</span>
+                <span className="text-2xl font-black text-orange-600">{index + 1}</span>
                 <h3 className="mt-4 text-3xl font-black leading-tight">{title}</h3>
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section id="private-number" className="scroll-mt-24 bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-4xl font-black tracking-tight sm:text-6xl">Keep your personal number personal.</h2>
-          <p className="mx-auto mt-5 max-w-3xl text-2xl font-black leading-tight text-slate-700">Use your ARK number for customer calls and texts.</p>
-        </div>
-      </section>
-
-      <section id="team" className="scroll-mt-24 bg-orange-50 px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="text-center text-4xl font-black tracking-tight sm:text-6xl">What you can do with a lead</h2>
-          <div className="mt-10 flex flex-wrap justify-center gap-3">{["Accept", "Decline", "Text", "Save contact", "Add to calendar", "Assign an employee"].map((item) => <span key={item} className="rounded-full border border-orange-200 bg-white px-6 py-4 text-lg font-black text-slate-800 shadow-sm">{item}</span>)}</div>
         </div>
       </section>
 
@@ -132,16 +104,6 @@ export default function Home() {
               </div>
             </div>
           </details>
-        </div>
-      </section>
-
-      <section id="live-demo" className="scroll-mt-24 bg-slate-950 px-4 py-16 text-white sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-4xl font-black tracking-tight sm:text-6xl">Hear it yourself.</h2>
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <DemoButton className={config.theme.button}>{demoPhoneHref ? `Call ${demoPhone}` : "Try the Live Demo"}</DemoButton>
-            <GetAppLink className={config.theme.secondaryButton}>Get the App</GetAppLink>
-          </div>
         </div>
       </section>
 
