@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-  background: #020617;
+  color-scheme: light;
+  background: #ffffff;
 }
 
 * {
@@ -13,21 +13,41 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  background: #020617;
-  color: #ffffff;
+  background: #ffffff;
+  color: #0f172a;
   font-family: Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 button,
 input,
+select,
 textarea {
   font: inherit;
+}
+
+button,
+a,
+summary,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 639px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
 }
 
 summary::-webkit-details-marker {
@@ -35,6 +55,6 @@ summary::-webkit-details-marker {
 }
 
 ::selection {
-  background: #22d3ee;
-  color: #020617;
+  background: #fed7aa;
+  color: #0f172a;
 }
