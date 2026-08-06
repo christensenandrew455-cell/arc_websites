@@ -4,9 +4,6 @@ import { demoPhone, demoPhoneHref } from "../productLinks";
 
 export default function SiteFooter() {
   const links = [
-    ["About", "/about"],
-    ["How It Works", "/#how-it-works"],
-    ["Pricing", "/#pricing"],
     ["Support", "/support"],
     ["Privacy Policy", "/privacy"],
     ["Terms & Conditions", "/terms"],
@@ -27,7 +24,7 @@ export default function SiteFooter() {
             Get the App
           </GetAppLink>
         </div>
-        <div className="mt-7 grid grid-cols-2 gap-2 text-sm font-bold sm:flex sm:flex-wrap sm:justify-center sm:gap-x-5 sm:gap-y-3">
+        <div className="mt-7 grid grid-cols-1 gap-2 text-sm font-bold sm:flex sm:flex-wrap sm:justify-center sm:gap-x-5 sm:gap-y-3">
           {links.map(([name, href]) => (
             <Link key={`${name}-${href}`} href={href} className="grid min-h-11 place-items-center rounded-xl px-2 hover:bg-white/5 hover:text-orange-400">{name}</Link>
           ))}
