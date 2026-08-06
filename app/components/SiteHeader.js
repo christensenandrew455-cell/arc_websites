@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import config from "../homeConfig";
-import { signupUrl } from "../productLinks";
+import { loginUrl } from "../productLinks";
+import { GetAppLink } from "./AppStoreRouting";
 
 function Brand() {
   return (
@@ -26,18 +27,18 @@ export default function SiteHeader() {
           ))}
         </nav>
 
-        <a href={signupUrl} className="hidden rounded-xl bg-slate-950 px-5 py-3 text-sm font-black text-white transition hover:bg-orange-600 sm:inline-flex">
-          Start Setup
-        </a>
+        <GetAppLink className="hidden rounded-xl bg-slate-950 px-5 py-3 text-sm font-black text-white transition hover:bg-orange-600 sm:inline-flex" />
 
         <details className="relative shrink-0 sm:hidden">
           <summary className="grid min-h-11 cursor-pointer list-none place-items-center rounded-xl border border-orange-200 bg-white px-3 text-sm font-black text-slate-950">Menu</summary>
           <div className="absolute right-0 mt-3 w-60 max-w-[calc(100vw-2rem)] overflow-hidden rounded-2xl border border-orange-200 bg-white p-2 shadow-xl">
-            {[...config.headerLinks, { name: "Start Setup", href: signupUrl }, { name: "Existing Customer", href: "/download" }].map((link) => (
+            <GetAppLink className="block rounded-xl bg-slate-950 px-4 py-3 text-sm font-black text-white">Get the App</GetAppLink>
+            {config.headerLinks.map((link) => (
               <Link key={`${link.name}-${link.href}`} href={link.href} className="block rounded-xl px-4 py-3 text-sm font-bold text-slate-700 hover:bg-orange-50 hover:text-orange-700">
                 {link.name}
               </Link>
             ))}
+            <a href={loginUrl} className="block rounded-xl px-4 py-3 text-sm font-bold text-slate-700 hover:bg-orange-50 hover:text-orange-700">Existing Customer Sign In</a>
           </div>
         </details>
       </div>

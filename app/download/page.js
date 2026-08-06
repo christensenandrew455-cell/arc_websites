@@ -1,7 +1,8 @@
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
+import { AppStoreRedirect } from "../components/AppStoreRouting";
 import config from "../homeConfig";
-import { demoPhone, demoPhoneHref, loginUrl, signupUrl } from "../productLinks";
+import { androidDownloadUrl, demoPhone, demoPhoneHref, iosDownloadUrl, loginUrl, signupUrl } from "../productLinks";
 
 function StoreOption({ title, description, href, label }) {
   return (
@@ -20,17 +21,15 @@ function StoreOption({ title, description, href, label }) {
 }
 
 export default function DownloadPage() {
-  const androidUrl = process.env.NEXT_PUBLIC_ANDROID_DOWNLOAD_URL || "";
-  const iosUrl = process.env.NEXT_PUBLIC_IOS_DOWNLOAD_URL || "";
-
   return (
     <main className="min-h-screen bg-white text-slate-950">
       <SiteHeader />
       <section className="border-b border-orange-200 bg-gradient-to-b from-orange-50 to-white px-4 py-10 text-center sm:px-6 sm:py-20">
         <div className="mx-auto max-w-4xl">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Get started</p>
-          <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Open ARK Client Center.</h1>
-          <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">Use the web app now. Mobile store downloads can be added here when their listings are ready.</p>
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Get the app</p>
+          <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Choose where you use ARK.</h1>
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">On Android or iPhone, this page opens the correct store automatically. Until the exact listing is connected, it searches for “ARK Client Center.” Desktop visitors can choose below.</p>
+          <AppStoreRedirect />
         </div>
       </section>
 
@@ -56,8 +55,8 @@ export default function DownloadPage() {
         </section>
 
         <div className="grid gap-5 md:grid-cols-2">
-          <StoreOption title="Android" description="Install ARK Client Center from Google Play when the official listing becomes available." href={androidUrl} label="Open Google Play" />
-          <StoreOption title="iPhone and iPad" description="Install ARK Client Center from the App Store when the official listing becomes available." href={iosUrl} label="Open App Store" />
+          <StoreOption title="Android" description="Install ARK Client Center from Google Play. If needed, search for “ARK Client Center” in the store." href={androidDownloadUrl} label="Open Google Play" />
+          <StoreOption title="iPhone and iPad" description="Install ARK Client Center from the App Store. If needed, search for “ARK Client Center” in the store." href={iosDownloadUrl} label="Open App Store" />
         </div>
       </div>
 
