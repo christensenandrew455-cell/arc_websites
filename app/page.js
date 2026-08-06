@@ -166,10 +166,7 @@ export default function Home() {
             Learn More
           </Link>
           <p className="mt-8 text-2xl font-black text-slate-600">Or</p>
-          <div className="mx-auto mt-5 flex w-32 flex-col items-center" aria-hidden="true">
-            <span className="h-12 w-4 rounded-full bg-orange-600" />
-            <span className="-mt-1 block h-16 w-16 rotate-45 border-b-[14px] border-r-[14px] border-orange-600" />
-          </div>
+          <div className="mt-2 text-[9rem] font-black leading-[0.7] text-orange-600 sm:text-[11rem]" aria-hidden="true">↓</div>
         </div>
       </section>
 
