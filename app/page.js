@@ -1,7 +1,15 @@
+import Link from "next/link";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
 import OpportunityCalculator from "./components/OpportunityCalculator";
 import config from "./homeConfig";
+
+const topicLinks = [
+  { label: "Missed-call math", note: "Run your numbers", href: "/missed-calls" },
+  { label: "How it works", note: "Follow a real call", href: "/how-it-works" },
+  { label: "Live demo", note: "Hear it yourself", href: "/live-demo" },
+  { label: "Pricing", note: "See every charge", href: "/pricing" },
+];
 
 const featureCards = [
   "Calls get answered while you keep working.",
@@ -45,10 +53,27 @@ export default function Home() {
         </div>
       </section>
 
+      <nav className="border-b border-slate-200 bg-white px-4 py-6 sm:px-6 lg:px-8" aria-label="Learn about ARK">
+        <div className="mx-auto grid max-w-7xl gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {topicLinks.map((topic) => (
+            <Link key={topic.href} href={topic.href} className="group rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:-translate-y-0.5 hover:border-orange-300 hover:bg-orange-50">
+              <span className="text-xs font-black uppercase tracking-[0.16em] text-orange-700">{topic.note}</span>
+              <span className="mt-2 flex items-center justify-between gap-3 text-lg font-black text-slate-950">
+                {topic.label}
+                <span aria-hidden="true" className="text-orange-600 transition group-hover:translate-x-1">→</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </nav>
+
       <section id="missed-call-math" className="scroll-mt-24 bg-slate-950 px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="mb-8 text-4xl font-black tracking-tight text-white sm:text-5xl">What could missed calls be costing you?</h2>
           <OpportunityCalculator />
+          <div className="mt-8 text-center">
+            <Link href="/missed-calls" className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-black text-white transition hover:bg-white hover:text-slate-950">Understand the full missed-call math →</Link>
+          </div>
         </div>
       </section>
 
@@ -75,6 +100,9 @@ export default function Home() {
                 <h3 className="mt-4 text-3xl font-black leading-tight">{title}</h3>
               </article>
             ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/how-it-works" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-slate-950 px-6 py-3 font-black text-white transition hover:bg-orange-600">See the complete call flow →</Link>
           </div>
         </div>
       </section>
@@ -104,6 +132,9 @@ export default function Home() {
               </div>
             </div>
           </details>
+          <div className="mt-8 text-center">
+            <Link href="/pricing" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-orange-600 px-6 py-3 font-black text-white transition hover:bg-orange-700">See full pricing details →</Link>
+          </div>
         </div>
       </section>
 

@@ -5,8 +5,10 @@ import { demoPhone, demoPhoneHref } from "../productLinks";
 export default function SiteFooter() {
   const links = [
     ["About", "/about"],
-    ["How It Works", "/#how-it-works"],
-    ["Pricing", "/#pricing"],
+    ["Missed-call Math", "/missed-calls"],
+    ["How It Works", "/how-it-works"],
+    ["Live Demo", "/live-demo"],
+    ["Pricing", "/pricing"],
     ["Support", "/support"],
     ["Privacy Policy", "/privacy"],
     ["Terms & Conditions", "/terms"],
@@ -18,7 +20,7 @@ export default function SiteFooter() {
         <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl">Hear it yourself.</h2>
         <div className="mx-auto mt-8 grid max-w-md gap-3 sm:max-w-xl sm:grid-cols-2">
           <a
-            href={demoPhoneHref || "/#live-demo"}
+            href={demoPhoneHref || "/live-demo"}
             className="inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-orange-600 px-6 py-4 text-base font-black text-white transition hover:bg-orange-500"
           >
             {demoPhoneHref ? `Try the Live Demo: ${demoPhone}` : "Try the Live Demo"}
