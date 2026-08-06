@@ -10,6 +10,13 @@ export const metadata = {
   metadataBase: new URL("https://arkwebsites.com"),
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#fff7ed",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

@@ -19,26 +19,26 @@ export default function TermsPage() {
   return (
     <main className="min-h-screen bg-white text-slate-950">
       <SiteHeader />
-      <section className="border-b border-orange-200 bg-gradient-to-b from-orange-50 to-white px-4 py-14 text-center sm:px-6 sm:py-20">
+      <section className="border-b border-orange-200 bg-gradient-to-b from-orange-50 to-white px-4 py-10 text-center sm:px-6 sm:py-20">
         <div className="mx-auto max-w-4xl">
           <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Effective July 24, 2026</p>
-          <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Terms & Conditions</h1>
-          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">The rules for using the ARK Client Center website, application, receptionist connections, and messaging tools.</p>
+          <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Terms & Conditions</h1>
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">The rules for using the ARK Client Center website, application, receptionist connections, and messaging tools.</p>
         </div>
       </section>
 
-      <div className="mx-auto max-w-4xl space-y-5 px-4 py-10 sm:px-6 sm:py-14">
+      <div className="mx-auto max-w-4xl space-y-4 px-3 py-6 sm:space-y-5 sm:px-6 sm:py-14">
         {sections.map(([title, body]) => (
-          <section key={title} className="rounded-3xl border border-orange-200 bg-white p-6 shadow-sm sm:p-8">
+          <section key={title} className="rounded-3xl border border-orange-200 bg-white p-4 shadow-sm sm:p-8">
             <h2 className="text-2xl font-black">{title}</h2>
             <p className="mt-3 leading-7 text-slate-600">{body}</p>
           </section>
         ))}
 
-        <section className="rounded-3xl border border-orange-200 bg-orange-50 p-6 sm:p-8">
+        <section className="rounded-3xl border border-orange-200 bg-orange-50 p-4 sm:p-8">
           <h2 className="text-2xl font-black">Support and reports</h2>
           <p className="mt-3 leading-7 text-slate-600">Questions about these terms or concerns about messages sent through ARK Client Center can be submitted through the support page.</p>
-          <Link href="/support" className="mt-5 inline-flex rounded-xl bg-orange-500 px-5 py-3 text-sm font-black text-white hover:bg-orange-600">Open Support</Link>
+          <Link href="/support" className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-orange-500 px-5 py-3 text-sm font-black text-white hover:bg-orange-600 sm:w-auto">Open Support</Link>
         </section>
       </div>
 

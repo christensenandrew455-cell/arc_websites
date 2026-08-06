@@ -101,10 +101,10 @@ export default function Home() {
     <main className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}>
       <SiteHeader />
 
-      <section className={`flex min-h-[calc(100svh-69px)] items-center border-b border-orange-200 px-4 py-12 text-center sm:px-6 sm:py-16 ${config.theme.heroBg}`}>
+      <section className={`flex min-h-[calc(100svh-65px)] items-center border-b border-orange-200 px-4 py-10 text-center sm:min-h-[calc(100svh-69px)] sm:px-6 sm:py-16 ${config.theme.heroBg}`}>
         <div className="mx-auto max-w-4xl">
-          <h1 className="text-5xl font-black tracking-tight text-slate-950 sm:text-7xl">ARK Client Center</h1>
-          <h2 className="mx-auto mt-4 max-w-3xl text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">An AI receptionist that collects every lead while you keep working.</h2>
+          <h1 className="text-4xl font-black tracking-tight text-slate-950 sm:text-7xl">ARK Client Center</h1>
+          <h2 className="mx-auto mt-4 max-w-3xl text-xl font-black tracking-tight text-slate-900 sm:text-3xl">An AI receptionist that collects every lead while you keep working.</h2>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <a href={signupUrl} className={config.theme.button}>Start Setup</a>
             {demoPhoneHref ? (
@@ -116,8 +116,8 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 sm:py-12">
-        <section className={`${config.theme.sectionBg} p-6 sm:p-8`}>
+      <div className="mx-auto max-w-7xl space-y-5 px-3 py-6 sm:space-y-8 sm:px-6 sm:py-12">
+        <section className={`${config.theme.sectionBg} p-4 sm:p-8`}>
           <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">ARK Client Center</p>
@@ -125,7 +125,7 @@ export default function Home() {
             </div>
             <Link href="/about" className="hidden font-black text-orange-600 underline decoration-2 underline-offset-4 hover:text-orange-700 sm:inline-flex">Read more</Link>
           </div>
-          <div className="mt-6 grid grid-cols-2 gap-3">
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {aboutHighlights.map((item) => (
               <Link key={item.title} href="/about" className="rounded-2xl border border-orange-200 bg-orange-50/50 p-4 transition hover:-translate-y-0.5 hover:border-orange-400 hover:shadow-md sm:p-5">
                 <h3 className="text-base font-black sm:text-lg">{item.title}</h3>
@@ -136,7 +136,7 @@ export default function Home() {
           <Link href="/about" className="mt-5 inline-flex font-black text-orange-600 underline decoration-2 underline-offset-4 hover:text-orange-700 sm:hidden">Read more</Link>
         </section>
 
-        <section className={`${config.theme.sectionBg} p-6 sm:p-8`}>
+        <section className={`${config.theme.sectionBg} p-4 sm:p-8`}>
           <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">How it works</p>
           <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">From the first call to the next step.</h2>
           <div className="mt-6 space-y-4">
@@ -150,7 +150,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${config.theme.sectionBg} p-6 sm:p-8`}>
+        <section className={`${config.theme.sectionBg} p-4 sm:p-8`}>
           <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Inside the client center</p>
           <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Only the tools needed to handle the next step.</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
@@ -166,7 +166,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${config.theme.sectionBg} p-6 sm:p-8`}>
+        <section className={`${config.theme.sectionBg} p-4 sm:p-8`}>
           <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">FAQ</p>
           <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Common questions</h2>
           <div className="mt-6 space-y-3">
@@ -184,7 +184,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="rounded-3xl border border-orange-300 bg-orange-50 p-7 text-center shadow-lg sm:p-9">
+        <section className="rounded-3xl border border-orange-300 bg-orange-50 p-5 text-center shadow-lg sm:p-9">
           <h2 className="text-3xl font-black tracking-tight">Ready to stop missing calls?</h2>
           <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-700">Start your business setup in the web app, or contact ARK with a sales or support question.</p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
