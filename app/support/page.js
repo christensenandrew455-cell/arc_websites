@@ -3,7 +3,6 @@
 import { useState } from "react";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
-import { clientCenterUrl } from "../productLinks";
 
 const categories = [
   ["sales", "Sales question"],
@@ -47,7 +46,7 @@ export default function SupportPage() {
       const body = new FormData();
       Object.entries(form).forEach(([key, value]) => body.append(key, String(value)));
       if (screenshot) body.append("screenshot", screenshot);
-      const response = await fetch(`${clientCenterUrl}/api/support/contact`, { method: "POST", body });
+      const response = await fetch("/api/support", { method: "POST", body });
       const data = await response.json().catch(() => ({}));
       if (!response.ok || !data.ok) throw new Error(data.error || "Your request could not be submitted.");
       setForm(initialForm);
