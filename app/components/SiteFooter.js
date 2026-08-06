@@ -6,7 +6,6 @@ export default function SiteFooter() {
   const links = [
     ["About", "/about"],
     ["How It Works", "/#how-it-works"],
-    ["Live Demo", "/#live-demo"],
     ["Pricing", "/#pricing"],
     ["Support", "/support"],
     ["Privacy Policy", "/privacy"],
@@ -14,9 +13,10 @@ export default function SiteFooter() {
   ];
 
   return (
-    <footer className="border-t border-slate-200 bg-slate-950 px-4 pb-[calc(2.5rem+env(safe-area-inset-bottom))] pt-10 text-slate-400">
+    <footer id="live-demo" className="scroll-mt-24 border-t border-slate-200 bg-slate-950 px-4 pb-[calc(2.5rem+env(safe-area-inset-bottom))] pt-12 text-slate-400">
       <div className="mx-auto max-w-7xl text-center">
-        <div className="mx-auto grid max-w-md gap-3 sm:max-w-xl sm:grid-cols-2">
+        <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl">Hear it yourself.</h2>
+        <div className="mx-auto mt-8 grid max-w-md gap-3 sm:max-w-xl sm:grid-cols-2">
           <a
             href={demoPhoneHref || "/#live-demo"}
             className="inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-orange-600 px-6 py-4 text-base font-black text-white transition hover:bg-orange-500"
