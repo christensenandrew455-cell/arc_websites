@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { GetAppLink } from "./AppStoreRouting";
 
 export default function SiteFooter() {
   const links = [
@@ -17,7 +16,6 @@ export default function SiteFooter() {
       <div className="mx-auto max-w-7xl text-center">
         <p className="text-xl font-black text-white">ARK Client Center</p>
         <p className="mx-auto mt-2 max-w-2xl text-sm leading-6">Your calls answered, your leads organized, and your next step clear.</p>
-        <GetAppLink className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-orange-600 px-6 py-3 text-sm font-black text-white transition hover:bg-orange-500 sm:w-auto">Get the App</GetAppLink>
         <div className="mt-6 grid grid-cols-2 gap-2 text-sm font-bold sm:flex sm:flex-wrap sm:justify-center sm:gap-x-5 sm:gap-y-3">
           {links.map(([name, href]) => (
             <Link key={`${name}-${href}`} href={href} className="grid min-h-11 place-items-center rounded-xl px-2 hover:bg-white/5 hover:text-orange-400">{name}</Link>
