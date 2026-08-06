@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
 import OpportunityCalculator from "./components/OpportunityCalculator";
@@ -154,6 +155,18 @@ export default function Home() {
               </div>
             </div>
           </details>
+        </div>
+      </section>
+
+      <section className="border-t border-orange-200 bg-orange-50 px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-black uppercase tracking-[0.2em] text-orange-700">One more step</p>
+          <h2 className="mt-4 text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">Want to learn more?</h2>
+          <Link href="/about" className="mt-8 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-slate-950 px-7 py-4 text-lg font-black text-white transition hover:-translate-y-0.5 hover:bg-slate-800 sm:w-auto">
+            Learn More
+          </Link>
+          <p className="mt-8 text-2xl font-black text-slate-600">Or</p>
+          <div className="mt-3 text-6xl font-black leading-none text-orange-600" aria-hidden="true">↓</div>
         </div>
       </section>
 
