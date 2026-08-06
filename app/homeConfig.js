@@ -4,10 +4,10 @@ const config = {
   showLogo: true,
   showNavLinks: true,
   headerLinks: [
-    { name: "Missed-call math", href: "/#missed-call-math" },
-    { name: "How it works", href: "/#how-it-works" },
-    { name: "Live demo", href: "/#live-demo" },
-    { name: "Pricing", href: "/#pricing" },
+    { name: "Missed-call math", href: "/missed-calls" },
+    { name: "How it works", href: "/how-it-works" },
+    { name: "Live demo", href: "/live-demo" },
+    { name: "Pricing", href: "/pricing" },
   ],
   font: "font-sans",
   theme: {
