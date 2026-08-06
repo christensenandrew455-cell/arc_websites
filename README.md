@@ -13,4 +13,4 @@ This repository contains the public ARK Client Center website at `arkwebsites.co
 
 ## Environment variables
 
-Copy `.env.example` and configure `NEXT_PUBLIC_CLIENT_CENTER_URL` so website support requests are saved directly to the administrator inbox in ARK Client Center. The live-demo phone and mobile-store URLs are optional.
+Copy `.env.example` and configure `NEXT_PUBLIC_CLIENT_CENTER_URL` so website support requests are saved directly to the administrator inbox in ARK Client Center. The live-demo phone and mobile-store URLs are optional. Until an exact mobile listing URL is configured, mobile Get the App buttons open the correct store's search for “ARK Client Center.”

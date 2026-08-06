@@ -1,33 +1,34 @@
 import Link from "next/link";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
+import { GetAppLink } from "./components/AppStoreRouting";
 import config from "./homeConfig";
 import { demoPhone, demoPhoneHref, signupUrl } from "./productLinks";
 
-const aboutHighlights = [
+const quickLinks = [
   {
-    title: "Why ARK started",
-    body: "Andrew Christensen started ARK after running a landscaping business and constantly switching between the work itself, new leads, handwritten notes, and text threads. He wanted one place that clearly showed who called, what they needed, and when the next job was.",
+    eyebrow: "New here?",
+    title: "See how ARK works",
+    body: "Follow a customer call from the receptionist to an organized lead.",
+    href: "#how-it-works",
   },
   {
-    title: "AI caller intake",
-    body: "The responsive AI receptionist accurately collects job details, contact information, timing, and estimate requests. It guides callers toward the next step so more inquiries can become real estimate opportunities instead of missed voicemails.",
+    eyebrow: "Want to hear it?",
+    title: "Call the live demo",
+    body: "Try a real receptionist conversation before you decide.",
+    href: "/download#live-demo",
   },
   {
-    title: "More than voicemail",
-    body: "The receptionist carries the conversation forward, asks the questions your business needs, and organizes the answers before the call ends.",
+    eyebrow: "Ready to use it?",
+    title: "Get the app",
+    body: "Open the correct mobile store or choose your version on desktop.",
+    appLink: true,
   },
   {
-    title: "One clear workspace",
-    body: "See who called, what they need, and what should happen next without searching through notes, missed calls, and old conversations.",
-  },
-  {
-    title: "Private business messaging",
-    body: "Continue customer conversations through the business number without exposing your personal phone number.",
-  },
-  {
-    title: "Employees stay connected",
-    body: "Approve employee accounts, control access, assign work, and review activity inside the same business workspace.",
+    eyebrow: "Already a customer?",
+    title: "Get support",
+    body: "Find account, privacy, billing, and messaging help in one place.",
+    href: "/support",
   },
 ];
 
@@ -101,12 +102,12 @@ export default function Home() {
     <main className={`${config.font} ${config.theme.pageBg} ${config.theme.pageText}`}>
       <SiteHeader />
 
-      <section className={`flex min-h-[calc(100svh-65px)] items-center border-b border-orange-200 px-4 py-10 text-center sm:min-h-[calc(100svh-69px)] sm:px-6 sm:py-16 ${config.theme.heroBg}`}>
+      <section className={`border-b border-orange-200 px-4 py-14 text-center sm:px-6 sm:py-24 ${config.theme.heroBg}`}>
         <div className="mx-auto max-w-4xl">
           <h1 className="text-4xl font-black tracking-tight text-slate-950 sm:text-7xl">ARK Client Center</h1>
           <h2 className="mx-auto mt-4 max-w-3xl text-xl font-black tracking-tight text-slate-900 sm:text-3xl">An AI receptionist that collects every lead while you keep working.</h2>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href={signupUrl} className={config.theme.button}>Start Setup</a>
+            <GetAppLink className={config.theme.button}>Get the App</GetAppLink>
             {demoPhoneHref ? (
               <a href={demoPhoneHref} className={config.theme.secondaryButton}>Call Demo: {demoPhone}</a>
             ) : (
@@ -118,25 +119,19 @@ export default function Home() {
 
       <div className="mx-auto max-w-7xl space-y-5 px-3 py-6 sm:space-y-8 sm:px-6 sm:py-12">
         <section className={`${config.theme.sectionBg} p-4 sm:p-8`}>
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">ARK Client Center</p>
-              <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">About Us</h2>
-            </div>
-            <Link href="/about" className="hidden font-black text-orange-600 underline decoration-2 underline-offset-4 hover:text-orange-700 sm:inline-flex">Read more</Link>
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Go straight to what you need</p>
+          <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">What are you here to do?</h2>
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {quickLinks.map((item) => {
+              const card = <><p className="text-[10px] font-black uppercase tracking-[0.18em] text-orange-600">{item.eyebrow}</p><h3 className="mt-2 text-lg font-black">{item.title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{item.body}</p><span className="mt-4 inline-flex text-sm font-black text-orange-700">Go →</span></>;
+              return item.appLink
+                ? <GetAppLink key={item.title} className="rounded-2xl border border-orange-200 bg-orange-50/50 p-5 transition hover:-translate-y-0.5 hover:border-orange-400 hover:shadow-md">{card}</GetAppLink>
+                : <Link key={item.title} href={item.href} className="rounded-2xl border border-orange-200 bg-orange-50/50 p-5 transition hover:-translate-y-0.5 hover:border-orange-400 hover:shadow-md">{card}</Link>;
+            })}
           </div>
-          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {aboutHighlights.map((item) => (
-              <Link key={item.title} href="/about" className="rounded-2xl border border-orange-200 bg-orange-50/50 p-4 transition hover:-translate-y-0.5 hover:border-orange-400 hover:shadow-md sm:p-5">
-                <h3 className="text-base font-black sm:text-lg">{item.title}</h3>
-                <p className="mt-2 text-xs leading-5 text-slate-700 sm:text-sm sm:leading-6">{item.body}</p>
-              </Link>
-            ))}
-          </div>
-          <Link href="/about" className="mt-5 inline-flex font-black text-orange-600 underline decoration-2 underline-offset-4 hover:text-orange-700 sm:hidden">Read more</Link>
         </section>
 
-        <section className={`${config.theme.sectionBg} p-4 sm:p-8`}>
+        <section id="how-it-works" className={`scroll-mt-24 ${config.theme.sectionBg} p-4 sm:p-8`}>
           <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">How it works</p>
           <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">From the first call to the next step.</h2>
           <div className="mt-6 space-y-4">
@@ -150,7 +145,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${config.theme.sectionBg} p-4 sm:p-8`}>
+        <section id="features" className={`scroll-mt-24 ${config.theme.sectionBg} p-4 sm:p-8`}>
           <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Inside the client center</p>
           <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Only the tools needed to handle the next step.</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
@@ -186,10 +181,10 @@ export default function Home() {
 
         <section className="rounded-3xl border border-orange-300 bg-orange-50 p-5 text-center shadow-lg sm:p-9">
           <h2 className="text-3xl font-black tracking-tight">Ready to stop missing calls?</h2>
-          <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-700">Start your business setup in the web app, or contact ARK with a sales or support question.</p>
+          <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-700">Get ARK Client Center on your device, or start your business setup in the web app.</p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href={signupUrl} className={config.theme.button}>Start Setup</a>
-            <Link href="/support" className={config.theme.secondaryButton}>Contact ARK</Link>
+            <GetAppLink className={config.theme.button}>Get the App</GetAppLink>
+            <a href={signupUrl} className={config.theme.secondaryButton}>Start Setup</a>
           </div>
         </section>
       </div>
