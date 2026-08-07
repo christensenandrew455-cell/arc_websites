@@ -27,19 +27,6 @@ export default function SiteHeader() {
         </nav>
 
         <GetAppLink className="hidden rounded-xl bg-slate-950 px-5 py-3 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-orange-600 sm:inline-flex" />
-
-        <details className="relative shrink-0 sm:hidden">
-          <summary className="grid min-h-11 cursor-pointer list-none place-items-center rounded-xl border border-slate-200 bg-white px-3 text-sm font-black text-slate-950">Menu</summary>
-          <div className="absolute right-0 mt-3 w-64 max-w-[calc(100vw-2rem)] overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl">
-            <GetAppLink className="block rounded-xl bg-slate-950 px-4 py-3 text-sm font-black text-white">Get the App</GetAppLink>
-            {config.headerLinks.map((link) => (
-              <Link key={`${link.name}-${link.href}`} href={link.href} className="block rounded-xl px-4 py-3 text-sm font-bold text-slate-700 hover:bg-orange-50 hover:text-orange-700">
-                {link.name}
-              </Link>
-            ))}
-            <Link href="/support" className="block rounded-xl px-4 py-3 text-sm font-bold text-slate-700 hover:bg-orange-50 hover:text-orange-700">Support</Link>
-          </div>
-        </details>
       </div>
     </header>
   );
