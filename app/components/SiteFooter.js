@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { GetAppLink } from "./AppStoreRouting";
-import { demoPhone, demoPhoneHref } from "../productLinks";
 
 export default function SiteFooter() {
   const links = [
@@ -14,12 +13,12 @@ export default function SiteFooter() {
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl">Hear it yourself.</h2>
         <div className="mx-auto mt-8 grid max-w-md gap-3 sm:max-w-xl sm:grid-cols-2">
-          <a
-            href={demoPhoneHref || "/#live-demo"}
+          <Link
+            href="/demo"
             className="inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-orange-600 px-6 py-4 text-base font-black text-white transition hover:bg-orange-500"
           >
-            {demoPhoneHref ? `Try the Live Demo: ${demoPhone}` : "Try the Live Demo"}
-          </a>
+            Try the Live Demo
+          </Link>
           <GetAppLink className="inline-flex min-h-14 w-full items-center justify-center rounded-xl border border-slate-700 bg-white px-6 py-4 text-base font-black text-slate-950 transition hover:bg-slate-100">
             Get the App
           </GetAppLink>
