@@ -1,0 +1,44 @@
+import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "../components/SiteFooter";
+
+const demoPhone = "978-777-6464";
+const demoPhoneHref = "tel:+19787776464";
+
+export default function DemoPage() {
+  return (
+    <main className="min-h-screen bg-white text-slate-950">
+      <SiteHeader />
+
+      <section className="border-b border-orange-200 bg-orange-50 px-4 py-16 text-center sm:px-6 sm:py-24">
+        <div className="mx-auto max-w-4xl">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-700">Live demo</p>
+          <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-6xl">Call this number and see what you think.</h1>
+          <a
+            href={demoPhoneHref}
+            className="mt-8 inline-flex min-h-16 w-full items-center justify-center rounded-2xl bg-slate-950 px-7 py-5 text-3xl font-black text-white transition hover:bg-slate-800 sm:w-auto sm:text-4xl"
+          >
+            {demoPhone}
+          </a>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
+        <h2 className="text-3xl font-black tracking-tight sm:text-5xl">Test it however you want.</h2>
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          {[
+            "Pretend to be one of your customers.",
+            "Ask the kinds of questions your customers ask.",
+            "Try to throw it off and see how it handles the call.",
+          ].map((item) => (
+            <article key={item} className="rounded-3xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+              <p className="text-2xl font-black leading-tight">{item}</p>
+            </article>
+          ))}
+        </div>
+        <p className="mt-8 text-xl font-bold leading-8 text-slate-700">Play with it, test it your way, and decide whether it feels right for your business.</p>
+      </section>
+
+      <SiteFooter />
+    </main>
+  );
+}
