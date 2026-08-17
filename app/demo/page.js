@@ -1,8 +1,6 @@
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
-
-const demoPhone = "978-777-6464";
-const demoPhoneHref = "tel:+19787776464";
+import { demoPhoneDisplay, demoPhoneHref } from "../productLinks";
 
 export default function DemoPage() {
   return (
@@ -17,7 +15,7 @@ export default function DemoPage() {
             href={demoPhoneHref}
             className="mt-8 inline-flex min-h-16 w-full items-center justify-center rounded-2xl bg-slate-950 px-7 py-5 text-3xl font-black text-white transition hover:bg-slate-800 sm:w-auto sm:text-4xl"
           >
-            {demoPhone}
+            {demoPhoneDisplay}
           </a>
         </div>
       </section>

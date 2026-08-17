@@ -136,8 +136,8 @@ export default function Home() {
                 <p className="text-sm font-black uppercase tracking-[0.18em] text-orange-400">Base plan</p>
                 <p className="mt-4 text-6xl font-black">$50<span className="text-xl text-slate-400">/month</span></p>
               </div>
-              <div className="grid sm:grid-cols-3">
-                {[["$2", "per call lead"], ["$1", "to start texting"], ["$1", "per 50 segments"]].map(([price, unit]) => <div key={unit} className="border-b border-slate-800 p-7 text-center last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0"><p className="text-4xl font-black">{price}</p><p className="mt-2 text-xl font-black text-orange-400">{unit}</p></div>)}
+              <div className="grid sm:grid-cols-2">
+                {[["$2", "per new lead"], ["$1", "per 50 SMS parts"]].map(([price, unit]) => <div key={unit} className="border-b border-slate-800 p-7 text-center last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0"><p className="text-4xl font-black">{price}</p><p className="mt-2 text-xl font-black text-orange-400">{unit}</p></div>)}
               </div>
             </div>
           </div>
