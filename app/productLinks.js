@@ -1,4 +1,4 @@
-export const demoPhone = String(process.env.NEXT_PUBLIC_DEMO_PHONE || "+19787776464").trim();
+export const demoPhone = String(process.env.NEXT_PUBLIC_DEMO_PHONE || "+17742316164").trim();
 export const demoPhoneHref = demoPhone
   ? `tel:${demoPhone.replace(/[^+\d]/g, "")}`
   : "";
