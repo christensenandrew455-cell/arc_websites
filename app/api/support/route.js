@@ -1,12 +1,14 @@
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+const DEFAULT_SUPPORT_API_BASE_URL = "https://ark-websites-ocm-xi.vercel.app";
+
 function apiBaseUrl() {
   return String(
     process.env.ARK_SUPPORT_API_BASE_URL
       || process.env.NEXT_PUBLIC_CLIENT_CENTER_URL
-      || "",
-  ).trim().replace(/\/$/, "");
+      || DEFAULT_SUPPORT_API_BASE_URL,
+  ).trim().replace(/\/+$/, "");
 }
 
 export async function POST(request) {
