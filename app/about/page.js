@@ -1,76 +1,54 @@
-import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
-import config from "../homeConfig";
+import SiteHeader from "../components/SiteHeader";
 
 const sections = [
   {
     title: "Why ARK was started",
     paragraphs: [
-      "ARK Client Center was started after Andrew Christensen saw a real problem through a friend who runs a painting company. The phone would ring, and there was no easy way to know whether the caller was a real customer, a scammer, or someone trying to sell something.",
-      "That meant stopping work, answering the phone, and hoping the call was worth the interruption. ARK was built to make that first call useful before it ever reaches the business owner.",
+      "ARK Client Center started with a problem common to small service businesses: the phone rings while the owner is already doing the work, and there is no quick way to know whether the interruption will become a real job.",
+      "ARK makes that first call useful without requiring the owner to stop what they are doing.",
     ],
   },
   {
     title: "How the receptionist works",
     paragraphs: [
-      "When someone calls your ARK number, the receptionist connects that call to your account. It uses the business information you added to answer questions and guide the caller through the information your business needs.",
-      "It does not make up details about your company. If a caller asks for business information, it uses what is stored in your account. If the caller asks why information is needed, it gives a short explanation and keeps the conversation moving.",
+      "When someone calls the business's ARK number, the receptionist loads that business's services, service-request hours, service areas, and owner-provided facts.",
+      "It guides the caller through one request and uses only the supplied business information to answer business-specific questions. If the answer is not there, it does not invent one.",
     ],
   },
   {
-    title: "How a call becomes a lead",
+    title: "What ARK collects",
     paragraphs: [
-      "The receptionist guides the caller through the lead form one question at a time. The lead is not sent to your account until the required information is complete.",
-      "The call flow also asks for consent before the lead is sent. Once consent is granted and the required details are filled in, the lead appears in the Leads area of the app.",
+      "The receptionist asks for the requested service, the caller's name, the full project address, a preferred day, a broad morning or afternoon window, and any useful project notes. It also asks for consent before sending the request.",
+      "A preference is not a booked appointment. ARK does not promise that an exact date or time is available; the business owner confirms that after reviewing the request.",
     ],
   },
   {
     title: "What happens in the app",
     paragraphs: [
-      "When a new lead arrives, you can open it, review the details, and accept or decline it. After you accept it, you can message the customer, save the contact, add the job or appointment to your calendar, or assign the lead to an employee.",
-      "Saving a contact opens your phone's contact flow with the lead information ready to use. Adding to the calendar prepares the event details so you can review them and save the event.",
+      "A completed request appears in Contacted You for review. The owner can accept it as a client or decline it. Emergency requests appear separately when the business has enabled emergency service and the caller explicitly asks for urgent help.",
+      "Accepted clients can be reviewed and edited. The owner can save contact details or create a calendar event after deciding on the actual appointment date and time.",
     ],
   },
   {
-    title: "Messaging without sharing your personal number",
+    title: "What the plan counts",
     paragraphs: [
-      "You can message customers through the ARK business number instead of giving out your personal number. That helps keep business conversations separate and gives you more control over who can reach you directly.",
-      "This is useful whether you speak with a few customers each week or hundreds of people every day.",
+      "ARK plans are based on accepted leads, not every call. One unique request counts when the owner taps Accept. Calls, declined requests, edits, and deletions do not use the allowance.",
+      "The four monthly plans include 25, 50, 100, or 200 accepted leads. Additional accepted leads cost $1 each for the current billing period and expire at the next reset.",
     ],
   },
   {
-    title: "Employee access and control",
+    title: "Why the real safeguards stay",
     paragraphs: [
-      "You can add employees to your account and assign them to specific leads or customers. Employee permissions control what each person is allowed to see.",
-      "For example, you can allow an employee to work with a lead without showing the customer's phone number or address. You decide what information is available to each employee.",
-    ],
-  },
-  {
-    title: "Call safeguards",
-    paragraphs: [
-      "The receptionist is designed to keep the call focused on collecting a useful lead. It can answer questions from your saved business information, explain why a question is being asked, and return to the intake flow.",
-      "Required details and consent must be completed before a lead is delivered. These safeguards help keep incomplete conversations from appearing as finished opportunities.",
-    ],
-  },
-  {
-    title: "Testing and development",
-    paragraphs: [
-      "ARK has been tested in real business settings for about a year. Early testers have used it to handle incoming calls, organize leads, and avoid spending time on callers who did not become real opportunities.",
-      "The app is still being improved around the needs of small service businesses, with an emphasis on clear screens, simple actions, and useful lead information.",
-    ],
-  },
-  {
-    title: "Why the pricing works this way",
-    paragraphs: [
-      "ARK uses a monthly base price plus fixed usage charges. A smaller business with fewer calls can use the same receptionist without taking on a large office-software bill.",
-      "A business with more call and message activity pays more because it uses the service more. The price per call lead and message usage stays clear, so the same system can work for businesses at different sizes.",
+      "The useful safeguards are the ones tied to real failures: account ownership checks, required intake details, caller consent, duplicate-delivery protection, payment verification, and limits that prevent a call from running forever.",
+      "Those checks protect customer data, prevent duplicate leads or charges, and keep the receptionist inside the business information it was given.",
     ],
   },
   {
     title: "About the builder",
     paragraphs: [
-      "Andrew Christensen has been working with software and AI for about three and a half years. Before building ARK, he also worked in landscaping and saw how difficult it can be to stop a job every time the phone rings.",
-      "ARK Client Center combines that hands-on service-business perspective with software built to make calls, leads, messages, calendars, contacts, and employees easier to manage.",
+      "Andrew Christensen built ARK after seeing the interruption problem in service businesses, including painting and landscaping work.",
+      "The product is designed around a straightforward handoff: ARK gathers the request, and the business owner makes the business decision.",
     ],
   },
 ];
@@ -80,9 +58,10 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white text-slate-950">
       <SiteHeader />
 
-      <section className={`border-b border-orange-200 px-4 py-14 text-center sm:px-6 sm:py-24 ${config.theme.heroBg}`}>
+      <section className="border-b border-orange-200 bg-gradient-to-br from-white via-orange-50 to-orange-100 px-4 py-14 text-center sm:px-6 sm:py-24">
         <div className="mx-auto max-w-4xl">
           <h1 className="text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">About ARK Client Center</h1>
+          <p className="mx-auto mt-5 max-w-3xl text-lg font-semibold leading-8 text-slate-700">What the product does, where it stops, and which decisions remain with the business owner.</p>
         </div>
       </section>
 

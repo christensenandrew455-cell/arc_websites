@@ -5,7 +5,7 @@ export const metadata = {
     default: "ARK Client Center",
     template: "%s | ARK Client Center",
   },
-  description: "Secure lead, client, receptionist, and business messaging management for service businesses.",
+  description: "AI receptionist and accepted-lead management for service businesses.",
   applicationName: "ARK Client Center",
   metadataBase: new URL("https://arkwebsites.com"),
 };

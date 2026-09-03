@@ -1,18 +1,21 @@
 import Link from "next/link";
-import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
 
 const sections = [
-  ["The service", "ARK Client Center provides tools for connected receptionist intake, lead and client organization, business messaging, employee access, notifications, and related account management. Features may change as the platform develops."],
-  ["Business accounts and employees", "The account owner is responsible for the accuracy of business information, account security, employee access, and all activity performed through the account. Employees may use only the permissions granted by the owner."],
-  ["Messaging program", "ARK Client Center supports customer-care conversations about inquiries, estimates, scheduling, appointments, and related service follow-up. Message frequency varies based on the conversation. Message and data rates may apply. Reply STOP to opt out and HELP for the support or reporting path."],
-  ["Consent and lawful messaging", "Businesses may message only people who have provided appropriate consent or otherwise lawfully initiated the conversation. Businesses must honor opt-out requests and may not use ARK Client Center for cold-message lists, purchased contacts, unlawful marketing, harassment, impersonation, threats, fraud, or misleading content."],
-  ["Prohibited conduct", "Users may not send illegal, abusive, discriminatory, sexually explicit, exploitative, deceptive, or malicious content; interfere with the platform; attempt unauthorized access; evade account restrictions; or use the service in a way that harms customers, carriers, vendors, or ARK."],
-  ["Reports, suspension, and termination", "ARK may investigate credible support or abuse reports. ARK may limit messaging, suspend employees, disable a business account, preserve relevant records, or terminate access when reasonably necessary to protect recipients, the platform, or service providers. Serious matters may be referred to appropriate authorities when required or justified."],
-  ["Fees and third-party charges", "The standard ARK Client Center price is $50 per month, plus $2 per AI receptionist call, $1 per 50 SMS message parts, and $5 per active approved employee account each month. Taxes, carrier registration, or separately agreed service charges may also apply when disclosed during setup."],
-  ["Third-party services", "The platform depends on third-party telecommunications, hosting, artificial-intelligence, payment, authentication, notification, and app-distribution services. ARK is not responsible for outages, delays, carrier filtering, store-review decisions, or provider restrictions outside ARK's reasonable control."],
-  ["No guaranteed outcome", "ARK does not guarantee that every call will create a lead, every message will be delivered, every customer will respond, or every requested appointment will be accepted. Businesses remain responsible for reviewing records and following up appropriately."],
-  ["Changes to these terms", "ARK may update these terms as the platform and applicable requirements change. Continued use after an updated effective date constitutes acceptance of the revised terms to the extent permitted by law."],
+  ["Agreement", "These Terms of Use govern ARK Client Center and its related AI receptionist, lead-management, notification, support, website, billing, and account services. By creating an account, accepting the agreement, adding a payment method, or using the service, the account owner agrees to these Terms and the Privacy Policy and confirms that they are authorized to act for the business."],
+  ["The service", "ARK provides connected receptionist intake, service-request review, client organization, notifications, account settings, support, and billing tools. ARK may change features or technical requirements when reasonably needed to maintain, secure, or improve the service."],
+  ["Business responsibilities", "The owner is responsible for accurate business information, lawful instructions, account security, downloaded files, and decisions made from lead or customer information. The business must provide any notices and obtain any permissions or consents required for calls, recordings, texts, customer information, and follow-up."],
+  ["Monthly accepted-lead plans", "Starter is $24.99 per month for 25 accepted leads; Standard is $47.49 for 50; Growth is $89.99 for 100; and Scale is $169.99 for 200. One unique service request counts when the owner taps Accept. Repeated acceptance attempts, calls, declined leads, edits, and deletions do not count. Unused plan leads do not roll over."],
+  ["Additional accepted leads", "The owner may purchase a whole-number quantity of additional accepted leads for the current billing period at $1 each. Top-up leads expire at the next allowance reset and do not roll over. Taxes, custom work, or provider pass-through charges apply only when separately disclosed or agreed."],
+  ["Payment, plan changes, and refunds", "The iOS app uses Apple In-App Purchase; web and other supported platforms use Stripe. The payment provider controls completed charges and sensitive payment details. Stripe-billed owners may change plans through the available billing controls. A directly purchased first Stripe subscription charge may be eligible for a refund request within seven calendar days; renewals, top-ups, Apple purchases, custom work, taxes, and previously refunded accounts are excluded. Apple controls App Store refund eligibility and processing."],
+  ["Payment failure and cancellation", "A failed recurring payment pauses the receptionist and new lead intake while billing access remains available. Stripe-billed accounts may be deleted after the stated seven-day recovery window if payment is not restored; Apple-billed accounts follow Apple's billing-retry schedule. Apple subscriptions must be canceled through Apple. Deleting an ARK account does not cancel billing controlled by Apple."],
+  ["Service-related texts", "ARK may send account notifications and service-request status texts. Message frequency varies and message and data rates may apply. Recipients can reply STOP to opt out and HELP for the support path. Users may not use ARK for unlawful marketing, purchased contact lists, harassment, impersonation, threats, fraud, or misleading content."],
+  ["AI output and appointments", "Automated systems may route, summarize, classify, or respond to information. Users remain responsible for reviewing that information. A caller's preferred day or time window is not a confirmed appointment, and ARK does not guarantee that any requested date or time is available."],
+  ["Third-party services and availability", "ARK depends on telecommunications, hosting, AI, payment, authentication, notification, and app-distribution providers. Maintenance, outages, carrier filtering, store decisions, internet or phone failures, and other events outside ARK's reasonable control may affect availability or delivery. ARK does not promise uninterrupted or error-free operation."],
+  ["Suspension and prohibited conduct", "Users may not attempt unauthorized access, evade account restrictions, interfere with the platform, or use the service for illegal, abusive, deceptive, privacy-invasive, or security-invasive activity. ARK may restrict, suspend, or terminate access for nonpayment, misuse, security risk, legal requirements, or a material breach of these Terms."],
+  ["No guaranteed business outcome", "ARK does not guarantee that every call will produce a lead, that every lead will become a customer, that a notification or text will be delivered, or that the service will produce revenue. The business remains responsible for reviewing requests, choosing whether to accept them, confirming appointments, and following up."],
+  ["Updates", "ARK may update these Terms as the service, pricing, providers, or legal requirements change. The effective date appears on this page. ARK may request renewed acceptance when a material change requires it."],
 ];
 
 export default function TermsPage() {
@@ -21,9 +24,9 @@ export default function TermsPage() {
       <SiteHeader />
       <section className="border-b border-orange-200 bg-gradient-to-b from-orange-50 to-white px-4 py-10 text-center sm:px-6 sm:py-20">
         <div className="mx-auto max-w-4xl">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Effective July 24, 2026</p>
-          <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Terms & Conditions</h1>
-          <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">The rules for using the ARK Client Center website, application, receptionist connections, and messaging tools.</p>
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Effective September 3, 2026</p>
+          <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Terms of Use</h1>
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">The rules for using the ARK website, application, receptionist, lead-management, support, and billing services.</p>
         </div>
       </section>
 
@@ -36,8 +39,8 @@ export default function TermsPage() {
         ))}
 
         <section className="rounded-3xl border border-orange-200 bg-orange-50 p-4 sm:p-8">
-          <h2 className="text-2xl font-black">Support and reports</h2>
-          <p className="mt-3 leading-7 text-slate-600">Questions about these terms or concerns about messages sent through ARK Client Center can be submitted through the support page.</p>
+          <h2 className="text-2xl font-black">Support</h2>
+          <p className="mt-3 leading-7 text-slate-600">Questions about these terms, billing, an account, or a text sent through ARK can be submitted through Support.</p>
           <Link href="/support" className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-orange-500 px-5 py-3 text-sm font-black text-white hover:bg-orange-600 sm:w-auto">Open Support</Link>
         </section>
       </div>
