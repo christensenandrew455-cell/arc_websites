@@ -5,7 +5,7 @@ export default function SiteFooter() {
   const links = [
     ["Support", "/support"],
     ["Privacy Policy", "/privacy"],
-    ["Terms & Conditions", "/terms"],
+    ["Terms of Use", "/terms"],
   ];
 
   return (
