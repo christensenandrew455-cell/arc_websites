@@ -1,16 +1,11 @@
 const siteConfig = {
-  showHeader: true,
-  stickyHeader: true,
-  showFooter: true,
-  footerCentered: true,
-  contentAlignment: "left",
-  pagePadding: "p-6 md:p-12",
-  maxWidth: "max-w-7xl",
-  contactPageRoute: "/support",
-  supportPageRoute: "/support",
-  downloadPageRoute: "/download",
-  privacyPageRoute: "/privacy",
-  termsPageRoute: "/terms",
+  logoUrl: "/ark-logo.svg",
+  headerLinks: [
+    { name: "Why ARK", href: "/#why-ark" },
+    { name: "How it works", href: "/#how-it-works" },
+    { name: "Live demo", href: "/#live-demo" },
+    { name: "Pricing", href: "/#pricing" },
+  ],
 };
 
 export default siteConfig;

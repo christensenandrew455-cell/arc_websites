@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import config from "../homeConfig";
+import config from "../siteConfig";
 import { GetAppLink } from "./AppStoreRouting";
 
 function Brand() {
