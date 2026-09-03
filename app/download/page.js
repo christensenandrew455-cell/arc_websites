@@ -9,7 +9,7 @@ export default function DownloadPage() {
       <section className="border-b border-slate-200 bg-gradient-to-b from-orange-50 to-white px-4 py-14 text-center sm:px-6 sm:py-20">
         <div className="mx-auto max-w-4xl">
           <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Get the app</p>
-          <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-6xl">How to install ARK Client Center</h1>
+          <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-6xl">Get ARK Client Center</h1>
           <AppStoreRedirect />
         </div>
       </section>

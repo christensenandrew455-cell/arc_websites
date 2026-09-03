@@ -2,7 +2,7 @@ export async function POST() {
   return Response.json(
     {
       success: false,
-      error: "The old contact form has been retired. Use the ARK Client Center support page.",
+      error: "Use Support.",
       supportPath: "/support",
     },
     { status: 410 },

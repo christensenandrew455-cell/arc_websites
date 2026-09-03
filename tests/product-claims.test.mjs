@@ -14,8 +14,9 @@ test("the public site describes the current accepted-lead plans", async () => {
     assert.ok(home.includes(price));
     assert.ok(terms.includes(price));
   }
-  assert.ok(home.includes("Only a request you accept uses your monthly accepted-lead allowance."));
-  assert.ok(home.includes("Calls do not count toward the plan."));
+  assert.ok(home.includes("Only accepted leads count."));
+  assert.ok(home.includes("Calls are included."));
+  assert.ok(home.includes("One request counts once when you tap Accept."));
   assert.ok(terms.includes("Repeated acceptance attempts, calls, declined leads, edits, and deletions do not count."));
 });
 
