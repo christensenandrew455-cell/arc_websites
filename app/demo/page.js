@@ -33,7 +33,6 @@ export default function DemoPage() {
             </article>
           ))}
         </div>
-        <p className="mt-8 text-xl font-bold leading-8 text-slate-700">Play with it, test it your way, and decide whether it feels right for your business.</p>
       </section>
 
       <SiteFooter />
