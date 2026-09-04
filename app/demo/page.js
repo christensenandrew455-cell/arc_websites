@@ -1,3 +1,5 @@
+import Link from "next/link";
+import GetStartedLink from "../components/GetStartedLink";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import { demoPhoneDisplay, demoPhoneHref } from "../productLinks";
@@ -32,6 +34,19 @@ export default function DemoPage() {
               <p className="text-2xl font-black leading-tight">{item}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="border-t border-orange-200 bg-orange-50 px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-4xl font-black tracking-tight sm:text-6xl">Like it? Get started.</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg font-bold leading-8 text-slate-600">If not, tell us what could be better. We’re always improving.</p>
+          <div className="mx-auto mt-8 grid max-w-xl gap-3 sm:grid-cols-2">
+            <GetStartedLink className="inline-flex min-h-14 items-center justify-center rounded-xl bg-slate-950 px-7 py-4 text-lg font-black text-white transition hover:-translate-y-0.5 hover:bg-orange-600" />
+            <Link href="/support?topic=feedback" className="inline-flex min-h-14 items-center justify-center rounded-xl border border-orange-300 bg-white px-7 py-4 text-lg font-black text-slate-950 transition hover:-translate-y-0.5 hover:border-orange-500">
+              Give Feedback
+            </Link>
+          </div>
         </div>
       </section>
 

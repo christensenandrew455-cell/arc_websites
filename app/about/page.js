@@ -8,13 +8,13 @@ const sections = [
     detail: "Service businesses need a way to answer calls without stopping the job.",
   },
   {
-    title: "How it works",
-    detail: "ARK answers, gathers one service request, and sends it to the business.",
+    title: "How each call is handled",
+    detail: "ARK answers, gathers the service, address, preferred time, and notes, then sends the request to the business.",
+    help: "The preferred day and time window are a request, not a booked appointment. The business confirms the exact time.",
   },
   {
-    title: "What you get",
-    detail: "The service, customer, address, preferred time, and project notes.",
-    help: "The preferred day and time window are a request, not a booked appointment. The business confirms the exact time.",
+    title: "What the business can customize",
+    detail: "Business type, services, service area, days and hours, emergency availability, and extra information the receptionist should know.",
   },
   {
     title: "You stay in control",

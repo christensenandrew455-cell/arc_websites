@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import config from "../siteConfig";
-import { GetAppLink } from "./AppStoreRouting";
+import GetStartedLink from "./GetStartedLink";
 
 function Brand() {
   return (
@@ -26,7 +26,7 @@ export default function SiteHeader() {
           ))}
         </nav>
 
-        <GetAppLink className="hidden rounded-xl bg-slate-950 px-5 py-3 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-orange-600 sm:inline-flex" />
+        <GetStartedLink className="hidden rounded-xl bg-slate-950 px-5 py-3 text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-orange-600 sm:inline-flex" />
       </div>
     </header>
   );
