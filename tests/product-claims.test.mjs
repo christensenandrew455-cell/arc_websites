@@ -50,3 +50,22 @@ test("unused configuration and calculator modules stay removed", async () => {
     await assert.rejects(access(new URL(path, root)));
   }
 });
+
+test("Get Started opens Client Center signup without store placeholders", async () => {
+  const [links, header, footer, demo, download] = await Promise.all([
+    source("app/productLinks.js"),
+    source("app/components/SiteHeader.js"),
+    source("app/components/SiteFooter.js"),
+    source("app/demo/page.js"),
+    source("app/download/page.js"),
+  ]);
+  assert.ok(links.includes("https://www.arkclientcenter.com"));
+  assert.ok(links.includes("NEXT_PUBLIC_CLIENT_CENTER_SIGNUP_URL"));
+  assert.ok(header.includes("GetStartedLink"));
+  assert.ok(footer.includes("GetStartedLink"));
+  assert.ok(demo.includes("GetStartedLink"));
+  assert.ok(download.includes("redirect(clientCenterSignupUrl)"));
+  assert.equal([links, header, footer, demo, download].join("\n").includes("Google Play"), false);
+  assert.equal([links, header, footer, demo, download].join("\n").includes("App Store"), false);
+  await assert.rejects(access(new URL("app/components/AppStoreRouting.js", root)));
+});

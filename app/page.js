@@ -1,23 +1,52 @@
 import Link from "next/link";
+import GetStartedLink from "./components/GetStartedLink";
 import InfoTip from "./components/InfoTip";
 import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
 
-const featureCards = [
+const callSteps = [
   {
-    label: "Calls",
-    title: "Calls answered",
-    detail: "ARK handles the first conversation.",
+    label: "Answer",
+    title: "ARK picks up",
+    detail: "The receptionist answers with your business information.",
   },
   {
-    label: "Intake",
-    title: "Details together",
-    detail: "Get the service, address, preferred time, and notes.",
+    label: "Ask",
+    title: "The caller explains the job",
+    detail: "ARK gathers the service, address, preferred time, and notes.",
   },
   {
-    label: "Decision",
-    title: "You choose",
-    detail: "Accept or decline each request.",
+    label: "Send",
+    title: "You get the request",
+    detail: "Review it when you have time, then accept or decline it.",
+  },
+];
+
+const customizationOptions = [
+  "Business name and details",
+  "Business type",
+  "Services you offer",
+  "Service area",
+  "Days and hours",
+  "Emergency availability",
+  "Extra information callers should know",
+];
+
+const testimonials = [
+  {
+    name: "Taper Painting",
+    type: "Painting",
+    quote: "I’m working when the notifications come in. I keep going until my break, look through the requests, decide which ones are worth my time, and get right back to work. I don’t have to stop and answer every call anymore.",
+  },
+  {
+    name: "Robert",
+    type: "Emergency electrical work",
+    quote: "Even with a small business, an emergency call could get blocked by spam or someone trying to sell me something. ARK can answer more than one call at a time, so the real emergencies can get through instead of landing in voicemail.",
+  },
+  {
+    name: "Zahara",
+    type: "Plumbing business owner",
+    quote: "I run a small plumbing business with two employees. I accept the lead, find a time that works while I get to know the customer, and send the saved details to my employees. I don’t have to dig through texts or remember what was said on the call.",
   },
 ];
 
@@ -49,44 +78,44 @@ export default function Home() {
           <p className="text-sm font-black uppercase tracking-[0.22em] text-orange-700">AI receptionist for service businesses</p>
           <h1 className="mt-5 text-5xl font-black leading-[0.95] tracking-[-0.05em] text-slate-950 sm:text-7xl lg:text-[5.25rem]">ARK answers. You keep working.</h1>
           <p className="mx-auto mt-6 max-w-3xl text-xl font-black leading-8 text-slate-700 sm:text-2xl">Get the request. Choose what happens next.</p>
+          <div className="mx-auto mt-8 grid max-w-xl gap-3 sm:grid-cols-2">
+            <GetStartedLink className="inline-flex min-h-14 items-center justify-center rounded-xl bg-slate-950 px-7 py-4 text-lg font-black text-white transition hover:-translate-y-0.5 hover:bg-orange-600" />
+            <Link href="/demo" className="inline-flex min-h-14 items-center justify-center rounded-xl border border-orange-300 bg-white px-7 py-4 text-lg font-black text-slate-950 transition hover:-translate-y-0.5 hover:border-orange-500">
+              Try a Live Demo
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section id="what-you-get" className="scroll-mt-24 bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      <section id="how-calls-work" className="scroll-mt-24 bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionMarker number="01" label="What you get" />
+          <SectionMarker number="01" label="How each call is handled" />
           <div className="grid gap-5 lg:grid-cols-3">
-            {featureCards.map((feature, index) => (
-              <article key={feature.title} className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-[0_18px_50px_-38px_rgba(15,23,42,0.5)] sm:p-8">
+            {callSteps.map((step, index) => (
+              <article key={step.title} className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-[0_18px_50px_-38px_rgba(15,23,42,0.5)] sm:p-8">
                 <span className="absolute right-6 top-5 text-6xl font-black text-slate-200">{index + 1}</span>
-                <p className="text-xs font-black uppercase tracking-[0.18em] text-orange-700">{feature.label}</p>
-                <h3 className="relative mt-4 text-3xl font-black leading-tight tracking-tight text-slate-950">{feature.title}</h3>
-                <p className="relative mt-4 text-lg font-semibold leading-7 text-slate-600">{feature.detail}</p>
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-orange-700">{step.label}</p>
+                <h3 className="relative mt-4 text-3xl font-black leading-tight tracking-tight text-slate-950">{step.title}</h3>
+                <p className="relative mt-4 text-lg font-semibold leading-7 text-slate-600">{step.detail}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="how-it-works" className="scroll-mt-24 border-y border-orange-200 bg-orange-50 px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      <section id="customize" className="scroll-mt-24 border-y border-orange-200 bg-orange-50 px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionMarker number="02" label="The handoff" />
+          <SectionMarker number="02" label="What your business can customize" />
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div>
-              <div className="flex items-center gap-3">
-                <h2 className="text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">From call to lead.</h2>
-                <InfoTip label="About requested times">The caller picks a preferred day and a morning or afternoon window. It is not booked until you confirm it.</InfoTip>
-              </div>
+              <h2 className="text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">Set it up for your business.</h2>
+              <p className="mt-5 text-lg font-bold leading-8 text-slate-600">You choose the information ARK uses on every call.</p>
             </div>
-            <div className="grid gap-4">
-              {[
-                "A customer calls your ARK number.",
-                "ARK collects the request.",
-                "You accept or decline it.",
-              ].map((title, index) => (
-                <article key={title} className="grid grid-cols-[3.5rem_1fr] items-center gap-5 rounded-3xl border border-orange-200 bg-white p-5 shadow-sm sm:p-6">
-                  <span className="grid h-14 w-14 place-items-center rounded-2xl bg-slate-950 text-2xl font-black text-orange-400">{index + 1}</span>
-                  <h3 className="text-2xl font-black leading-tight text-slate-950 sm:text-3xl">{title}</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {customizationOptions.map((option) => (
+                <article key={option} className="flex min-h-20 items-center gap-4 rounded-2xl border border-orange-200 bg-white p-5 shadow-sm">
+                  <span aria-hidden="true" className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-slate-950 text-base font-black text-orange-400">✓</span>
+                  <h3 className="text-lg font-black leading-6 text-slate-950">{option}</h3>
                 </article>
               ))}
             </div>
@@ -94,9 +123,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="scroll-mt-24 bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      <section id="testimonials" className="scroll-mt-24 bg-white px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionMarker number="03" label="Pricing" />
+          <SectionMarker number="03" label="From business owners" />
+          <h2 className="max-w-4xl text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">What it’s like day to day.</h2>
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <blockquote key={testimonial.name} className="flex h-full flex-col rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-[0_18px_50px_-38px_rgba(15,23,42,0.5)] sm:p-8">
+                <div>
+                  <p className="text-2xl font-black text-slate-950">{testimonial.name}</p>
+                  <p className="mt-1 text-xs font-black uppercase tracking-[0.16em] text-orange-700">{testimonial.type}</p>
+                </div>
+                <p className="mt-6 text-lg font-semibold leading-8 text-slate-700">“{testimonial.quote}”</p>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" className="scroll-mt-24 border-t border-orange-200 bg-orange-50 px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionMarker number="04" label="Pricing" />
           <div className="max-w-4xl">
             <h2 className="text-4xl font-black tracking-tight sm:text-6xl">Pick a monthly lead limit.</h2>
             <p className="mt-4 text-lg font-bold leading-8 text-slate-600">Calls are included. Only accepted leads count.</p>

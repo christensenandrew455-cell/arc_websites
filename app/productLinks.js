@@ -6,8 +6,11 @@ const demoDigits = demoPhone.replace(/\D/g, "").replace(/^1(?=\d{10}$)/, "");
 export const demoPhoneDisplay = /^\d{10}$/.test(demoDigits)
   ? `${demoDigits.slice(0, 3)}-${demoDigits.slice(3, 6)}-${demoDigits.slice(6)}`
   : demoPhone;
-const androidStoreSearchUrl = "https://play.google.com/store/search?q=ARK%20Client%20Center&c=apps";
-const iosStoreSearchUrl = "https://apps.apple.com/us/search?term=ARK%20Client%20Center";
 
-export const androidDownloadUrl = String(process.env.NEXT_PUBLIC_ANDROID_DOWNLOAD_URL || androidStoreSearchUrl).trim();
-export const iosDownloadUrl = String(process.env.NEXT_PUBLIC_IOS_DOWNLOAD_URL || iosStoreSearchUrl).trim();
+const clientCenterUrl = String(
+  process.env.NEXT_PUBLIC_CLIENT_CENTER_URL || "https://www.arkclientcenter.com",
+).trim().replace(/\/+$/, "");
+
+export const clientCenterSignupUrl = String(
+  process.env.NEXT_PUBLIC_CLIENT_CENTER_SIGNUP_URL || `${clientCenterUrl}/signup`,
+).trim();
